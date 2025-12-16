@@ -82,10 +82,11 @@ locales:
         icon: graduation-cap
         data:
           - type: work
-            place: Center for Quantum Computing, Analytical Quantum Complexity RIKEN Hakubi Research Team
+            place: Center for Quantum Computing
             time: Oct. 2024 - Present
             title: Postdoctoral Researcher
             content: with Dr. [Tomotaka Kuwahara](https://kuwahara-quantum.com/en/)
+            description: at Analytical Quantum Complexity RIKEN Hakubi Research Team
 
           - type: work
             place: Center for Quantum Computing, Analytical Quantum Complexity RIKEN Hakubi Research Team
