@@ -141,8 +141,7 @@
 用于出版物或奖项等列表的多功能组件。
 
 - **额外配置**:
-  - `unordered`: 可选布尔值 (Optional Boolean). 列表是无序 (ul) 还是有序 (ol)。
-  - `dot`: 可选字符串 (Optional String). 无序列表的标记样式 (`'circle'`, `'square'`, `'diamond'`, `'check'`, `'none'`).
+  - `dot`: 可选字符串 (Optional String). 无序列表的标记样式 (`'circle'`, `'square'`, `'diamond'`, `'check'`, `'none'`, `'number'`），默认为 `'number'`.
 - **数据结构**: `ListItem` 或字符串数组:
   - 字符串：内容 (支持 markdown)。
   - `text`: 内容 (String, 支持 markdown).

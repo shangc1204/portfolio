@@ -25,16 +25,12 @@ export interface ListProps {
    * 列表项
    */
   items: (ListItem | string)[];
+
   /**
-   * Whether the list is unordered
-   * 列表是否为无序列表
-   */
-  unordered?: boolean;
-  /**
-   * Style of list markers for unordered lists
+   * Style of list markers for lists
    * 无序列表的列表标记样式
    */
-  dot?: "circle" | "square" | "diamond" | "check" | "none";
+  dot?: "circle" | "square" | "diamond" | "check" | "none" | "number";
 }
 
 /**
@@ -46,27 +42,25 @@ export interface ListProps {
  *
  * 显示带有可配置样式的项目列表。
  */
-export const List: FC<ListProps> = ({ items, unordered, dot }) => {
-  const ListTag = unordered ? "ul" : "ol";
-  const listStyle = dot ?? "circle";
+export const List: FC<ListProps> = ({ items, dot = "number" }) => {
+  const isOrderedList = dot === "number";
+  const ListTag = isOrderedList || !dot ? "ol" : "ul";
 
   return (
-    <ListTag className={unordered ? "list-ul" : "list-ol"}>
+    <ListTag className={isOrderedList ? "list-ol" : "list-ul"}>
       {items.map((item, i) => (
         <li
           key={i}
-          className={`text-content ${unordered ? "list-li-unordered" : "list-li-ordered"}`}
+          className={`text-content ${isOrderedList ? "list-li-ordered" : "list-li-unordered"}`}
         >
-          {unordered && listStyle !== "none" && (
+          {!isOrderedList && (
             <div className="list-marker-container">
-              {listStyle === "check" && (
+              {dot === "check" && (
                 <Icon icon="circle-check" className="list-marker-check" />
               )}
-              {listStyle === "circle" && <div className="list-marker-circle" />}
-              {listStyle === "square" && <div className="list-marker-square" />}
-              {listStyle === "diamond" && (
-                <div className="list-marker-diamond" />
-              )}
+              {dot === "circle" && <div className="list-marker-circle" />}
+              {dot === "square" && <div className="list-marker-square" />}
+              {dot === "diamond" && <div className="list-marker-diamond" />}
             </div>
           )}
           <div className="list-content">

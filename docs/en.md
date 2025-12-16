@@ -141,8 +141,7 @@ A grid of high-level cards for projects or dissertations.
 A versatile component for lists like Publications or Awards.
 
 - **Additional Config**:
-  - `unordered`: Optional Boolean. Whether the list is unordered (ul) or ordered (ol).
-  - `dot`: Optional String. Marker style for unordered lists (`'circle'`, `'square'`, `'diamond'`, `'check'`, `'none'`).
+  - `dot`: Optional String. Marker style for lists (`'circle'`, `'square'`, `'diamond'`, `'check'`, `'none'`, `'number'`), default is `'number'`
 - **Data Schema**: Array of `ListItem` or String:
   - String: Content (markdown supported).
   - `text`: Content (markdown supported).

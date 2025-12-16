@@ -168,7 +168,6 @@ locales:
         id: awards
         title: Honors & Awards
         icon: trophy
-        unordered: true
         dot: check
         data:
           - "**2024** Invited Talk, [21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)](https://events.physics.uoc.gr/event/1/page/5-speakers), Chania, Greece."
@@ -288,7 +287,7 @@ locales:
         id: patents
         title: Patents
         icon: certificate
-        unordered: true
+        dot: circle
         data:
           - text: |-
               Cheng Shang, Hui Zhao, Xuan Zhang, Fu-De Li, and He Bai, Grayscale Mechanical Random Number Generator: Testing and Usage Methodologies, CN Patent CN108,958,706 B (2023)
@@ -505,7 +504,6 @@ locales:
         id: awards
         title: 荣誉与奖项
         icon: trophy
-        unordered: true
         dot: check
         data:
           - "**2024** 邀请报告，[第 21 届赝厄密哈密顿量量子物理学国际研讨会 (PHHQP-XXI)](https://events.physics.uoc.gr/event/1/page/5-speakers)，希腊哈尼亚。"
@@ -624,7 +622,7 @@ locales:
         id: patents
         title: 专利
         icon: certificate
-        unordered: true
+        dot: circle
         data:
           - text: Cheng Shang, Hui Zhao, Xuan Zhang, Fu-De Li, and He Bai, 测灰度机械随机数生成器及其使用方法, CN Patent CN108,958,706 B (2023)
             link: https://patents.google.com/patent/CN108958706B/zh

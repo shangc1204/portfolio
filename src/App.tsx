@@ -152,13 +152,7 @@ export const App: FC<{ initialLocale?: string }> = ({ initialLocale }) => {
         return <Cards items={content.data} locale={locale} />;
 
       case "list":
-        return (
-          <List
-            unordered={content.unordered}
-            dot={content.dot}
-            items={content.data}
-          />
-        );
+        return <List dot={content.dot} items={content.data} />;
 
       case "gallery":
         return <Gallery items={content.data} />;
