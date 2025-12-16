@@ -4,7 +4,7 @@ import type { FC, HTMLAttributes } from "react";
 export interface IconProps extends HTMLAttributes<HTMLElement> {
   /**
    * The icon name or image URL
-   * - Iconify name: "mdi:home", "fa6-solid:user"
+   * - Iconify name: "mdi:home", "fa7-solid:user"
    * - Image URL: "https://example.com/icon.png", "/icons/my-icon.svg"
    */
   icon: string;
@@ -19,8 +19,8 @@ const resolveIcon = (icon: string): string => {
   // Strip fa- prefix if present (e.g. "fa-user" -> "user")
   const cleanName = icon.replace(/^fa-/, "");
 
-  // Default to fa6-solid
-  return `fa6-solid:${cleanName}`;
+  // Default to fa7-solid
+  return `fa7-solid:${cleanName}`;
 };
 
 /**
