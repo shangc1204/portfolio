@@ -1,0 +1,61 @@
+@layer components {
+  .timeline-cards-grid {
+    @apply grid grid-cols-1 gap-4;
+  }
+
+  .timeline-card {
+    @apply relative flex flex-col md:flex-row md:items-center gap-4 md:gap-8 p-6;
+  }
+
+  .timeline-year-col {
+    @apply flex-shrink-0 w-16 text-right;
+  }
+
+  .timeline-year-text {
+    @apply text-base font-bold text-primary-600/80 dark:text-primary-400/80 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors uppercase;
+  }
+
+  .timeline-content-col {
+    @apply flex-1;
+  }
+
+  .timeline-link-col {
+    @apply flex-shrink-0;
+  }
+
+  .timeline-link-btn {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-slate-50 dark:bg-slate-800 group-hover:bg-primary-600 dark:group-hover:bg-primary-600 rounded-2xl text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 group-hover:text-white dark:group-hover:text-white shadow-sm transition-all active:scale-95;
+  }
+
+  .timeline-list {
+    @apply space-y-0 pl-0 md:pl-4;
+  }
+
+  .timeline-list-item {
+    @apply relative pl-7 md:pl-9 pb-5 last:pb-0;
+  }
+
+  .timeline-line {
+    @apply absolute left-[4.5px] top-4 bottom-0 w-px bg-slate-200 dark:bg-slate-800 z-0;
+  }
+
+  .timeline-dot {
+    @apply absolute left-0 top-2 w-2.5 h-2.5 rounded-full bg-primary-500 dark:bg-primary-600 shadow-sm z-10 transition-all duration-500 group-hover:scale-125;
+  }
+
+  .timeline-list-content {
+    @apply flex flex-col gap-1.5;
+  }
+
+  .timeline-header {
+    @apply flex items-center gap-3;
+  }
+
+  .timeline-link-icon {
+    @apply text-slate-400 dark:text-slate-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors;
+  }
+
+  .timeline-box {
+    @apply p-1 md:p-2;
+  }
+}
