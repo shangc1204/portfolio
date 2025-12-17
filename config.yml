@@ -60,10 +60,7 @@ locales:
             - title: Interests
               icon: heart
               value:
-                - B-boying (Breaking)
-                - Gomoku
                 - Music
-                - Running
           contact:
             - label: RIKEN Email
               value: cheng.shang@riken.jp
@@ -71,10 +68,7 @@ locales:
             - label: Gmail
               value: shangc1204@gmail.com
               icon: fa6-brands:google
-            - label: UTokyo Email
-              value: c-shang@iis.u-tokyo.ac.jp
-              icon: building-columns
-          slogan: Theoretical physics is the pursuit of understanding the fundamental structure of reality through logic and beauty.
+          slogan: 🗿 Give civilization to time.
 
       - type: experience
         id: education
