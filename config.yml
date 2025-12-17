@@ -13,9 +13,8 @@ locales:
       name: Cheng Shang
       welcome: 👋 Hi there, I am
       titles:
-        - Theoretical Physics Researcher
-        - ♐ Sagittarius
-        - INTJ (MBTI)
+        - ℏ Theoretical Physics Researcher
+        - ♜ INTJ (MBTI); Sagittarius
       avatar: /avatar.avif
       bgImage: /bg.avif
       medias:
