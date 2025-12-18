@@ -68,6 +68,11 @@ export interface LocaleConfig {
      * 联系方式标签
      */
     contact?: string;
+    /**
+     * Label for detail link
+     * 详情链接标签
+     */
+    detail?: string;
   };
 }
 

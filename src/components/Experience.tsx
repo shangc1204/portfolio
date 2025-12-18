@@ -102,7 +102,7 @@ export const Experience: FC<ExperienceProps> = ({ items, types = {} }) => {
               <div className="flex flex-col gap-2 md:gap-3">
                 {/* Top Meta: Time & Location */}
                 <div className="experience-meta">
-                  <span className="badge">{time}</span>
+                  <span className="time">{time}</span>
                   <div className="experience-location">
                     <Icon icon="location-dot" className="flex-shrink-0" />
                     <span className="block min-w-0 text-left leading-tight">

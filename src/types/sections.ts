@@ -3,6 +3,7 @@ import type { CardItem } from "../components/Cards.js";
 import type { ExperienceItem } from "../components/Experience.js";
 import type { GalleryItem } from "../components/Gallery.js";
 import type { ListItem, ListProps } from "../components/List.js";
+import type { MarkdownProps } from "../components/Markdown.js";
 import type { ProfileData } from "../components/Profile.js";
 import type { SectionBase } from "../components/SectionWrapper.js";
 import type { TimelineItem, TimelineProps } from "../components/Timeline.js";
@@ -59,12 +60,7 @@ export interface GallerySection extends SectionBase {
 
 export interface MarkdownSection extends SectionBase {
   type: "markdown";
-  data: string;
-  /**
-   * Whether to display as a card
-   * 是否显示为卡片
-   */
-  card?: boolean;
+  data: MarkdownProps;
 }
 
 /**

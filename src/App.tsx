@@ -125,7 +125,7 @@ export const App: FC<{ initialLocale?: string }> = ({ initialLocale }) => {
       }
 
       case "timeline":
-        return <Timeline items={section.data} style={section.style} />;
+        return <Timeline items={section.data} ui={section.ui} />;
 
       case "cards":
         return <Cards items={section.data} locale={localePath} />;
@@ -137,7 +137,9 @@ export const App: FC<{ initialLocale?: string }> = ({ initialLocale }) => {
         return <Gallery items={section.data} />;
 
       case "markdown":
-        return <Markdown content={section.data} card={section.card} />;
+        return (
+          <Markdown content={section.data.content} card={section.data.card} />
+        );
       default:
         return null;
     }

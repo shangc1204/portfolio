@@ -85,7 +85,7 @@ const processSection = (section: Section): Section => {
       break;
 
     case "markdown":
-      result.data = renderMarkdown(result.data);
+      result.data.content = renderMarkdown(result.data.content);
       break;
   }
 

@@ -54,5 +54,5 @@ export interface HeroConfig {
    * Social media links
    * 社交媒体链接
    */
-  medias: HeroMedia[];
+  medias?: HeroMedia[];
 }

@@ -7,8 +7,8 @@ import type {
   GallerySection,
   HeroConfig,
   ListSection,
+  MarkdownSection,
   NavbarConfig,
-  ParagraphSection,
   ProfileSection,
   Section,
   TimelineSection,
@@ -53,6 +53,6 @@ export const defineListSection = (config: ListSection): ListSection => config;
 export const defineGallerySection = (config: GallerySection): GallerySection =>
   config;
 
-export const defineParagraphSection = (
-  config: ParagraphSection,
-): ParagraphSection => config;
+export const defineMarkdownSection = (
+  config: MarkdownSection,
+): MarkdownSection => config;

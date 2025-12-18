@@ -339,7 +339,8 @@ locales:
         id: closing
         title: Looking Forward
         icon: star
-        data: I am always looking for collaborative opportunities at the intersection of **quantum complexity** and **open quantum systems**. Feel free to reach out for research discussions or joint explorations of the fundamental structures of our universe.
+        data:
+          content: I am always looking for collaborative opportunities at the intersection of **quantum complexity** and **open quantum systems**. Feel free to reach out for research discussions or joint explorations of the fundamental structures of our universe.
 
     footer:
       copyright: © 2025 Cheng Shang. All rights reserved.
@@ -681,7 +682,8 @@ locales:
         id: closing
         title: 未来展望
         icon: star
-        data: 我始终期待在 **量子复杂性** 与 **开放量子系统** 的交叉领域展开合作。如果您对科研讨论或共同探索宇宙的基本结构感兴趣，欢迎通过邮箱与我联系。
+        data:
+          content: 我始终期待在 **量子复杂性** 与 **开放量子系统** 的交叉领域展开合作。如果您对科研讨论或共同探索宇宙的基本结构感兴趣，欢迎通过邮箱与我联系。
 
     footer:
       copyright: © 2025 尚 程. 保留所有权利。

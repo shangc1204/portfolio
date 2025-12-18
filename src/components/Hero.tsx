@@ -63,21 +63,23 @@ export const Hero: FC<Props> = ({ hero, locale }) => {
             </div>
           </div>
 
-          <div className="hero-social-links">
-            {hero.medias.map((media, idx) => (
-              <a
-                key={idx}
-                href={media.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group hero-btn"
-                title={media.name}
-              >
-                <Icon icon={media.icon} className="text-xl" />
-                <span className="hero-social-btn-text">{media.name}</span>
-              </a>
-            ))}
-          </div>
+          {hero.medias && (
+            <div className="hero-social-links">
+              {hero.medias.map((media, idx) => (
+                <a
+                  key={idx}
+                  href={media.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group hero-btn"
+                  title={media.name}
+                >
+                  <Icon icon={media.icon} className="text-xl" />
+                  <span className="hero-social-btn-text">{media.name}</span>
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 

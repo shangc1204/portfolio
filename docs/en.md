@@ -14,14 +14,14 @@ Supported configuration formats: `config.ts`, `config.js`, `config.json`, `confi
 The configuration file exports a `Config` object by default, containing the following fields:
 
 - `locales`:
-  - Type: `Record<string, LocaleConfig>` (optional)
+  - Type: `Record<string, LocaleConfig>`
   - Details: Multi-language configuration map. Keys are path prefixes (e.g., `"/"`, `"/zh/"`), and values are `LocaleConfig` object
 
 - `config`：
-  - Type: `Config` (optional)
+  - Type: `GlobalConfig` (optional)
   - Details: Global configuration.
 
-## Config Object
+## Global Config Object
 
 The optional `config` object contains the following fields:
 
@@ -44,15 +44,15 @@ The optional `config` object contains the following fields:
     - Details: Language code (e.g., "en", "zh-CN").
 
   - `langName`:
-    - Type: String
+    - Type: String (optional)
     - Details: Language display name (e.g., "English", "简体中文").
 
   - `title`:
-    - Type: String
+    - Type: String (optional)
     - Details: Website title shown in the document title and header.
 
   - `description`:
-    - Type: String
+    - Type: String (optional)
     - Details: Meta description for SEO and social previews.
 
   - `hero`:
@@ -63,7 +63,7 @@ The optional `config` object contains the following fields:
     - Type: Object (optional)
     - Details: Navigation bar configuration (see `Navigation Bar` below).
 
-  - `contents`:
+  - `sections`:
     - Type: Array
     - Details: Main content sections for the locale. Each item is a section object (see `Content Blocks`).
 
@@ -80,6 +80,9 @@ The optional `config` object contains the following fields:
     - `contact`:
       - Type: String (optional)
       - Details: Label for the contact section.
+    - `detail`:
+      - Type: String
+      - Details: Label for the detail link.
 
 ## Hero Section (`hero`)
 
@@ -104,7 +107,7 @@ The optional `config` object contains the following fields:
     - Details: URL to the avatar image (relative to `public/` or absolute).
 
   - `bgImage`:
-    - Type: String (optional)
+    - Type: String
     - Details: Background image URL for the hero header.
 
   - `medias`:
@@ -136,9 +139,9 @@ The optional `config` object contains the following fields:
         - Type: String
         - Details: Target content block id (prefixed with `#`, e.g., `#profile`).
 
-## Content Blocks (`contents`)
+## Content Blocks (`sections`)
 
-- `contents`:
+- `sections`:
   - Type: Array
   - Details: Main sections for the page. Each item is a section object with the following fields:
 
@@ -158,10 +161,6 @@ The optional `config` object contains the following fields:
     - Type: String (optional)
     - Details: Icon class for the section header.
 
-  - `subtitle`:
-    - Type: String (optional)
-    - Details: Section subtitle or short description.
-
   - `data`:
     - Type: Any
     - Details: Component-specific payload. See each component type below for schema.
@@ -172,132 +171,156 @@ The optional `config` object contains the following fields:
   - Type: Component
   - Details: Personal information section.
 
-  - `fields`:
-    - Type: `Array<ProfileField>` (optional)
-    - Details: Custom fields such as location, skills, etc.
-      - `title`:
-        - Type: String
-        - Details: Field label.
-      - `value`:
-        - Type: `string | Array<string>`
-        - Details: Field value (markdown supported or tag list).
-      - `icon`:
-        - Type: String (optional)
-        - Details: Icon name for the field.
+  - `data`:
+    - `fields`:
+      - Type: `Array<ProfileField>` (optional)
+      - Details: Custom fields such as location, skills, etc.
+        - `title`:
+          - Type: String
+          - Details: Field label.
+        - `value`:
+          - Type: `string | Array<string>`
+          - Details: Field value (markdown supported or tag list).
+        - `icon`:
+          - Type: String (optional)
+          - Details: Icon name for the field.
 
-  - `contacts`:
-    - Type: `Array<ProfileContactItem>` (optional)
-    - Details: Contact entries.
-      - `label`:
-        - Type: String
-        - Details: Contact label (e.g., 'Email').
-      - `value`:
-        - Type: String
-        - Details: Contact value (email, phone, etc.).
-      - `link`:
-        - Type: String (optional)
-        - Details: Explicit URL; if omitted email addresses are auto-detected.
-      - `icon`:
-        - Type: String (optional)
-        - Details: Icon name.
+    - `contacts`:
+      - Type: `Array<ProfileContactItem>` (optional)
+      - Details: Contact entries.
+        - `label`:
+          - Type: String
+          - Details: Contact label (e.g., 'Email').
+        - `value`:
+          - Type: String
+          - Details: Contact value (email, phone, etc.).
+        - `link`:
+          - Type: String (optional)
+          - Details: Explicit URL; if omitted email addresses are auto-detected.
+        - `icon`:
+          - Type: String (optional)
+          - Details: Icon name.
 
-  - `slogan`:
-    - Type: String (optional)
-    - Details: Personal motto (markdown supported).
+    - `slogan`:
+      - Type: String (optional)
+      - Details: Personal motto (markdown supported).
 
 - `experience` (type: `experience`):
   - Type: Component
   - Details: Vertical timeline for work, study, volunteer, project entries.
 
-  - Item schema (ExperienceItem):
-    - `type`:
-      - Type: String
-      - Details: Experience category (built-in 'study' | 'work' | 'volunteer', or custom).
-    - `place`:
-      - Type: String
-      - Details: Institution or company name.
-    - `title`:
-      - Type: String (optional)
-      - Details: Role or degree.
-    - `time`:
-      - Type: String
-      - Details: Time period (e.g., '2021 - 2024').
-    - `content`:
-      - Type: String (optional)
-      - Details: Main content (markdown supported).
-    - `description`:
-      - Type: String (optional)
-      - Details: Additional details or long description.
-    - `icon`:
-      - Type: String (optional)
-      - Details: Override icon for the timeline node.
+  - `data`: `Array<ExperienceItem>`
+    - Item schema (ExperienceItem):
+      - `type`:
+        - Type: String
+        - Details: Experience category (built-in 'study' | 'work' | 'volunteer', or custom).
+      - `place`:
+        - Type: String
+        - Details: Institution or company name.
+      - `title`:
+        - Type: String (optional)
+        - Details: Role or degree.
+      - `time`:
+        - Type: String
+        - Details: Time period (e.g., '2021 - 2024').
+      - `content`:
+        - Type: String (optional)
+        - Details: Main content (markdown supported).
+      - `description`:
+        - Type: String (optional)
+        - Details: Additional details or long description.
+      - `icon`:
+        - Type: String (optional)
+        - Details: Override icon for the timeline node.
 
 - `banner` (type: `banner`):
   - Type: Component
   - Details: High-impact call-to-action block.
 
-  - `content`:
-    - Type: String
-    - Details: Main content (markdown supported).
+  - `data`:
+    - `header`:
+      - Type: String (optional)
+      - Details: Banner header text.
 
-  - `footer`:
-    - Type: String (optional)
-    - Details: Footer text displayed below content.
+    - `tags` :
+      - Type: `string | string[]` (optional)
+      - Details: Tag or tag list displayed above the header.
 
-  - `actions`:
-    - Type: `Array<BannerAction>`
-    - Details: Action buttons.
-      - `label`:
-        - Type: String
-        - Details: Button label.
-      - `link`:
-        - Type: String
-        - Details: Target URL.
-      - `primary`:
-        - Type: Boolean (optional)
-        - Details: Use emphasized style when true.
+    - `content`:
+      - Type: String (optional)
+      - Details: Main content (markdown supported).
+
+    - `footer`:
+      - Type: String (optional)
+      - Details: Footer text displayed below content.
+
+    - `actions`:
+      - Type: `Array<BannerAction>` (optional)
+      - Details: Action buttons.
+        - `label`:
+          - Type: String
+          - Details: Button label.
+        - `link`:
+          - Type: String
+          - Details: Target URL.
+        - `primary`:
+          - Type: Boolean (optional)
+          - Details: Use emphasized style when true.
 
 - `timeline` (type: `timeline`):
   - Type: Component
   - Details: Horizontal timeline or news list.
 
-  - Item schema:
-    - `year`:
+  - `ui`:
+    - `detail`:
       - Type: String
-      - Details: Year or date string.
-    - `content`:
-      - Type: String
-      - Details: Event description (markdown supported).
-    - `link`:
-      - Type: String (optional)
-      - Details: URL associated with the event.
-    - `linkText`:
-      - Type: String (optional)
-      - Details: Link label to show.
+      - Details: Label for the detail link.
+
+  - `data`: `Array<TimelineItem>`
+    - Item schema:
+      - `year`:
+        - Type: `string | number`
+        - Details: Year or date string.
+      - `content`:
+        - Type: String
+        - Details: Event description (markdown supported).
+      - `link`:
+        - Type: String (optional)
+        - Details: URL associated with the event.
+      - `linkText`:
+        - Type: String (optional)
+        - Details: Link label to show.
 
 - `cards` (type: `cards`):
   - Type: Component
   - Details: Grid layout for project or work cards.
 
-  - Card schema:
-    - `title`:
-      - Type: String
-      - Details: Card title.
-    - `category`:
-      - Type: String (optional)
-      - Details: Category label.
-    - `link`:
-      - Type: String
-      - Details: Destination URL.
-    - `description`:
-      - Type: String (optional)
-      - Details: Card description.
-    - `action`:
-      - Type: String (optional)
-      - Details: Action button label.
-    - `icon`:
-      - Type: String (optional)
-      - Details: Icon name for the action.
+  - `data`: `Array<CardItem>`
+    - Card schema:
+      - `title`:
+        - Type: String
+        - Details: Card title.
+      - `logo`:
+        - Type: `string | { light: string; dark: string }` (optional)
+        - Details: Logo URL or object with light/dark mode URLs.
+      - `category`:
+        - Type: String (optional)
+        - Details: Category label.
+      - `description`:
+        - Type: String (optional)
+        - Details: Card description.
+      - `actions`:
+        - Type: `Array<CardAction>` (optional)
+        - Details: Action buttons
+          - `text`:
+            - Type: String
+            - Details: Button label.
+          - `link`:
+            - Type: String (optional)
+            - Details: Action link.
+          - `icon`:
+            - Type: String (optional)
+            - Details: Icon name for the action.
 
 - `list` (type: `list`):
   - Type: Component
@@ -307,49 +330,52 @@ The optional `config` object contains the following fields:
     - Type: String (optional)
     - Details: Marker style ('circle', 'square', 'diamond', 'check', 'none', 'number'). Default: 'number'.
 
-  - Item schema:
-    - String:
-      - Type: String
-      - Details: Markdown-supported content.
-    - Object:
-      - `text`:
+  - `data`: `Array<ListItem | string>`
+    - Item schema:
+      - String:
         - Type: String
-        - Details: Content text (markdown supported).
-      - `link`:
-        - Type: String (optional)
-        - Details: Optional URL for the list item.
+        - Details: Markdown-supported content.
+      - Object:
+        - `text`:
+          - Type: String
+          - Details: Content text (markdown supported).
+        - `link`:
+          - Type: String (optional)
+          - Details: Optional URL for the list item.
 
 - `gallery` (type: `gallery`):
   - Type: Component
   - Details: Masonry photo wall with lightbox.
 
-  - Item schema (GalleryItem):
-    - `url`:
-      - Type: String
-      - Details: Image URL.
-    - `title`:
-      - Type: String
-      - Details: Image title.
-    - `location`:
-      - Type: String (optional)
-      - Details: Location metadata.
-    - `date`:
-      - Type: String (optional)
-      - Details: Date metadata.
-    - `description`:
-      - Type: String (optional)
-      - Details: Long-form story (markdown supported).
+  - `data`: `Array<GalleryItem>`
+    - Item schema (GalleryItem):
+      - `url`:
+        - Type: String
+        - Details: Image URL.
+      - `title`:
+        - Type: String
+        - Details: Image title.
+      - `location`:
+        - Type: String (optional)
+        - Details: Location metadata.
+      - `date`:
+        - Type: `string | number` (optional)
+        - Details: Date metadata.
+      - `description`:
+        - Type: String (optional)
+        - Details: Long-form story (markdown supported).
 
-- `paragraph` (type: `paragraph`):
+- `markdown` (type: `markdown`):
   - Type: Component
   - Details: Simple Markdown/HTML content block.
 
-  - `content`:
-    - Type: String
-    - Details: Text content (Markdown or HTML supported).
-  - `card`:
-    - Type: Boolean (optional)
-    - Details: Whether to render the paragraph as a card (default: false).
+  - `data`:
+    - `content`:
+      - Type: String
+      - Details: Text content (Markdown or HTML supported).
+    - `card`:
+      - Type: Boolean (optional)
+      - Details: Whether to render the paragraph as a card (default: false).
 
 ## Footer (`footer`)
 

@@ -39,16 +39,20 @@ export interface ProfileField {
    * 字段标题
    */
   title: string;
-  /**
-   * Icon for the field
-   * 字段图标
-   */
-  icon?: string;
+
   /**
    * Value of the field (Markdown string or list of strings)
    * 字段值 (Markdown 字符串或字符串列表)
    */
   value: string | string[];
+
+  /**
+   * Icon for the field
+   * 字段图标
+   *
+   * @default "envelope"
+   */
+  icon?: string;
 }
 
 /**

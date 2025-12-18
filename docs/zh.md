@@ -9,235 +9,392 @@
 
 支持的配置文件格式：`config.ts`, `config.js`, `config.json`, `config.yml`, `config.yaml`。
 
-## 配置结构 (`Config`)
+## 配置结构
 
 配置文件默认导出一个 `Config` 对象，包含以下字段：
 
-- `locales`: 对象 (Object). 多语言配置映射。键是路径前缀 (例如 `"/"`, `"/zh/"`)，值是 `LocaleConfig` 对象。
-- `experienceStyles`: 可选对象 (Optional Object). 自定义经历组件的样式映射。
+- `locales`:
+  - 类型: `Record<string, LocaleConfig>`
+  - 详情: 多语言配置映射。键是路径前缀 (例如 `"/"`, `"/zh/"`)，值是 `LocaleConfig` 对象。
+
+- `config`:
+  - 类型: `GlobalConfig` (可选)
+  - 详情: 全局配置。
+
+## 全局配置对象 (`GlobalConfig`)
+
+可选的 `config` 对象包含以下字段：
+
+- `experienceTypes`:
+  - 类型: `Record<string, ExperienceTypeConfig>` (可选).
+  - 详情:
+    自定义经历组件的类型。键是类型标识符，值是包含以下字段的 `ExperienceTypeConfig` 对象：
+    - `bgClass`: 字符串。时间轴节点的背景类名 (例如 "bg-indigo-600")。
+    - `icon`: 字符串。时间轴节点的图标名称 (例如 "mdi:briefcase")。
+    - `iconClass`: 字符串。时间轴节点的图标类名 (例如 "text-white")。
 
 ## 多语言配置 (`LocaleConfig`)
 
-在 `locales` 对象中，每个语言的配置包含以下字段：
+- `locales` 条目:
+  - 类型: 对象 (Object)
+  - 详情: 应用程序使用的语言配置映射。每个条目包含以下字段。
 
-- `langName`: 字符串 (String). 语言名称 (例如 "English", "简体中文")。
-- `title`: 字符串 (String). 网站标题。
-- `description`: 字符串 (String). 网站描述。
-- `hero`: 对象 (Object). 首屏区域配置。
-- `navbar`: 可选对象 (Optional Object). 导航栏配置。
-- `contents`: 内容对象数组 (Array of Content objects). 要显示的内容。
-- `footer`: 可选对象 (Optional Object). 页脚配置。
-- `ui`: 可选对象 (Optional Object). 界面翻译字符串。
-  - `themeToggle`: 可选字符串 (Optional String). 主题切换器的提示文本。
-  - `contact`: 可选字符串 (Optional String). 联系方式标签。
+  - `lang`:
+    - 类型: 字符串 (String)
+    - 详情: 语言代码 (例如 "en", "zh-CN")。
+
+  - `langName`:
+    - 类型: 字符串 (String) (可选)
+    - 详情: 语言显示名称 (例如 "English", "简体中文")。
+
+  - `title`:
+    - 类型: 字符串 (String) (可选)
+    - 详情: 在文档标题和页眉中显示的网站标题。
+
+  - `description`:
+    - 类型: 字符串 (String) (可选)
+    - 详情: 用于 SEO 和社交预览的元描述。
+
+  - `hero`:
+    - 类型: 对象 (Object)
+    - 详情: 首屏区域配置 (见下文 `首屏区域`)。
+
+  - `navbar`:
+    - 类型: 对象 (Object) (可选)
+    - 详情: 导航栏配置 (见下文 `导航栏`)。
+
+  - `sections`:
+    - 类型: 数组 (Array)
+    - 详情: 语言的主要内容章节。每个项目都是一个章节对象 (见 `内容块`)。
+
+  - `footer`:
+    - 类型: 对象 (Object) (可选)
+    - 详情: 页脚配置 (见下文 `页脚`)。
+
+  - `ui`:
+    - 类型: 对象 (Object) (可选)
+    - 详情: 界面翻译字符串。
+    - `themeToggle`:
+      - 类型: 字符串 (String) (可选)
+      - 详情: 主题切换控件的提示文本。
+    - `contact`:
+      - 类型: 字符串 (String) (可选)
+      - 详情: 联系方式章节的标签。
+    - `detail`:
+      - 类型: 字符串 (String)
+      - 详情: 详情链接的标签。
 
 ## 首屏区域 (`hero`)
 
-顶部首屏区域的配置。
+- `hero`:
+  - 类型: 对象 (Object)
+  - 详情: 语言的顶部首屏配置。
 
-- `name`: 字符串 (String). 用户姓名。
-- `welcome`: 字符串 (String). 欢迎语。
-- `titles`: 字符串数组 (Array of strings). 在姓名下方通过打字机效果显示的动画头衔。
-- `avatar`: URL 字符串. 头像图片。
-- `bgImage`: URL 字符串. 顶部的全屏背景图片。
-- `medias`: `HeroMedia` 数组. 社交媒体或联系方式链接。
-  - `icon`: 图标名称 (例如 'mdi:github', 'github') 或图片 URL。
-  - `name`: 显示名称。
-  - `link`: URL。
+  - `name`:
+    - 类型: 字符串 (String)
+    - 详情: 显著显示的用户姓名。
+
+  - `welcome`:
+    - 类型: 字符串 (String)
+    - 详情: 简短的欢迎或介绍文本 (例如 "👋 你好，我是")。
+
+  - `titles`:
+    - 类型: `Array<string>`
+    - 详情: 姓名下方打字机动画的头衔。
+
+  - `avatar`:
+    - 类型: 字符串 (String)
+    - 详情: 头像图片的 URL (相对于 `public/` 或绝对路径)。
+
+  - `bgImage`:
+    - 类型: 字符串 (String)
+    - 详情: 首屏页眉的背景图片 URL。
+
+  - `medias`:
+    - 类型: `Array<HeroMedia>` (可选)
+    - 详情: 社交 / 联系链接。
+      - `icon`:
+        - 类型: 字符串 (String)
+        - 详情: 图标名称 (Iconify 或 FontAwesome) 或图片 URL。
+      - `name`:
+        - 类型: 字符串 (String)
+        - 详情: 媒体项目的显示名称。
+      - `link`:
+        - 类型: 字符串 (String)
+        - 详情: 媒体项目的 URL。
 
 ## 导航栏 (`navbar`)
 
-粘性导航栏配置。
+- `navbar`:
+  - 类型: 对象 (Object) (可选)
+  - 详情: 语言的粘性导航栏配置。
 
-- `links`: `NavLink` 数组.
-  - `label`: 显示标签。
-  - `anchor`: 目标内容块的 `id` (前缀为 `#`, 例如 `#profile`)。
+  - `links`:
+    - 类型: `Array<NavLink>`
+    - 详情: 导航链接。
+      - `label`:
+        - 类型: 字符串 (String)
+        - 详情: 导航栏中显示的标签。
+      - `anchor`:
+        - 类型: 字符串 (String)
+        - 详情: 目标内容块 id (带 `#` 前缀，例如 `#profile`)。
 
-## 内容块 (`contents`)
+## 内容块 (`sections`)
 
-这是作品集的核心。它是一个组件配置数组。
+- `sections`:
+  - 类型: 数组 (Array)
+  - 详情: 页面的主要章节。每个项目都是一个具有以下字段的章节对象：
 
-每个对象遵循此通用结构：
+  - `type`:
+    - 类型: 字符串 (String)
+    - 详情: 组件标识符 (例如 'profile', 'experience', 'cards')。
 
-```ts
-{
-  type: string;     // 组件标识符
-  id: string;       // 唯一标识符 (用于导航)
-  title: string;    // 章节标题
-  icon?: string;    // 可选章节图标类名
-  subtitle?: string;// 可选章节副标题
-  data: any;        // 组件特定数据
-  // 某些组件可能具有其他属性
-}
-```
+  - `id`:
+    - 类型: 字符串 (String)
+    - 详情: 用于导航锚点的唯一 id。
+
+  - `title`:
+    - 类型: 字符串 (String)
+    - 详情: 页面上显示的章节标题。
+
+  - `icon`:
+    - 类型: 字符串 (String) (可选)
+    - 详情: 章节页眉的图标类名。
+
+  - `data`:
+    - 类型: 任意 (Any)
+    - 详情: 组件特定负载。有关架构，请参见下面的每个组件类型。
 
 ## 支持的组件
 
-### 1. 个人资料 (`profile`)
+- `profile` (类型: `profile`):
+  - 类型: 组件 (Component)
+  - 详情: 个人信息章节。
 
-显示自定义字段、可点击的联系信息和可选标语。
+  - `data`:
+    - `fields`:
+      - 类型: `Array<ProfileField>` (可选)
+      - 详情: 自定义字段，如位置、技能等。
+        - `title`:
+          - 类型: 字符串 (String)
+          - 详情: 字段标签。
+        - `value`:
+          - 类型: `string | Array<string>`
+          - 详情: 字段值 (支持 markdown 或标签列表)。
+        - `icon`:
+          - 类型: 字符串 (String) (可选)
+          - 详情: 字段的图标名称。
 
-- **数据结构** (`ProfileData`):
-  - `fields`: `ProfileField` 数组.
-    - `title`: 字符串 (String). 字段标题。
-    - `icon`: 字符串 (String). 字段图标。
-    - `value`: 字符串 (String, 支持 markdown) 或字符串数组。
-  - `contact`: `ProfileContactItem` 数组.
-    - `label`: 字符串 (String). 联系方式标签。
-    - `value`: 字符串 (String). 联系方式值。
-    - `link`: 可选 URL (Optional URL, 如果未提供，默认为 `mailto:value`)。
-    - `icon`: 可选图标类名 (Optional icon class).
-  - `slogan`: 可选字符串 (Optional String, 支持 markdown)。
+    - `contacts`:
+      - 类型: `Array<ProfileContactItem>` (可选)
+      - 详情: 联系条目。
+        - `label`:
+          - 类型: 字符串 (String)
+          - 详情: 联系标签 (例如 'Email')。
+        - `value`:
+          - 类型: 字符串 (String)
+          - 详情: 联系值 (电子邮件、电话等)。
+        - `link`:
+          - 类型: 字符串 (String) (可选)
+          - 详情: 显式 URL；如果省略，将自动检测电子邮件地址。
+        - `icon`:
+          - 类型: 字符串 (String) (可选)
+          - 详情: 图标名称。
 
-### 2. 经历 (`experience`)
+    - `slogan`:
+      - 类型: 字符串 (String) (可选)
+      - 详情: 个人座右铭 (支持 markdown)。
 
-突出显示工作经历和学术背景的垂直时间轴。
+- `experience` (类型: `experience`):
+  - 类型: 组件 (Component)
+  - 详情: 工作、学习、志愿者、项目条目的垂直时间轴。
 
-- **数据结构**: `ExperienceItem` 数组:
-  - `type`: 字符串 (String, 例如 `'study'`, `'work'`).
-  - `place`: 字符串 (String). 地点/机构名称。
-  - `title`: 可选字符串 (Optional String). 职位或学位。
-  - `time`: 字符串 (String, 例如 '2021 - 2024').
-  - `content`: 可选字符串 (Optional String, 支持 markdown). 主要内容。
-  - `description`: 可选字符串 (Optional String, 支持 markdown). 额外详细信息。
-  - `icon`: 可选图标名称 (Optional icon name).
+  - `data`: `Array<ExperienceItem>`
+    - 项目架构 (ExperienceItem):
+      - `type`:
+        - 类型: 字符串 (String)
+        - 详情: 经历类别 (内置 'study' | 'work' | 'volunteer'，或自定义)。
+      - `place`:
+        - 类型: 字符串 (String)
+        - 详情: 机构或公司名称。
+      - `title`:
+        - 类型: 字符串 (String) (可选)
+        - 详情: 职位或学位。
+      - `time`:
+        - 类型: 字符串 (String)
+        - 详情: 时间段 (例如 '2021 - 2024')。
+      - `content`:
+        - 类型: 字符串 (String) (可选)
+        - 详情: 主要内容 (支持 markdown)。
+      - `description`:
+        - 类型: 字符串 (String) (可选)
+        - 详情: 额外细节或详细描述。
+      - `icon`:
+        - 类型: 字符串 (String) (可选)
+        - 详情: 时间轴节点的覆盖图标。
 
-### 3. 横幅 (`banner`)
+- `banner` (类型: `banner`):
+  - 类型: 组件 (Component)
+  - 详情: 具有视觉冲击力的号召性用语块。
 
-具有高视觉冲击力的号召性用语块。
+  - `data`:
+    - `header`:
+      - 类型: 字符串 (String) (可选)
+      - 详情: 横幅标题文本。
 
-- **数据结构** (`BannerData`):
-  - `content`: 字符串 (String, 支持 markdown). 主要内容文本。
-  - `footer`: 可选字符串 (Optional String). 页脚文本。
-  - `actions`: `BannerAction` 数组.
-    - `label`: 字符串 (String). 按钮标签。
-    - `link`: 字符串 (String). 按钮 URL。
-    - `primary`: 可选布尔值 (Optional Boolean). 是否使用强调样式。
+    - `tags` :
+      - 类型: `string | string[]` (可选)
+      - 详情: 显示在标题上方的标签或标签列表。
 
-### 4. 时间轴 / 新闻 (`timeline`)
+    - `content`:
+      - 类型: 字符串 (String) (可选)
+      - 详情: 主要内容 (支持 markdown)。
 
-简洁、水平排列的事件或新闻更新列表。
+    - `footer`:
+      - 类型: 字符串 (String) (可选)
+      - 详情: 显示在内容下方的页脚文本。
 
-- **数据结构**: `TimelineItem` 数组:
-  - `year`: 字符串 (String). 年份或日期字符串。
-  - `content`: 字符串 (String, 支持 markdown). 事件内容。
-  - `link`: 可选 URL (Optional URL).
-  - `linkText`: 可选链接标签 (Optional link label).
+    - `actions`:
+      - 类型: `Array<BannerAction>` (可选)
+      - 详情: 操作按钮。
+        - `label`:
+          - 类型: 字符串 (String)
+          - 详情: 按钮标签。
+        - `link`:
+          - 类型: 字符串 (String)
+          - 详情: 目标 URL。
+        - `primary`:
+          - 类型: 布尔值 (Boolean) (可选)
+          - 详情: 为 true 时使用强调样式。
 
-### 5. 卡片 (`cards`)
+- `timeline` (类型: `timeline`):
+  - 类型: 组件 (Component)
+  - 详情: 水平时间轴或新闻列表。
 
-用于项目或论文的高级卡片网格。
+  - `ui`:
+    - `detail`:
+      - 类型: 字符串 (String)
+      - 详情: 详情链接的标签。
 
-- **数据结构**: `CardItem` 数组:
-  - `title`: 字符串 (String). 卡片标题。
-  - `category`: 可选字符串 (Optional String). 类别标签。
-  - `link`: URL。
-  - `description`: 可选字符串 (Optional String). 描述。
-  - `action`: 可选字符串 (Optional String). 操作按钮标签。
-  - `icon`: 可选字符串 (Optional String). 操作按钮图标。
+  - `data`: `Array<TimelineItem>`
+    - 项目架构:
+      - `year`:
+        - 类型: `string | number`
+        - 详情: 年份或日期字符串。
+      - `content`:
+        - 类型: 字符串 (String)
+        - 详情: 事件描述 (支持 markdown)。
+      - `link`:
+        - 类型: 字符串 (String) (可选)
+        - 详情: 与事件关联的 URL。
+      - `linkText`:
+        - 类型: 字符串 (String) (可选)
+        - 详情: 要显示的链接标签。
 
-### 6. 列表 (`list`)
+- `cards` (类型: `cards`):
+  - 类型: 组件 (Component)
+  - 详情: 项目或工作卡片的网格布局。
 
-用于出版物或奖项等列表的多功能组件。
+  - `data`: `Array<CardItem>`
+    - 卡片架构:
+      - `title`:
+        - 类型: 字符串 (String)
+        - 详情: 卡片标题。
+      - `logo`:
+        - 类型: `string | { light: string; dark: string }` (可选)
+        - 详情: Logo URL 或包含浅色/深色模式 URL 的对象。
+      - `category`:
+        - 类型: 字符串 (String) (可选)
+        - 详情: 类别标签。
+      - `description`:
+        - 类型: 字符串 (String) (可选)
+        - 详情: 卡片描述。
+      - `actions`:
+        - 类型: `Array<CardAction>` (可选)
+        - 详情: 操作按钮
+          - `text`:
+            - 类型: 字符串 (String)
+            - 详情: 按钮标签。
+          - `link`:
+            - 类型: 字符串 (String) (可选)
+            - 详情: 操作链接。
+          - `icon`:
+            - 类型: 字符串 (String) (可选)
+            - 详情: 操作按钮的图标名称。
 
-- **额外配置**:
-  - `dot`: 可选字符串 (Optional String). 无序列表的标记样式 (`'circle'`, `'square'`, `'diamond'`, `'check'`, `'none'`, `'number'`），默认为 `'number'`.
-- **数据结构**: `ListItem` 或字符串数组:
-  - 字符串：内容 (支持 markdown)。
-  - `text`: 内容 (String, 支持 markdown).
-  - `link`: 可选 URL (Optional URL).
+- `list` (类型: `list`):
+  - 类型: 组件 (Component)
+  - 详情: 用于出版物、奖项等的灵活列表。
 
-### 7. 画廊 (`gallery`)
+  - `dot`:
+    - 类型: 字符串 (String) (可选)
+    - 详情: 标记样式 ('circle', 'square', 'diamond', 'check', 'none', 'number')。默认值: 'number'。
 
-带有交互式灯箱的瀑布流照片墙。
+  - `data`: `Array<ListItem | string>`
+    - 项目架构:
+      - 字符串:
+        - 类型: 字符串 (String)
+        - 详情: 支持 markdown 的内容。
+      - 对象:
+        - `text`:
+          - 类型: 字符串 (String)
+          - 详情: 内容文本 (支持 markdown)。
+        - `link`:
+          - 类型: 字符串 (String) (可选)
+          - 详情: 列表项的可选 URL。
 
-- **数据结构**: `GalleryItem` 数组:
-  - `url`: 图片 URL。
-  - `title`: 图片标题。
-  - `location`: 可选地点字符串 (Optional String).
-  - `date`: 可选日期字符串 (Optional String).
-  - `description`: 可选长篇故事 (Optional String, 支持 markdown)。
+- `gallery` (类型: `gallery`):
+  - 类型: 组件 (Component)
+  - 详情: 带有灯箱的瀑布流照片墙。
 
-### 8. 段落 (`paragraph`)
+  - `data`: `Array<GalleryItem>`
+    - 项目架构 (GalleryItem):
+      - `url`:
+        - 类型: 字符串 (String)
+        - 详情: 图片 URL。
+      - `title`:
+        - 类型: 字符串 (String)
+        - 详情: 图片标题。
+      - `location`:
+        - 类型: 字符串 (String) (可选)
+        - 详情: 位置元数据。
+      - `date`:
+        - 类型: `string | number` (可选)
+        - 详情: 日期元数据。
+      - `description`:
+        - 类型: 字符串 (String) (可选)
+        - 详情: 长篇故事 (支持 markdown)。
 
-渲染 Markdown 或 HTML 内容的简单文本块。非常适合结论、关于部分或自定义描述。
+- `markdown` (类型: `markdown`):
+  - 类型: 组件 (Component)
+  - 详情: 简单的 Markdown/HTML 内容块。
 
-- **数据结构**: 字符串 (String, 支持 Markdown 或 HTML)。
-- **card**: 布尔值 (Boolean, 默认 `false`). 是否以卡片样式显示（带有背景和边框）。
+  - `data`:
+    - `content`:
+      - 类型: 字符串 (String)
+      - 详情: 文本内容 (支持 Markdown 或 HTML)。
+    - `card`:
+      - 类型: 布尔值 (Boolean) (可选)
+      - 详情: 是否将段落渲染为卡片 (默认值: false)。
 
 ## 页脚 (`footer`)
 
-页脚配置。
+- `footer`:
+  - 类型: 对象 (Object)
+  - 详情: 语言的页脚配置。
 
-- `copyright`: 字符串 (String). 版权文本。
-- `description`: 可选字符串 (Optional String). 页脚描述。
+  - `copyright`:
+    - 类型: 字符串 (String)
+    - 详情: 版权文本。
+  - `description`:
+    - 类型: 字符串 (String) (可选)
+    - 详情: 页脚描述或简短介绍。
 
-## 完整配置示例
+## 图片和图标
 
-以下是一个完整的配置示例 (基于 `src/helper.ts` 提供的辅助函数)：
+您可以始终为图标和图片使用完整 URL (例如 `https://example.com/icon.png`)，或相对于 `public/` 目录的路径 (例如 `/images/icon.png` 对应 `public/images/icon.png`)。
 
-```typescript
-import {
-  defineConfig,
-  defineContents,
-  defineFooterConfig,
-  defineHeroConfig,
-  defineNavbarConfig,
-} from "./src/helper.js";
-
-const hero = defineHeroConfig({
-  name: "你的名字",
-  welcome: "👋 你好，我是",
-  titles: ["开发者", "设计师"],
-  avatar: "/avatar.avif",
-  bgImage: "https://example.com/bg.jpg",
-  medias: [
-    {
-      icon: "mdi:github",
-      name: "GitHub",
-      link: "https://github.com/yourname",
-    },
-  ],
-});
-
-const navbar = defineNavbarConfig({
-  links: [
-    { label: "简介", anchor: "#profile" },
-    { label: "经历", anchor: "#experience" },
-  ],
-});
-
-const footer = defineFooterConfig({
-  copyright: "© 2025 你的名字",
-});
-
-const contents = defineContents([
-  {
-    type: "profile",
-    id: "profile",
-    title: "个人简介",
-    data: {
-      fields: [{ title: "位置", icon: "map-marker", value: "中国" }],
-      contact: [{ label: "Email", value: "email@example.com", icon: "email" }],
-    },
-  },
-]);
-
-export const zh = {
-  langName: "简体中文",
-  title: "我的作品集",
-  hero,
-  navbar,
-  contents,
-  footer,
-};
-
-export default defineConfig({
-  locales: {
-    "/": zh,
-  },
-});
-```
+我们支持来自 [iconify](https://iconify.design/) 的所有图标名称，您可以直接使用 FontAwesome 7 实心图标名称 (例如 `book` 对应 `fa7-solid:book`)，或使用完整的图标名称 (例如 `mdi:github`)。
 
 ## 自定义主题色
 

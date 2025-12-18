@@ -37,7 +37,7 @@
     @apply text-slate-700 dark:text-slate-300 font-bold text-base md:text-lg leading-relaxed;
   }
 
-  .badge {
+  .time {
     @apply text-xs md:text-base font-bold text-primary-600 dark:text-primary-400 px-2 py-0.5 md:px-3 md:py-1;
   }
 }

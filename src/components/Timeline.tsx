@@ -37,13 +37,9 @@ export interface TimelineProps {
    */
   items: TimelineItem[];
 
-  /**
-   * Style of the timeline: "line" or "cards"
-   * 时间轴的样式: "line" 或 "cards"
-   *
-   * @default 'line'
-   */
-  style?: "line" | "cards";
+  ui?: {
+    detail?: string;
+  };
 }
 
 /**
@@ -55,33 +51,37 @@ export interface TimelineProps {
  *
  * 按时间顺序显示事件或新闻项的列表
  */
-export const Timeline: FC<TimelineProps> = ({ items, style = "line" }) => {
-  if (style === "cards") {
-    return (
-      <div className="timeline-cards-grid">
-        {items.map((item, idx) => (
-          <div key={idx} className="group card-base card-hover timeline-card">
-            <div className="timeline-year-col">
-              <span className="timeline-year-text"> {String(item.year)}</span>
+export const Timeline: FC<TimelineProps> = ({ items, ui }) => {
+  return (
+    <div className="timeline">
+      {items.map((item, idx) => (
+        <div key={idx} className="group timeline-item">
+          {/* Timeline Line */}
+          {idx !== items.length - 1 && <div className="timeline-line" />}
+
+          {/* Timeline Node - Simple small solid primary dot */}
+          <div className="timeline-dot" />
+
+          <div className="timeline-content">
+            <div className="timeline-header">
+              <span className="time">{item.year}</span>
             </div>
 
-            <div className="timeline-content-col">
-              <RichContent
-                content={item.content}
-                className="text-content"
-                block
-              />
-            </div>
+            <RichContent
+              content={item.content}
+              className="text-content timeline-box"
+              block
+            />
 
             {item.link && (
-              <div className="timeline-link-col">
+              <div className="timeline-link-wrapper">
                 <a
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="timeline-link-btn"
+                  className="timeline-link"
                 >
-                  {item.linkText ?? "Detail"}
+                  {item.linkText ?? ui?.detail ?? "Detail"}
                   <Icon
                     icon="arrow-up-right-from-square"
                     className="text-[10px]"
@@ -89,50 +89,6 @@ export const Timeline: FC<TimelineProps> = ({ items, style = "line" }) => {
                 </a>
               </div>
             )}
-          </div>
-        ))}
-      </div>
-    );
-  }
-
-  // Default 'line' style
-  return (
-    <div className="timeline-list">
-      {items.map((item, idx) => (
-        <div key={idx} className="group timeline-list-item">
-          {/* Timeline Line */}
-          {idx !== items.length - 1 && <div className="timeline-line" />}
-
-          {/* Timeline Node - Simple small solid primary dot */}
-          <div className="timeline-dot" />
-
-          <div className="timeline-list-content">
-            {/* Year Badge */}
-            <div className="timeline-header">
-              <span className="badge">{item.year}</span>
-              {item.link && (
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="timeline-link-icon"
-                >
-                  <Icon
-                    icon="arrow-up-right-from-square"
-                    className="text-[9px]"
-                  />
-                </a>
-              )}
-            </div>
-
-            {/* Content Box - Reduced padding */}
-            <div className="timeline-box">
-              <RichContent
-                content={item.content}
-                className="text-content"
-                block
-              />
-            </div>
           </div>
         </div>
       ))}
