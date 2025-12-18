@@ -42,6 +42,7 @@ export const Icon: FC<IconProps> = ({ icon, className, style, ...props }) => {
         src={src}
         alt=""
         className={`icon-img ${className ?? ""}`}
+        loading="lazy"
         style={style}
         {...props}
       />

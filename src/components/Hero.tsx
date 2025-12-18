@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import type { HeroConfig } from "../types/index.js";
-import { isCJKLocale } from "../helper.js";
+import { isCJKLocale } from "../utils/index.js";
 import { Icon } from "./Icon.js";
 import { Typewriter } from "./Typewriter.js";
 

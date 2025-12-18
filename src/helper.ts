@@ -1,17 +1,17 @@
 import type { FooterProps } from "./components/Footer.js";
 import type {
-  BannerContent,
-  CardsContent,
+  BannerSection,
+  CardsSection,
   Config,
-  Content,
-  ExperienceContent,
-  GalleryContent,
+  ExperienceSection,
+  GallerySection,
   HeroConfig,
-  ListContent,
+  ListSection,
   NavbarConfig,
-  ParagraphContent,
-  ProfileContent,
-  TimelineContent,
+  ParagraphSection,
+  ProfileSection,
+  Section,
+  TimelineSection,
 } from "./types/index.js";
 
 /**
@@ -25,44 +25,34 @@ export const defineHeroConfig = (config: HeroConfig): HeroConfig => config;
 export const defineNavbarConfig = (config: NavbarConfig): NavbarConfig =>
   config;
 
-export const defineContents = (config: Content[]): Content[] => config;
+export const defineSections = (config: Section[]): Section[] => config;
 
 export const defineFooterConfig = (
   config: Partial<FooterProps>,
 ): Partial<FooterProps> => config;
 
-export const defineProfileContent = (config: ProfileContent): ProfileContent =>
+export const defineProfileSection = (config: ProfileSection): ProfileSection =>
   config;
 
-export const defineExperienceContent = (
-  config: ExperienceContent,
-): ExperienceContent => config;
+export const defineExperienceSection = (
+  config: ExperienceSection,
+): ExperienceSection => config;
 
-export const defineBannerContent = (config: BannerContent): BannerContent =>
+export const defineBannerSection = (config: BannerSection): BannerSection =>
   config;
 
-export const defineTimelineContent = (
-  config: TimelineContent,
-): TimelineContent => config;
+export const defineTimelineSection = (
+  config: TimelineSection,
+): TimelineSection => config;
 
-export const defineCardsContent = (config: CardsContent): CardsContent =>
+export const defineCardsSection = (config: CardsSection): CardsSection =>
   config;
 
-export const defineListContent = (config: ListContent): ListContent => config;
+export const defineListSection = (config: ListSection): ListSection => config;
 
-export const defineGalleryContent = (config: GalleryContent): GalleryContent =>
+export const defineGallerySection = (config: GallerySection): GallerySection =>
   config;
 
-export const defineParagraphContent = (
-  config: ParagraphContent,
-): ParagraphContent => config;
-
-/**
- * Check if the locale is a CJK locale (Chinese, Japanese, Korean)
- * 检查语言环境是否为 CJK 语言环境 (中文、日文、韩文)
- */
-export const isCJKLocale = (locale?: string): boolean => {
-  if (!locale) return false;
-
-  return ["zh", "ja", "ko"].includes(locale);
-};
+export const defineParagraphSection = (
+  config: ParagraphSection,
+): ParagraphSection => config;

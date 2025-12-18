@@ -1,10 +1,9 @@
-# yaml-language-server: $schema=./lib/config.schema.json
-
 locales:
   /:
+    lang: en-US
+    langName: EN
     title: Cheng Shang | Portfolio
     description: The personal portfolio of Cheng Shang, a Theoretical Physics Researcher and World Explorer.
-    langName: EN
     ui:
       themeToggle: Toggle Theme
       contact: Contact
@@ -47,7 +46,7 @@ locales:
         - label: Gallery
           anchor: "#gallery"
 
-    contents:
+    sections:
       - type: profile
         id: profile
         title: Profile
@@ -57,17 +56,21 @@ locales:
             - title: Affiliation
               icon: building-columns
               value: Analytical Quantum Complexity RIKEN Hakubi Research Team
+
             - title: Interests
               icon: heart
               value:
                 - Music
-          contact:
+
+          contacts:
             - label: RIKEN Email
               value: cheng.shang@riken.jp
               icon: envelope
+
             - label: Gmail
               value: shangc1204@gmail.com
               icon: fa6-brands:google
+
           slogan: 🗿 Give civilization to time.
 
       - type: experience
@@ -83,10 +86,11 @@ locales:
             description: at Analytical Quantum Complexity RIKEN Hakubi Research Team
 
           - type: work
-            place: Center for Quantum Computing, Analytical Quantum Complexity RIKEN Hakubi Research Team
+            place: Center for Quantum Computing
             time: Apr. 2023 - Sep. 2024
             title: Junior Research Associate
             content: with Dr. [Tomotaka Kuwahara](https://kuwahara-quantum.com/en/)
+            description: at Analytical Quantum Complexity RIKEN Hakubi Research Team
 
           - type: study
             place: The University of Tokyo, Department of Physics, Japan
@@ -109,9 +113,10 @@ locales:
         id: cfp
         title: Call for Papers
         icon: bullhorn
-        subtitle: |-
-          Special Collection: Exception Points in non-Hermitian Systems
         data:
+          tags: Call for Papers
+          header: |-
+            Special Collection: Exception Points in non-Hermitian Systems
           content: |-
             **Journal**: Discover Physics (Springer Nature)
 
@@ -177,16 +182,18 @@ locales:
           - title: "Suppression of Decoherence in Open Quantum Systems: Resonance and Topological Effects"
             category: Theses
             description: Doctoral Dissertation
-            link: http://hatano-lab.iis.u-tokyo.ac.jp/thesis/dron2024/thesis_shang.pdf
-            action: View PDF
-            icon: file-pdf
+            actions:
+              - text: View PDF
+                link: http://hatano-lab.iis.u-tokyo.ac.jp/thesis/dron2024/thesis_shang.pdf
+                icon: file-pdf
 
           - title: Nonreciprocal Transmission Based on Modulated Optomechanical Systems
             category: Theses
-            link: https://service.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&dbname=CMFD202101&filename=1020826922.nh&uniplatform=OVERSEA
             description: Master’s Thesis
-            action: View PDF
-            icon: file-pdf
+            actions:
+              - text: View PDF
+                link: https://service.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&dbname=CMFD202101&filename=1020826922.nh&uniplatform=OVERSEA
+                icon: file-pdf
 
       - type: list
         id: publications
@@ -328,7 +335,7 @@ locales:
             date: 2024
             description: The sanctuary of knowledge where most of my doctoral dissertation took shape.
 
-      - type: paragraph
+      - type: markdown
         id: closing
         title: Looking Forward
         icon: star
@@ -339,8 +346,9 @@ locales:
       description: Built with Physics and Love.
 
   /zh/:
-    title: 尚程 | 个人主页
+    lang: zh-CN
     langName: 中文
+    title: 尚程 | 个人主页
     ui:
       themeToggle: 切换主题
       contact: 联系方式
@@ -380,7 +388,7 @@ locales:
         - label: 相册
           anchor: "#gallery"
 
-    contents:
+    sections:
       - type: profile
         id: profile
         title: 个人简介
@@ -390,6 +398,7 @@ locales:
             - title: 所属机构
               icon: building-columns
               value: RIKEN Hakubi 研究团队 分析量子复杂性研究组
+
             - title: 个人爱好
               icon: heart
               value:
@@ -397,16 +406,19 @@ locales:
                 - 五子棋
                 - 音乐
                 - 跑步
-          contact:
+
+          contacts:
             - label: RIKEN 邮箱
               value: cheng.shang@riken.jp
               icon: envelope
+
             - label: Gmail
               value: shangc1204@gmail.com
               icon: fa6-brands:google
             - label: 东京大学邮箱
               value: c-shang@iis.u-tokyo.ac.jp
               icon: building-columns
+
           slogan: 理论物理是对通过逻辑与美感来理解现实基本结构的追求。
 
       - type: experience
@@ -447,8 +459,9 @@ locales:
         id: cfp
         title: 特刊征稿
         icon: bullhorn
-        subtitle: "Special Collection: Exception Points in non-Hermitian Systems"
         data:
+          tags: 特刊征稿
+          header: "Special Collection: Exception Points in non-Hermitian Systems"
           content: |-
             **期刊**: Discover Physics (Springer Nature)
 
@@ -511,17 +524,19 @@ locales:
         data:
           - title: 开放量子系统中的退相干抑制：共振与拓扑效应
             category: 学位论文
-            link: http://hatano-lab.iis.u-tokyo.ac.jp/thesis/dron2024/thesis_shang.pdf
             description: 博士论文
-            action: 查看 PDF
-            icon: file-pdf
+            actions:
+              - text: 查看 PDF
+                link: http://hatano-lab.iis.u-tokyo.ac.jp/thesis/dron2024/thesis_shang.pdf
+                icon: file-pdf
 
           - title: 基于可控光力系统的非互易传输
-            link: https://kns.cnki.net/kcms2/article/abstract?v=sKJ9SXrFdEp3keNUa73wzZt2qsRh5sWMxp5xQXa5xpBeTgFa1dFLKxs8M76AJIPfu9z0sGis4GQV4nGLHFPKoy1SHuG1EKoQBfxTZbDpPTdVr8t6MkR_5gBEUgaza4vOHMjGLqFT4ignRy17YZpEbU2JEKK8t6AyW5ra24e4BX52qtBj5VUVcz2R5MufKnOYWiJbdYuAjEI=&language=CHS
             category: 学位论文
             description: 硕士论文
-            action: 查看 PDF
-            icon: file-pdf
+            actions:
+              - text: 查看 PDF
+                link: https://kns.cnki.net/kcms2/article/abstract?v=sKJ9SXrFdEp3keNUa73wzZt2qsRh5sWMxp5xQXa5xpBeTgFa1dFLKxs8M76AJIPfu9z0sGis4GQV4nGLHFPKoy1SHuG1EKoQBfxTZbDpPTdVr8t6MkR_5gBEUgaza4vOHMjGLqFT4ignRy17YZpEbU2JEKK8t6AyW5ra24e4BX52qtBj5VUVcz2R5MufKnOYWiJbdYuAjEI=&language=CHS
+                icon: file-pdf
 
       - type: list
         id: publications
@@ -662,7 +677,7 @@ locales:
             date: 2024
             description: 知识的殿堂，我的博士论文大部分内容在这里成型。
 
-      - type: paragraph
+      - type: markdown
         id: closing
         title: 未来展望
         icon: star

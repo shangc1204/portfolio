@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { RichContent } from "./RichContent.js";
 
-export interface ParagraphProps {
+export interface MarkdownProps {
   /**
    * Content text (Markdown supported)
    * 内容文本 (支持 Markdown)
@@ -15,15 +15,15 @@ export interface ParagraphProps {
 }
 
 /**
- * Paragraph component
+ * Markdown component
  *
  * Displays a simple text block with glassmorphism styling.
  *
- * 段落组件
+ * Markdown 组件
  *
  * 显示带有玻璃拟态样式的简单文本块。
  */
-export const Paragraph: FC<ParagraphProps> = ({ content, card = false }) => {
+export const Markdown: FC<MarkdownProps> = ({ content, card = false }) => {
   if (card)
     return (
       <div className="card-base p-8 md:p-10 text-content font-medium">
@@ -32,7 +32,7 @@ export const Paragraph: FC<ParagraphProps> = ({ content, card = false }) => {
     );
 
   return (
-    <div className="text-content font-medium">
+    <div className="px-2 md:px-4 text-content font-medium">
       <RichContent content={content} />
     </div>
   );

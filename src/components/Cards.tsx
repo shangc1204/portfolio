@@ -1,7 +1,25 @@
 import type { FC } from "react";
-import { isCJKLocale } from "../helper.js";
+import { isCJKLocale } from "../utils/index.js";
 import { Icon } from "./Icon.js";
 import { RichContent } from "./RichContent.js";
+
+export interface CardAction {
+  /**
+   * Action button label (e.g., "View PDF")
+   * 操作按钮标签 (例如 "查看 PDF")
+   */
+  text: string;
+  /**
+   * Link URL
+   * 链接地址
+   */
+  link?: string;
+  /**
+   * Icon class for the action button
+   * 操作按钮的图标类名
+   */
+  icon?: string;
+}
 
 /**
  * Card item for projects or highlights
@@ -15,30 +33,23 @@ export interface CardItem {
   title: string;
 
   /**
-   * Link URL
-   * 链接地址
+   * Optional logo URL or object with light/dark mode URLs
+   * 可选的标志 URL 或包含亮色/暗色模式 URL 的对象
    */
-  link: string;
+  logo?: string | { light: string; dark: string };
+
   /**
    * Category label (e.g., "Thesis")
    * 类别标签 (例如 "学位论文")
    */
   category?: string;
   /**
-   * Action button label (e.g., "View PDF")
-   * 操作按钮标签 (例如 "查看 PDF")
-   */
-  action?: string;
-  /**
-   * Icon class for the action button
-   * 操作按钮的图标类名
-   */
-  icon?: string;
-  /**
    * Optional description
    * 可选描述
    */
   description?: string;
+
+  actions?: CardAction[];
 }
 
 export interface CardsProps {
@@ -69,13 +80,7 @@ export const Cards: FC<CardsProps> = ({ items, locale }) => {
   return (
     <div className="card-grid">
       {items.map((card, idx) => (
-        <a
-          key={idx}
-          href={card.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group card-base card-item card-hover"
-        >
+        <div key={idx} className="card-base card-item">
           <div className="card-decoration" />
           <div className="relative z-10">
             {card.category && (
@@ -83,6 +88,23 @@ export const Cards: FC<CardsProps> = ({ items, locale }) => {
                 {card.category}
               </h4>
             )}
+            {card.logo &&
+              (typeof card.logo === "string" ? (
+                <img
+                  src={card.logo}
+                  alt={card.title}
+                  className="card-logo float-right ml-4 mb-2"
+                  loading="lazy"
+                />
+              ) : (
+                <picture className="card-logo float-right ml-4 mb-2">
+                  <source
+                    media="(prefers-color-scheme: dark)"
+                    srcSet={card.logo.dark}
+                  />
+                  <img src={card.logo.light} alt={card.title} loading="lazy" />
+                </picture>
+              ))}
             <h3 className="card-title">
               <RichContent content={card.title} />
             </h3>
@@ -93,16 +115,34 @@ export const Cards: FC<CardsProps> = ({ items, locale }) => {
                 block
               />
             )}
-            {(card.action || card.icon) && (
-              <span
-                className={`card-action ${isCJK ? "" : "tracking-[0.2em]"}`}
-              >
-                {card.action}
-                {card.icon && <Icon icon={card.icon} className="text-lg" />}
-              </span>
-            )}
+            {card.actions?.map((action, actionIndex) => {
+              const content = (
+                <>
+                  <span>{action.text}</span>
+                  {action.icon && (
+                    <Icon icon={action.icon} className="text-lg inline-block" />
+                  )}
+                </>
+              );
+
+              return action.link ? (
+                <a
+                  key={actionIndex}
+                  href={action.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card-action mr-4"
+                >
+                  {content}
+                </a>
+              ) : (
+                <span key={actionIndex} className="card-action mr-4">
+                  {content}
+                </span>
+              );
+            })}
           </div>
-        </a>
+        </div>
       ))}
     </div>
   );

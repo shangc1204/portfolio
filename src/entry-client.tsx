@@ -9,15 +9,15 @@ if (!rootElement) {
   throw new Error("Could not find root element to mount to");
 }
 
-if (rootElement.hasChildNodes()) {
-  hydrateRoot(
-    rootElement,
+if (import.meta.env.DEV) {
+  createRoot(rootElement).render(
     <StrictMode>
       <App />
     </StrictMode>,
   );
 } else {
-  createRoot(rootElement).render(
+  hydrateRoot(
+    rootElement,
     <StrictMode>
       <App />
     </StrictMode>,

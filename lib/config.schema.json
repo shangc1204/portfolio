@@ -3,12 +3,14 @@
   "title": "Config",
   "type": "object",
   "properties": {
-    "experienceStyles": {
+    "config": {
       "type": "object",
-      "additionalProperties": {
-        "$ref": "#/definitions/ExperienceStyle"
+      "properties": {
+        "experienceTypes": {
+          "$ref": "#/definitions/ExperienceTypes"
+        }
       },
-      "description": "Custom styles for experience types\n自定义经历组件的样式映射"
+      "additionalProperties": false
     },
     "locales": {
       "type": "object",
@@ -16,14 +18,22 @@
         "$ref": "#/definitions/LocaleConfig"
       },
       "description": "Multi-language configuration map. Keys are path prefixes (e.g., \"/\", \"/zh/\")\n多语言配置映射。键是路径前缀 (例如 \"/\", \"/zh/\")"
-    }
+    },
+    "additionalProperties": false
   },
   "required": ["locales"],
   "definitions": {
-    "ExperienceStyle": {
+    "ExperienceTypes": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/ExperienceType"
+      },
+      "description": "Custom styles for experience types\n自定义经历组件的类别映射"
+    },
+    "ExperienceType": {
       "type": "object",
       "properties": {
-        "background": {
+        "bgClass": {
           "type": "string",
           "description": "Background class for the timeline node (e.g., \"bg-indigo-600\")\n时间轴节点的背景类名"
         },
@@ -31,17 +41,22 @@
           "type": "string",
           "description": "Icon class for the timeline node (e.g., \"fa-book-open\")\n时间轴节点的图标类名"
         },
-        "iconBox": {
+        "iconClass": {
           "type": "string",
-          "description": "Background/Text class for the content icon box (e.g., \"bg-indigo-50 text-indigo-600\")\n内容图标框的背景/文本类名"
+          "description": "Background/Text class for the content icon box (e.g., \"bg-indigo-50 text-indigo-600\")\n内容图标框的类名"
         }
       },
-      "required": ["background", "icon", "iconBox"],
-      "description": "Style configuration for experience types\n经历类型的样式配置"
+      "required": ["bgClass", "icon", "iconClass"],
+      "description": "Type configuration for experience\n经历类型的配置",
+      "additionalProperties": false
     },
     "LocaleConfig": {
       "type": "object",
       "properties": {
+        "lang": {
+          "type": "string",
+          "description": "Language code (e.g., \"en\", \"zh-CN\")\n语言代码"
+        },
         "langName": {
           "type": "string",
           "description": "Language name (e.g., \"English\", \"简体中文\")\n语言名称"
@@ -62,12 +77,12 @@
           "$ref": "#/definitions/NavbarConfig",
           "description": "Navbar configuration\n导航栏配置"
         },
-        "contents": {
+        "sections": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Content"
+            "$ref": "#/definitions/Section"
           },
-          "description": "Content to display\n要显示的内容"
+          "description": "Section to display\n要显示的内容"
         },
         "footer": {
           "$ref": "#/definitions/FooterProps",
@@ -88,8 +103,9 @@
           "description": "UI translation strings\n界面翻译字符串"
         }
       },
-      "required": ["hero", "contents"],
-      "description": "Main application configuration\n应用程序主配置"
+      "required": ["lang", "hero", "sections"],
+      "description": "Main locale configuration\n语言主配置",
+      "additionalProperties": false
     },
     "HeroConfig": {
       "type": "object",
@@ -126,7 +142,8 @@
         }
       },
       "required": ["name", "welcome", "titles", "avatar", "bgImage", "medias"],
-      "description": "Hero section configuration\n首屏区域配置"
+      "description": "Hero section configuration\n首屏区域配置",
+      "additionalProperties": false
     },
     "HeroMedia": {
       "type": "object",
@@ -145,7 +162,8 @@
         }
       },
       "required": ["icon", "name", "link"],
-      "description": "Portfolio media link configuration\n个人作品集媒体链接配置"
+      "description": "Portfolio media link configuration\n个人作品集媒体链接配置",
+      "additionalProperties": false
     },
     "NavbarConfig": {
       "type": "object",
@@ -159,7 +177,8 @@
         }
       },
       "required": ["links"],
-      "description": "Navbar configuration\n导航栏配置"
+      "description": "Navbar configuration\n导航栏配置",
+      "additionalProperties": false
     },
     "NavLink": {
       "type": "object",
@@ -174,7 +193,8 @@
         }
       },
       "required": ["label", "anchor"],
-      "description": "Navigation link configuration\n导航链接配置"
+      "description": "Navigation link configuration\n导航链接配置",
+      "additionalProperties": false
     },
     "FooterProps": {
       "type": "object",
@@ -189,38 +209,23 @@
         }
       },
       "required": ["copyright"],
-      "description": "Footer configuration\n页脚配置"
+      "description": "Footer configuration\n页脚配置",
+      "additionalProperties": false
     },
-    "Content": {
+    "Section": {
       "oneOf": [
-        {
-          "$ref": "#/definitions/ProfileContent"
-        },
-        {
-          "$ref": "#/definitions/ExperienceContent"
-        },
-        {
-          "$ref": "#/definitions/BannerContent"
-        },
-        {
-          "$ref": "#/definitions/TimelineContent"
-        },
-        {
-          "$ref": "#/definitions/CardsContent"
-        },
-        {
-          "$ref": "#/definitions/ListContent"
-        },
-        {
-          "$ref": "#/definitions/GalleryContent"
-        },
-        {
-          "$ref": "#/definitions/ParagraphContent"
-        }
+        { "$ref": "#/definitions/ProfileSection" },
+        { "$ref": "#/definitions/ExperienceSection" },
+        { "$ref": "#/definitions/BannerSection" },
+        { "$ref": "#/definitions/TimelineSection" },
+        { "$ref": "#/definitions/CardsSection" },
+        { "$ref": "#/definitions/ListSection" },
+        { "$ref": "#/definitions/GallerySection" },
+        { "$ref": "#/definitions/MarkdownSection" }
       ],
       "description": "Configuration for a content block\n内容块配置"
     },
-    "ContentBase": {
+    "SectionBase": {
       "type": "object",
       "properties": {
         "id": {
@@ -239,14 +244,11 @@
           "type": "string",
           "description": "Section subtitle\n章节副标题"
         }
-      },
-      "required": ["id", "title"]
+      }
     },
-    "ProfileContent": {
+    "ProfileSection": {
       "allOf": [
-        {
-          "$ref": "#/definitions/ContentBase"
-        },
+        { "$ref": "#/definitions/SectionBase" },
         {
           "type": "object",
           "properties": {
@@ -271,7 +273,7 @@
           },
           "description": "List of custom fields\n自定义字段列表"
         },
-        "contact": {
+        "contacts": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ProfileContactItem"
@@ -283,8 +285,8 @@
           "description": "Optional slogan text (Markdown supported)\n可选标语文本 (支持 Markdown)"
         }
       },
-      "required": ["fields", "contact"],
-      "description": "Profile data structure\n个人资料数据结构"
+      "description": "Profile data structure\n个人资料数据结构",
+      "additionalProperties": false
     },
     "ProfileField": {
       "type": "object",
@@ -299,9 +301,7 @@
         },
         "value": {
           "oneOf": [
-            {
-              "type": "string"
-            },
+            { "type": "string" },
             {
               "type": "array",
               "items": {
@@ -313,7 +313,8 @@
         }
       },
       "required": ["title", "icon", "value"],
-      "description": "Profile field item\n个人资料字段项"
+      "description": "Profile field item\n个人资料字段项",
+      "additionalProperties": false
     },
     "ProfileContactItem": {
       "type": "object",
@@ -336,13 +337,12 @@
         }
       },
       "required": ["label", "value"],
-      "description": "Contact item for profile\n个人资料联系方式项"
+      "description": "Contact item for profile\n个人资料联系方式项",
+      "additionalProperties": false
     },
-    "ExperienceContent": {
+    "ExperienceSection": {
       "allOf": [
-        {
-          "$ref": "#/definitions/ContentBase"
-        },
+        { "$ref": "#/definitions/SectionBase" },
         {
           "type": "object",
           "properties": {
@@ -393,13 +393,12 @@
         }
       },
       "required": ["type", "place", "time"],
-      "description": "Experience item (work or study)\n经历项 (工作或学习)"
+      "description": "Experience item (work or study)\n经历项 (工作或学习)",
+      "additionalProperties": false
     },
-    "BannerContent": {
+    "BannerSection": {
       "allOf": [
-        {
-          "$ref": "#/definitions/ContentBase"
-        },
+        { "$ref": "#/definitions/SectionBase" },
         {
           "type": "object",
           "properties": {
@@ -417,13 +416,29 @@
     "BannerData": {
       "type": "object",
       "properties": {
+        "header": {
+          "type": "string",
+          "description": "Header text (Markdown supported)\n标题文本 (支持 Markdown)"
+        },
         "content": {
           "type": "string",
           "description": "Main content text (Markdown supported)\n主要内容文本 (支持 Markdown)"
         },
         "footer": {
           "type": "string",
-          "description": "Optional footer text to display at the bottom\n底部显示的可选页脚文本"
+          "description": "Footer text (Markdown supported)\n页脚文本 (支持 Markdown)"
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            { "type": "string" }
+          ],
+          "description": "Tags\n标签"
         },
         "actions": {
           "type": "array",
@@ -434,7 +449,8 @@
         }
       },
       "required": ["content", "actions"],
-      "description": "Banner data structure\nBanner 数据结构"
+      "description": "Banner data structure\nBanner 数据结构",
+      "additionalProperties": false
     },
     "BannerAction": {
       "type": "object",
@@ -454,13 +470,12 @@
         }
       },
       "required": ["label", "link"],
-      "description": "Action button configuration for the banner\nBanner 的操作按钮配置"
+      "description": "Action button configuration for the banner\nBanner 的操作按钮配置",
+      "additionalProperties": false
     },
-    "TimelineContent": {
+    "TimelineSection": {
       "allOf": [
-        {
-          "$ref": "#/definitions/ContentBase"
-        },
+        { "$ref": "#/definitions/SectionBase" },
         {
           "type": "object",
           "properties": {
@@ -489,9 +504,7 @@
       "properties": {
         "year": {
           "oneOf": [
-            {
-              "type": "string"
-            },
+            { "type": "string" },
             {
               "type": "number"
             }
@@ -512,13 +525,12 @@
         }
       },
       "required": ["year", "content"],
-      "description": "Timeline item for news or events\n新闻或事件的时间轴项"
+      "description": "Timeline item for news or events\n新闻或事件的时间轴项",
+      "additionalProperties": false
     },
-    "CardsContent": {
+    "CardsSection": {
       "allOf": [
-        {
-          "$ref": "#/definitions/ContentBase"
-        },
+        { "$ref": "#/definitions/SectionBase" },
         {
           "type": "object",
           "properties": {
@@ -543,35 +555,68 @@
           "type": "string",
           "description": "Card title\n卡片标题"
         },
-        "link": {
-          "type": "string",
-          "description": "Link URL\n链接地址"
+        "logo": {
+          "oneOf": [
+            { "type": "string" },
+            {
+              "type": "object",
+              "properties": {
+                "light": {
+                  "type": "string"
+                },
+                "dark": {
+                  "type": "string"
+                }
+              },
+              "required": ["light", "dark"],
+              "additionalProperties": false
+            }
+          ],
+          "description": "Logo image URL or object with light/dark URLs\nLogo 图片链接或包含亮/暗模式链接的对象"
         },
         "category": {
           "type": "string",
           "description": "Category label (e.g., \"Thesis\")\n类别标签 (例如 \"学位论文\")"
         },
-        "action": {
-          "type": "string",
-          "description": "Action button label (e.g., \"View PDF\")\n操作按钮标签 (例如 \"查看 PDF\")"
-        },
-        "icon": {
-          "type": "string",
-          "description": "Icon class for the action button\n操作按钮的图标类名"
+        "actions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CardAction"
+          },
+          "description": "List of action buttons\n操作按钮列表"
         },
         "description": {
           "type": "string",
           "description": "Optional description\n可选描述"
         }
       },
-      "required": ["title", "link"],
-      "description": "Card item for projects or highlights\n项目或亮点的卡片项"
+      "required": ["title"],
+      "description": "Card item for projects or highlights\n项目或亮点的卡片项",
+      "additionalProperties": false
     },
-    "ListContent": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/ContentBase"
+    "CardAction": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Action button label\n操作按钮标签"
         },
+        "link": {
+          "type": "string",
+          "description": "Link URL\n链接地址"
+        },
+        "icon": {
+          "type": "string",
+          "description": "Icon class for the action button\n操作按钮的图标类名"
+        }
+      },
+      "required": ["text"],
+      "additionalProperties": false,
+      "description": "Action button configuration for the card\n卡片的操作按钮配置"
+    },
+    "ListSection": {
+      "allOf": [
+        { "$ref": "#/definitions/SectionBase" },
         {
           "type": "object",
           "properties": {
@@ -587,14 +632,17 @@
                 ]
               }
             },
-            "unordered": {
-              "type": "boolean",
-              "description": "Whether the list is unordered\n列表是否为无序列表"
-            },
             "dot": {
               "type": "string",
-              "enum": ["circle", "square", "diamond", "check", "none"],
-              "description": "Style of list markers for unordered lists\n无序列表的列表标记样式"
+              "enum": [
+                "circle",
+                "square",
+                "diamond",
+                "check",
+                "none",
+                "number"
+              ],
+              "description": "Style of list markers for lists\n列表的列表标记样式"
             }
           },
           "required": ["type", "data"]
@@ -614,13 +662,12 @@
         }
       },
       "required": ["text"],
-      "description": "List item for publications, awards, etc.\n出版物、奖项等的列表项"
+      "description": "List item for publications, awards, etc.\n出版物、奖项等的列表项",
+      "additionalProperties": false
     },
-    "GalleryContent": {
+    "GallerySection": {
       "allOf": [
-        {
-          "$ref": "#/definitions/ContentBase"
-        },
+        { "$ref": "#/definitions/SectionBase" },
         {
           "type": "object",
           "properties": {
@@ -663,22 +710,21 @@
         }
       },
       "required": ["url", "title"],
-      "description": "Gallery item for photos\n照片画廊项"
+      "description": "Gallery item for photos\n照片画廊项",
+      "additionalProperties": false
     },
-    "ParagraphContent": {
+    "MarkdownSection": {
       "allOf": [
-        {
-          "$ref": "#/definitions/ContentBase"
-        },
+        { "$ref": "#/definitions/SectionBase" },
         {
           "type": "object",
           "properties": {
             "type": {
-              "const": "paragraph"
+              "const": "markdown"
             },
             "data": {
               "type": "string",
-              "description": "Paragraph content (Markdown supported)\n段落内容 (支持 Markdown)"
+              "description": "Markdown content\nMarkdown 内容"
             }
           },
           "required": ["type", "data"]

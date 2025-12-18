@@ -4,129 +4,19 @@ import path from "node:path";
 
 import { createJiti } from "jiti";
 import { load } from "js-yaml";
-import MarkdownIt from "markdown-it";
 
-import type { Config, Content, LocaleConfig } from "../src/types/index.js";
+import { resolveConfig } from "./resolveConfig.js";
+import type { Config } from "../src/types/index.js";
 
 const require = createRequire(import.meta.url);
-const md = new MarkdownIt({ html: true, linkify: true, typographer: true });
 
 export const configFiles = [
   "config.ts",
   "config.js",
-  "config.json",
   "config.yml",
   "config.yaml",
+  "config.json",
 ];
-
-const processMarkdown = (content: string): string => {
-  if (!content) return "";
-
-  return md.renderInline(content);
-};
-
-const processContent = (content: Content): Content => {
-  const newContent = { ...content };
-
-  switch (newContent.type) {
-    case "banner":
-      if (newContent.subtitle) {
-        newContent.subtitle = processMarkdown(newContent.subtitle);
-      }
-      if (newContent.data.content) {
-        newContent.data = {
-          ...newContent.data,
-          content: processMarkdown(newContent.data.content),
-        };
-      }
-      break;
-
-    case "cards":
-      newContent.data = newContent.data.map((item) => ({
-        ...item,
-        title: processMarkdown(item.title),
-        ...(item.description
-          ? { description: processMarkdown(item.description) }
-          : {}),
-      }));
-      break;
-
-    case "experience":
-      newContent.data = newContent.data.map((item) => ({
-        ...item,
-        ...(item.title ? { title: processMarkdown(item.title) } : {}),
-        ...(item.description
-          ? { description: processMarkdown(item.description) }
-          : {}),
-        ...(item.content ? { content: processMarkdown(item.content) } : {}),
-      }));
-      break;
-
-    case "list":
-      newContent.data = newContent.data.map((item) =>
-        typeof item === "object"
-          ? {
-              ...item,
-              text: processMarkdown(item.text),
-            }
-          : processMarkdown(item),
-      );
-      break;
-
-    case "profile": {
-      // ProfileData: fields, contact, slogan
-      const processedData = { ...newContent.data };
-
-      // slogan 字段 markdown
-      if (processedData.slogan) {
-        processedData.slogan = processMarkdown(processedData.slogan);
-      }
-      // fields.value 为 string 时 markdown
-      if (Array.isArray(processedData.fields)) {
-        processedData.fields = processedData.fields.map((field) => ({
-          ...field,
-          value:
-            typeof field.value === "string"
-              ? processMarkdown(field.value)
-              : field.value,
-        }));
-      }
-      newContent.data = processedData;
-      break;
-    }
-
-    case "timeline":
-      newContent.data = newContent.data.map((item) => ({
-        ...item,
-        content: processMarkdown(item.content),
-      }));
-      break;
-
-    case "paragraph":
-      newContent.data = processMarkdown(newContent.data);
-      break;
-  }
-
-  return newContent;
-};
-
-const processConfig = (config: LocaleConfig): LocaleConfig => {
-  return {
-    ...config,
-    contents: config.contents.map(processContent),
-    footer: config.footer
-      ? {
-          ...config.footer,
-          ...(config.footer.copyright
-            ? { copyright: processMarkdown(config.footer.copyright) }
-            : {}),
-          ...(config.footer.description
-            ? { description: processMarkdown(config.footer.description) }
-            : {}),
-        }
-      : undefined,
-  };
-};
 
 export const loadConfig = async (root: string): Promise<Config> => {
   for (const file of configFiles) {
@@ -168,15 +58,7 @@ export const loadConfig = async (root: string): Promise<Config> => {
           config = (mod as { default: Config }).default;
         }
 
-        return {
-          ...config,
-          locales: Object.fromEntries(
-            Object.entries(config.locales).map(([path, localeConfig]) => [
-              path,
-              processConfig(localeConfig),
-            ]),
-          ),
-        };
+        return resolveConfig(config);
       } catch (err) {
         throw new Error(`Error parsing ${file}: ${String(err)}`);
       }

@@ -9,6 +9,10 @@
     }
   }
 
+  span.rich-content img {
+    @apply inline-block;
+  }
+
   .dark .rich-content a {
     @apply text-primary-400;
   }

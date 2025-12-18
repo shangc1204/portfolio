@@ -25,39 +25,36 @@ export interface BannerAction {
   primary?: boolean;
 }
 
-export interface BannerData {
+export interface BannerProps {
+  /**
+   * Main header text
+   * 主要标题文本
+   */
+  header?: string;
+
   /**
    * Main content text (Markdown supported)
    * 主要内容文本 (支持 Markdown)
    */
-  content: string;
+  content?: string;
+
   /**
-   * Optional footer text to display at the bottom
-   * 底部显示的可选页脚文本
+   * Optional footer text to display at the bottom (Markdown supported)
+   * 底部显示的可选页脚文本 (支持 Markdown)
    */
   footer?: string;
+
+  /**
+   * Tags to display at the top
+   * 顶部显示的标签
+   */
+  tags?: string | string[];
+
   /**
    * List of action buttons
    * 操作按钮列表
    */
   actions: BannerAction[];
-}
-
-/**
- * Props for the Banner component
- * Banner 组件的属性
- */
-export interface BannerProps extends BannerData {
-  /**
-   * Section title or tag displayed at the top
-   * 顶部显示的章节标题或标签
-   */
-  title: string;
-  /**
-   * Main headline text
-   * 主要标题文本
-   */
-  subtitle: string;
 }
 
 /**
@@ -72,10 +69,10 @@ export interface BannerProps extends BannerData {
  * 具有渐变背景、装饰形状，并支持多个操作按钮。
  */
 export const Banner: FC<BannerProps> = ({
-  title,
-  subtitle,
+  header,
   content,
   footer,
+  tags,
   actions,
 }) => {
   return (
@@ -89,11 +86,16 @@ export const Banner: FC<BannerProps> = ({
 
       <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8">
         <div className="flex-1 space-y-6">
-          {title && <div className="banner-tag">{title}</div>}
+          {tags &&
+            (Array.isArray(tags) ? (
+              tags.map((tag) => <div className="banner-tag">{tag}</div>)
+            ) : (
+              <div className="banner-tag">{tags}</div>
+            ))}
           <div className="space-y-2">
-            {subtitle && (
+            {header && (
               <h3 className="banner-title">
-                <RichContent content={subtitle} />
+                <RichContent content={header} />
               </h3>
             )}
             {/* Since banner has bg, we need to override anchor tags */}
@@ -101,7 +103,9 @@ export const Banner: FC<BannerProps> = ({
               <RichContent className="banner-content" content={content} block />
             )}
           </div>
-          {footer && <div className="banner-footer">{footer}</div>}
+          {footer && (
+            <RichContent className="banner-footer" content={footer} block />
+          )}
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">

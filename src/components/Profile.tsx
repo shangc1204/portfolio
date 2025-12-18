@@ -43,7 +43,7 @@ export interface ProfileField {
    * Icon for the field
    * 字段图标
    */
-  icon: string;
+  icon?: string;
   /**
    * Value of the field (Markdown string or list of strings)
    * 字段值 (Markdown 字符串或字符串列表)
@@ -60,12 +60,12 @@ export interface ProfileData {
    * List of custom fields
    * 自定义字段列表
    */
-  fields: ProfileField[];
+  fields?: ProfileField[];
   /**
    * List of contact items
    * 联系方式列表
    */
-  contact: ProfileContactItem[];
+  contacts?: ProfileContactItem[];
   /**
    * Optional slogan text (Markdown supported)
    * 可选标语文本 (支持 Markdown)
@@ -92,22 +92,23 @@ export const Profile: FC<ProfileProps> = ({ data, ui }) => {
   return (
     <div className="card-base profile-container">
       <div className="profile-fields-col">
-        {data.fields.map((field, index) => (
+        {data.fields?.map(({ title, value, icon }, index) => (
           <div key={index}>
             <h4 className="label-sm profile-label">
-              <Icon icon={field.icon} /> {field.title}
+              {icon && <Icon icon={icon} />}
+              {title}
             </h4>
-            {Array.isArray(field.value) ? (
+            {Array.isArray(value) ? (
               <div className="profile-tags-wrapper">
-                {field.value.map((item, i) => (
-                  <span key={i} className="profile-tag">
+                {value.map((item, index) => (
+                  <span key={index} className="profile-tag">
                     {item}
                   </span>
                 ))}
               </div>
             ) : (
               <RichContent
-                content={field.value}
+                content={value}
                 className="profile-text-value"
                 block
               />
@@ -121,19 +122,23 @@ export const Profile: FC<ProfileProps> = ({ data, ui }) => {
             <Icon icon="paper-plane" /> {ui?.contact ?? "Contact"}
           </h4>
           <ul className="profile-contact-list">
-            {data.contact.map((c, i) => (
+            {data.contacts?.map((c, i) => (
               <li key={i} className="profile-contact-item">
                 <div className="profile-icon-box">
-                  <Icon icon={c.icon ?? "envelope"} className="text-base" />
+                  <Icon icon={c.icon ?? "envelope"} className="text-2xl" />
                 </div>
                 <div className="profile-contact-info">
                   <span className="profile-contact-label">{c.label}</span>
-                  <a
-                    href={c.link ?? `mailto:${c.value}`}
-                    className="profile-contact-link"
-                  >
-                    {c.value}
-                  </a>
+                  {c.link || /^\S+@\S+\.\S+$/.test(c.value) ? (
+                    <a
+                      href={c.link ?? `mailto:${c.value}`}
+                      className="profile-contact-link"
+                    >
+                      {c.value}
+                    </a>
+                  ) : (
+                    <span className="profile-contact-link">{c.value}</span>
+                  )}
                 </div>
               </li>
             ))}
@@ -142,9 +147,11 @@ export const Profile: FC<ProfileProps> = ({ data, ui }) => {
         {data.slogan && (
           <div className="profile-slogan-box">
             <Icon icon="quote-left" className="profile-quote-icon" />
-            <p className="profile-slogan-text">
-              "<RichContent content={data.slogan} />"
-            </p>
+            <RichContent
+              content={data.slogan}
+              className="profile-slogan-text"
+              block
+            />
           </div>
         )}
       </div>

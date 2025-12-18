@@ -1,19 +1,15 @@
-import type { Content } from "./content.js";
 import type { HeroConfig } from "./hero.js";
 import type { NavbarConfig } from "./navbar.js";
-import type { ExperienceStyle } from "../components/Experience.js";
+import type { Section } from "./sections.js";
 import type { FooterProps } from "../components/Footer.js";
+import type { ExperienceTypesConfig } from "../utils/index.js";
 
-/**
- * Main application configuration
- * 应用程序主配置
- */
 export interface LocaleConfig {
   /**
-   * Language name (e.g., "English", "简体中文")
-   * 语言名称
+   * Language code (e.g., "en", "zh")
+   * 语言代码
    */
-  langName?: string;
+  lang: string;
 
   /**
    * Website title
@@ -26,6 +22,12 @@ export interface LocaleConfig {
    * 网站描述
    */
   description?: string;
+
+  /**
+   * Language name (e.g., "English", "简体中文")
+   * 语言名称
+   */
+  langName?: string;
 
   /**
    * Hero section configuration
@@ -43,7 +45,7 @@ export interface LocaleConfig {
    * Content to display
    * 要显示的内容
    */
-  contents: Content[];
+  sections: Section[];
 
   /**
    * Footer configuration
@@ -69,8 +71,22 @@ export interface LocaleConfig {
   };
 }
 
+export interface GlobalConfig {
+  /**
+   * Experience types configuration
+   *
+   * 经历类型配置
+   */
+  experienceTypes?: ExperienceTypesConfig;
+}
+
 export interface Config {
-  experienceStyles?: Record<string, ExperienceStyle>;
+  /**
+   * Global configuration
+   *
+   * 全局配置
+   */
+  config?: GlobalConfig;
 
   locales: Record<string, LocaleConfig>;
 }

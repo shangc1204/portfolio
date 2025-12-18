@@ -10,8 +10,8 @@ import {
   configFiles,
   getConfigDependencies,
   loadConfig,
-} from "./lib/config-loader.js";
-import { ssgPlugin } from "./lib/ssg-plugin.js";
+} from "./lib/configLoader.js";
+import { ssgPlugin } from "./lib/ssgPlugin.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -19,6 +19,15 @@ export default defineConfig(async () => {
   const config = await loadConfig(__dirname);
 
   return {
+    root: path.resolve(__dirname, "src"),
+
+    build: {
+      outDir: path.resolve(__dirname, "dist"),
+      emptyOutDir: true,
+    },
+
+    publicDir: path.resolve(__dirname, "public"),
+
     define: {
       // eslint-disable-next-line @typescript-eslint/naming-convention
       __CONFIG__: JSON.stringify(config),
@@ -30,18 +39,21 @@ export default defineConfig(async () => {
     plugins: [
       react(),
       tailwindcss({}),
-      ssgPlugin(),
+      ssgPlugin(__dirname),
       {
-        name: "inject-title",
+        name: "inject-title-and-meta",
         transformIndexHtml(html: string): string {
-          const locales = Object.keys(config.locales);
+          const localeConfig = config.locales;
+          const locales = Object.keys(localeConfig);
           const defaultLocale = locales[0];
 
-          const title = config.locales[defaultLocale].title ?? "Portfolio";
+          const title = localeConfig[defaultLocale].title ?? "Portfolio";
+          const description =
+            localeConfig[defaultLocale].description ?? "Portfolio Template";
 
           return html.replace(
             /<title>(.*?)<\/title>/,
-            `<title>${title}</title>`,
+            `<title>${title}</title>\n    <meta name="description" content="${description}" />`,
           );
         },
       },

@@ -3,6 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": {
+    "name": "Mister-Hope"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mister-Hope/portfolio-template.git"
+  },
   "scripts": {
     "build": "vite build",
     "clean": "rimraf dist",

@@ -44,7 +44,7 @@ export interface ListProps {
  */
 export const List: FC<ListProps> = ({ items, dot = "number" }) => {
   const isOrderedList = dot === "number";
-  const ListTag = isOrderedList || !dot ? "ol" : "ul";
+  const ListTag = isOrderedList ? "ol" : "ul";
 
   return (
     <ListTag className={isOrderedList ? "list-ol" : "list-ul"}>
@@ -76,6 +76,7 @@ export const List: FC<ListProps> = ({ items, dot = "number" }) => {
             ) : (
               <RichContent
                 content={typeof item === "object" ? item.text : item}
+                block
               />
             )}
           </div>

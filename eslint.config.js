@@ -7,5 +7,4 @@ export default hope({
       project: "./tsconfig.json",
     },
   },
-  tsImport: true,
 });

@@ -5,10 +5,10 @@ import { dirname, join, resolve } from "node:path";
 import type { Plugin, ResolvedConfig } from "vite";
 import { build } from "vite";
 
-import { loadConfig } from "./config-loader.js";
+import { loadConfig } from "./configLoader.js";
 import type { Config } from "../src/types/index.js";
 
-export function ssgPlugin(): Plugin {
+export function ssgPlugin(root: string): Plugin {
   let viteConfig: ResolvedConfig;
 
   return {
@@ -20,17 +20,16 @@ export function ssgPlugin(): Plugin {
     async closeBundle(): Promise<void> {
       if (viteConfig.build.ssr) return;
 
-      const root = viteConfig.root;
       const outDir = viteConfig.build.outDir;
       const serverOutDir = join(outDir, "server");
 
       console.log("Building server entry...");
 
       await build({
-        root,
+        root: viteConfig.root,
         configFile: viteConfig.configFile,
         build: {
-          ssr: "src/entry-server.tsx",
+          ssr: "entry-server.tsx",
           outDir: serverOutDir,
           emptyOutDir: true,
           rollupOptions: {

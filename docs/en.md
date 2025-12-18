@@ -4,240 +4,371 @@ The application is controlled by a single configuration object.
 
 ## 🚀 Quick Start
 
-1.  Copy an example config from `examples/` to the root directory (e.g., `cp examples/config.example.yml config.yml`).
-2.  Edit `config.yml` to customize your portfolio.
+1. Copy an example config from `examples/` to the root directory (e.g., `cp examples/config.example.yml config.yml`).
+2. Edit `config.yml` to customize your portfolio.
 
 Supported configuration formats: `config.ts`, `config.js`, `config.json`, `config.yml`, `config.yaml`.
 
-## Configuration Structure (`Config`)
+## Configuration
 
 The configuration file exports a `Config` object by default, containing the following fields:
 
-- `locales`: Object. Multi-language configuration map. Keys are path prefixes (e.g., `"/"`, `"/zh/"`), and values are `LocaleConfig` objects.
-- `experienceStyles`: Optional Object. Custom styles map for the experience component.
+- `locales`:
+  - Type: `Record<string, LocaleConfig>` (optional)
+  - Details: Multi-language configuration map. Keys are path prefixes (e.g., `"/"`, `"/zh/"`), and values are `LocaleConfig` object
 
-## Locale Configuration (`LocaleConfig`)
+- `config`：
+  - Type: `Config` (optional)
+  - Details: Global configuration.
 
-In the `locales` object, each language configuration contains the following fields:
+## Config Object
 
-- `langName`: String. Language name (e.g., "English", "简体中文").
-- `title`: String. Website title.
-- `description`: String. Website description.
-- `hero`: Object. Hero section configuration.
-- `navbar`: Optional Object. Navbar configuration.
-- `contents`: Array of `Content` objects. Content to display.
-- `footer`: Optional Object. Footer configuration.
-- `ui`: Optional Object. UI translation strings.
-  - `themeToggle`: Optional String. Tooltip text for theme toggler.
-  - `contact`: Optional String. Label for contact.
+The optional `config` object contains the following fields:
+
+- `experienceTypes`:
+  - Type: `Record<string, ExperienceTypeConfig>` (optional).
+  - Details:
+    Customize types for experience component. Keys are type identifiers, and values are `ExperienceTypeConfig` objects with:
+    - `bgClass`: String. Background class for the timeline node (e.g., "bg-indigo-600").
+    - `icon`: String. Icon name for the timeline node (e.g., "mdi:briefcase").
+    - `iconClass`: String. Icon class for the timeline node (e.g., "text-white").
+
+## Locale Configuration
+
+- `locales` entry:
+  - Type: Object
+  - Details: Language configuration mapping used by the app. Each entry contains fields described below.
+
+  - `lang`:
+    - Type: String
+    - Details: Language code (e.g., "en", "zh-CN").
+
+  - `langName`:
+    - Type: String
+    - Details: Language display name (e.g., "English", "简体中文").
+
+  - `title`:
+    - Type: String
+    - Details: Website title shown in the document title and header.
+
+  - `description`:
+    - Type: String
+    - Details: Meta description for SEO and social previews.
+
+  - `hero`:
+    - Type: Object
+    - Details: Hero section configuration (see `Hero Section` below).
+
+  - `navbar`:
+    - Type: Object (optional)
+    - Details: Navigation bar configuration (see `Navigation Bar` below).
+
+  - `contents`:
+    - Type: Array
+    - Details: Main content sections for the locale. Each item is a section object (see `Content Blocks`).
+
+  - `footer`:
+    - Type: Object (optional)
+    - Details: Footer configuration (see `Footer` below).
+
+  - `ui`:
+    - Type: Object (optional)
+    - Details: UI translation strings.
+    - `themeToggle`:
+      - Type: String (optional)
+      - Details: Tooltip text for the theme toggle control.
+    - `contact`:
+      - Type: String (optional)
+      - Details: Label for the contact section.
 
 ## Hero Section (`hero`)
 
-Configuration for the top hero section.
+- `hero`:
+  - Type: Object
+  - Details: Top hero configuration for the locale.
 
-- `name`: String. User name.
-- `welcome`: String. Welcome message.
-- `titles`: Array of strings. Animated titles shown under the name using a typewriter effect.
-- `avatar`: URL String. Profile picture.
-- `bgImage`: URL String. Full-screen background image for the header.
-- `medias`: Array of `HeroMedia`. Social media or contact links.
-  - `icon`: Icon name (e.g., 'mdi:github', 'github') or image URL.
-  - `name`: Display name.
-  - `link`: URL.
+  - `name`:
+    - Type: String
+    - Details: The user's name displayed prominently.
+
+  - `welcome`:
+    - Type: String
+    - Details: Short welcome or intro text (e.g., "👋 Hi, I am").
+
+  - `titles`:
+    - Type: `Array<string>`
+    - Details: Titles for the typewriter animation under the name.
+
+  - `avatar`:
+    - Type: String
+    - Details: URL to the avatar image (relative to `public/` or absolute).
+
+  - `bgImage`:
+    - Type: String (optional)
+    - Details: Background image URL for the hero header.
+
+  - `medias`:
+    - Type: `Array<HeroMedia>` (optional)
+    - Details: Social / contact links.
+      - `icon`:
+        - Type: String
+        - Details: Icon name (Iconify or FontAwesome) or image URL.
+      - `name`:
+        - Type: String
+        - Details: Display name for the media item.
+      - `link`:
+        - Type: String
+        - Details: URL for the media item.
 
 ## Navigation Bar (`navbar`)
 
-The sticky navbar configuration.
+- `navbar`:
+  - Type: Object (optional)
+  - Details: Sticky navigation bar configuration for the locale.
 
-- `links`: Array of `NavLink`.
-  - `label`: Display label.
-  - `anchor`: The `id` of the target content block (prefixed with `#`, e.g., `#profile`).
+  - `links`:
+    - Type: `Array<NavLink>`
+    - Details: Navigation links.
+      - `label`:
+        - Type: String
+        - Details: Display label shown in the navbar.
+      - `anchor`:
+        - Type: String
+        - Details: Target content block id (prefixed with `#`, e.g., `#profile`).
 
 ## Content Blocks (`contents`)
 
-This is the core of the portfolio. It is an array of component configurations.
+- `contents`:
+  - Type: Array
+  - Details: Main sections for the page. Each item is a section object with the following fields:
 
-Each object follows this general structure:
+  - `type`:
+    - Type: String
+    - Details: Component identifier (e.g., 'profile', 'experience', 'cards').
 
-```ts
-{
-  type: string;     // The component identifier
-  id: string;       // Unique identifier (used for navigation)
-  title: string;    // Section heading
-  icon?: string;    // Optional section icon class
-  subtitle?: string;// Optional section subtitle
-  data: any;        // Component-specific data
-  // Some components may have additional properties
-}
-```
+  - `id`:
+    - Type: String
+    - Details: Unique id used for navigation anchors.
+
+  - `title`:
+    - Type: String
+    - Details: Section heading shown on the page.
+
+  - `icon`:
+    - Type: String (optional)
+    - Details: Icon class for the section header.
+
+  - `subtitle`:
+    - Type: String (optional)
+    - Details: Section subtitle or short description.
+
+  - `data`:
+    - Type: Any
+    - Details: Component-specific payload. See each component type below for schema.
 
 ## Supported Components
 
-### 1. Profile (`profile`)
+- `profile` (type: `profile`):
+  - Type: Component
+  - Details: Personal information section.
 
-Displays custom fields, clickable contact info, and an optional slogan.
+  - `fields`:
+    - Type: `Array<ProfileField>` (optional)
+    - Details: Custom fields such as location, skills, etc.
+      - `title`:
+        - Type: String
+        - Details: Field label.
+      - `value`:
+        - Type: `string | Array<string>`
+        - Details: Field value (markdown supported or tag list).
+      - `icon`:
+        - Type: String (optional)
+        - Details: Icon name for the field.
 
-- **Data Schema** (`ProfileData`):
-  - `fields`: Array of `ProfileField`.
-    - `title`: String. Field title.
-    - `icon`: String. Field icon.
-    - `value`: String (markdown supported) or Array of strings.
-  - `contact`: Array of `ProfileContactItem`.
-    - `label`: String. Contact label.
-    - `value`: String. Contact value.
-    - `link`: Optional URL (defaults to `mailto:value` if not provided).
-    - `icon`: Optional icon class.
-  - `slogan`: Optional String (markdown supported).
+  - `contacts`:
+    - Type: `Array<ProfileContactItem>` (optional)
+    - Details: Contact entries.
+      - `label`:
+        - Type: String
+        - Details: Contact label (e.g., 'Email').
+      - `value`:
+        - Type: String
+        - Details: Contact value (email, phone, etc.).
+      - `link`:
+        - Type: String (optional)
+        - Details: Explicit URL; if omitted email addresses are auto-detected.
+      - `icon`:
+        - Type: String (optional)
+        - Details: Icon name.
 
-### 2. Experience (`experience`)
+  - `slogan`:
+    - Type: String (optional)
+    - Details: Personal motto (markdown supported).
 
-A vertical timeline highlighting work history and academic background.
+- `experience` (type: `experience`):
+  - Type: Component
+  - Details: Vertical timeline for work, study, volunteer, project entries.
 
-- **Data Schema**: Array of `ExperienceItem`:
-  - `type`: String (e.g., `'study'`, `'work'`).
-  - `place`: String. Place/Institution name.
-  - `title`: Optional String. Job title or Degree.
-  - `time`: String (e.g., '2021 - 2024').
-  - `content`: Optional String (markdown supported). Main content.
-  - `description`: Optional String (markdown supported). Additional details.
-  - `icon`: Optional icon name.
+  - Item schema (ExperienceItem):
+    - `type`:
+      - Type: String
+      - Details: Experience category (built-in 'study' | 'work' | 'volunteer', or custom).
+    - `place`:
+      - Type: String
+      - Details: Institution or company name.
+    - `title`:
+      - Type: String (optional)
+      - Details: Role or degree.
+    - `time`:
+      - Type: String
+      - Details: Time period (e.g., '2021 - 2024').
+    - `content`:
+      - Type: String (optional)
+      - Details: Main content (markdown supported).
+    - `description`:
+      - Type: String (optional)
+      - Details: Additional details or long description.
+    - `icon`:
+      - Type: String (optional)
+      - Details: Override icon for the timeline node.
 
-### 3. Banner (`banner`)
+- `banner` (type: `banner`):
+  - Type: Component
+  - Details: High-impact call-to-action block.
 
-A call-to-action block with high visual impact.
+  - `content`:
+    - Type: String
+    - Details: Main content (markdown supported).
 
-- **Data Schema** (`BannerData`):
-  - `content`: String (markdown supported). Main content text.
-  - `footer`: Optional String. Footer text.
-  - `actions`: Array of `BannerAction`.
-    - `label`: String. Button label.
-    - `link`: String. Button URL.
-    - `primary`: Optional Boolean. Whether to use emphasized style.
+  - `footer`:
+    - Type: String (optional)
+    - Details: Footer text displayed below content.
 
-### 4. Timeline / News (`timeline`)
+  - `actions`:
+    - Type: `Array<BannerAction>`
+    - Details: Action buttons.
+      - `label`:
+        - Type: String
+        - Details: Button label.
+      - `link`:
+        - Type: String
+        - Details: Target URL.
+      - `primary`:
+        - Type: Boolean (optional)
+        - Details: Use emphasized style when true.
 
-A clean, horizontally-aligned list of events or news updates.
+- `timeline` (type: `timeline`):
+  - Type: Component
+  - Details: Horizontal timeline or news list.
 
-- **Data Schema**: Array of `TimelineItem`:
-  - `year`: String. Year or date string.
-  - `content`: String (markdown supported). Event content.
-  - `link`: Optional URL.
-  - `linkText`: Optional label for the link.
+  - Item schema:
+    - `year`:
+      - Type: String
+      - Details: Year or date string.
+    - `content`:
+      - Type: String
+      - Details: Event description (markdown supported).
+    - `link`:
+      - Type: String (optional)
+      - Details: URL associated with the event.
+    - `linkText`:
+      - Type: String (optional)
+      - Details: Link label to show.
 
-### 5. Cards (`cards`)
+- `cards` (type: `cards`):
+  - Type: Component
+  - Details: Grid layout for project or work cards.
 
-A grid of high-level cards for projects or dissertations.
+  - Card schema:
+    - `title`:
+      - Type: String
+      - Details: Card title.
+    - `category`:
+      - Type: String (optional)
+      - Details: Category label.
+    - `link`:
+      - Type: String
+      - Details: Destination URL.
+    - `description`:
+      - Type: String (optional)
+      - Details: Card description.
+    - `action`:
+      - Type: String (optional)
+      - Details: Action button label.
+    - `icon`:
+      - Type: String (optional)
+      - Details: Icon name for the action.
 
-- **Data Schema**: Array of `CardItem`:
-  - `title`: String. Card title.
-  - `category`: Optional String. Category label.
-  - `link`: URL.
-  - `description`: Optional String.
-  - `action`: Optional String. Action button label.
-  - `icon`: Optional String. Action button icon.
+- `list` (type: `list`):
+  - Type: Component
+  - Details: Flexible list for publications, awards, etc.
 
-### 6. List (`list`)
+  - `dot`:
+    - Type: String (optional)
+    - Details: Marker style ('circle', 'square', 'diamond', 'check', 'none', 'number'). Default: 'number'.
 
-A versatile component for lists like Publications or Awards.
+  - Item schema:
+    - String:
+      - Type: String
+      - Details: Markdown-supported content.
+    - Object:
+      - `text`:
+        - Type: String
+        - Details: Content text (markdown supported).
+      - `link`:
+        - Type: String (optional)
+        - Details: Optional URL for the list item.
 
-- **Additional Config**:
-  - `dot`: Optional String. Marker style for lists (`'circle'`, `'square'`, `'diamond'`, `'check'`, `'none'`, `'number'`), default is `'number'`
-- **Data Schema**: Array of `ListItem` or String:
-  - String: Content (markdown supported).
-  - `text`: Content (markdown supported).
-  - `link`: Optional URL.
+- `gallery` (type: `gallery`):
+  - Type: Component
+  - Details: Masonry photo wall with lightbox.
 
-### 7. Gallery (`gallery`)
+  - Item schema (GalleryItem):
+    - `url`:
+      - Type: String
+      - Details: Image URL.
+    - `title`:
+      - Type: String
+      - Details: Image title.
+    - `location`:
+      - Type: String (optional)
+      - Details: Location metadata.
+    - `date`:
+      - Type: String (optional)
+      - Details: Date metadata.
+    - `description`:
+      - Type: String (optional)
+      - Details: Long-form story (markdown supported).
 
-A masonry-style photo wall with an interactive lightbox.
+- `paragraph` (type: `paragraph`):
+  - Type: Component
+  - Details: Simple Markdown/HTML content block.
 
-- **Data Schema**: Array of `GalleryItem`:
-  - `url`: Image URL.
-  - `title`: Image title.
-  - `location`: Optional location string.
-  - `date`: Optional date string.
-  - `description`: Optional long-form story (markdown supported).
-
-### 8. Paragraph (`paragraph`)
-
-A simple text block that renders Markdown or HTML content. Ideal for conclusions, about sections, or custom descriptions.
-
-- **Data Schema**: String (Markdown or HTML supported).
-- **card**: Boolean (default `false`). Whether to display as a card (with background and border).
+  - `content`:
+    - Type: String
+    - Details: Text content (Markdown or HTML supported).
+  - `card`:
+    - Type: Boolean (optional)
+    - Details: Whether to render the paragraph as a card (default: false).
 
 ## Footer (`footer`)
 
-Configuration for the footer.
+- `footer`:
+  - Type: Object
+  - Details: Footer configuration for the locale.
 
-- `copyright`: String. Copyright text.
-- `description`: Optional String. Footer description.
+  - `copyright`:
+    - Type: String
+    - Details: Copyright text.
+  - `description`:
+    - Type: String (optional)
+    - Details: Footer description or short blurb.
 
-## Complete Configuration Example
+## Image and icons
 
-Here is a complete configuration example (using helper functions from `src/helper.ts`):
+You can always use a full URL for icons and images (e.g., `https://example.com/icon.png`), or a relative path to the `public/` directory starting with `/` (e.g., `/images/icon.png` for `public/images/icon.png`).
 
-```typescript
-import {
-  defineConfig,
-  defineContents,
-  defineFooterConfig,
-  defineHeroConfig,
-  defineNavbarConfig,
-} from "./src/helper.js";
-
-const hero = defineHeroConfig({
-  name: "Your Name",
-  welcome: "👋 Hi, I am",
-  titles: ["Developer", "Designer"],
-  avatar: "/avatar.avif",
-  bgImage: "https://example.com/bg.jpg",
-  medias: [
-    {
-      icon: "mdi:github",
-      name: "GitHub",
-      link: "https://github.com/yourname",
-    },
-  ],
-});
-
-const navbar = defineNavbarConfig({
-  links: [
-    { label: "Profile", anchor: "#profile" },
-    { label: "Experience", anchor: "#experience" },
-  ],
-});
-
-const footer = defineFooterConfig({
-  copyright: "© 2025 Your Name",
-});
-
-const contents = defineContents([
-  {
-    type: "profile",
-    id: "profile",
-    title: "Profile",
-    data: {
-      fields: [{ title: "Location", icon: "map-marker", value: "USA" }],
-      contact: [{ label: "Email", value: "email@example.com", icon: "email" }],
-    },
-  },
-]);
-
-export const en = {
-  langName: "English",
-  title: "My Portfolio",
-  hero,
-  navbar,
-  contents,
-  footer,
-};
-
-export default defineConfig({
-  locales: {
-    "/": en,
-  },
-});
-```
+We support all icon name from [iconify](https://iconify.design/), and you can either use FontAwesome 7 solid icons directly with its name (e.g.: `book` for `fa7-solid:book`), or use the full icon name (e.g., `mdi:github`).
 
 ## Customizing Theme Colors
 
@@ -247,6 +378,13 @@ You can modify the following variables in `src/index.css` to change the theme co
 
 ```css
 :root {
+  /**
+   * Define your default font family here.
+   */
+  --font:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 
     Define your brand colors here. 
     The system will automatically generate the palette based on these colors.

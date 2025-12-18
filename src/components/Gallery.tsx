@@ -106,6 +106,7 @@ export const Gallery: FC<GalleryProps> = ({ items }) => {
                 src={selected.url}
                 alt={selected.title}
                 className="lightbox-image"
+                loading="lazy"
               />
             </div>
             <div className="lightbox-content">

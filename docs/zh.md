@@ -4,8 +4,8 @@
 
 ## 🚀 快速开始
 
-1.  从 `examples/` 复制一个示例配置文件到根目录（例如 `cp examples/config.example.yml config.yml`）。
-2.  编辑 `config.yml` 以自定义您的作品集。
+1. 从 `examples/` 复制一个示例配置文件到根目录（例如 `cp examples/config.example.yml config.yml`）。
+2. 编辑 `config.yml` 以自定义您的作品集。
 
 支持的配置文件格式：`config.ts`, `config.js`, `config.json`, `config.yml`, `config.yaml`。
 

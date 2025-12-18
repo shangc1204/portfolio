@@ -9,7 +9,10 @@
   */
   --primary-base: #3b82f6; /* Blue 500 */
   --secondary-base: #6366f1; /* Indigo 500 */
-  --font-sans:
+  /**
+   * Define your default font family here.
+   */
+  --font:
     ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -48,7 +51,7 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font);
 }
 
-@import "./components/index.css";
+@import "./styles/index.css";
