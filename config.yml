@@ -103,14 +103,12 @@ locales:
             content: with Prof. [XueXi Yi](https://cqs.nenu.edu.cn/)
 
       - type: timeline
-  id: achievements
-  title: Achievements
-  icon: trophy
-  items:
+        id: achievements
+        title: Achievements
+        icon: trophy
+        
     - year: 2024
-      content: >
-        Invited Talk,
-        "[21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)](https://events.physics.uoc.gr/event/1/page/5-speakers)",
+      content: Invited Talk, [21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)](https://events.physics.uoc.gr/event/1/page/5-speakers),
         Chania, Greece.
 
           
