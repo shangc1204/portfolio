@@ -53,12 +53,7 @@ locales:
           fields:
             - title: Affiliation
               icon: building-columns
-              value: Analytical Quantum Complexity RIKEN Hakubi Research Team
-
-            - title: Interests
-              icon: heart
-              value:
-                - Music
+              value: Analytical Quantum Complexity RIKEN Hakubi Research Team (RIKEN Center for Quantum Computing)
 
           contacts:
             - label: RIKEN Email
@@ -68,8 +63,7 @@ locales:
             - label: Gmail
               value: shangc1204@gmail.com
               icon: fa6-brands:google
-
-          slogan: 🗿 Give civilization to time.
+            
 
       - type: experience
         id: education
