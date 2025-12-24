@@ -24,8 +24,9 @@ locales:
         - icon: fa6-brands:google-scholar
           name: Google Scholar
           link: https://scholar.google.com/citations?user=-k8PWr8AAAAJ
-          
-        - name: iNSPIRE
+
+        - icon: fa6-brands:linkedin-in
+          name: iNSPIRE
           link: https://inspirehep.net/authors/2662928
 
         - icon: fa6-brands:x-twitter
@@ -54,7 +55,12 @@ locales:
           fields:
             - title: Affiliation
               icon: building-columns
-              value: Analytical Quantum Complexity RIKEN Hakubi Research Team (RIKEN Center for Quantum Computing)
+              value: Analytical Quantum Complexity RIKEN Hakubi Research Team
+
+            - title: Interests
+              icon: heart
+              value:
+                - Music
 
           contacts:
             - label: RIKEN Email
@@ -64,19 +70,20 @@ locales:
             - label: Gmail
               value: shangc1204@gmail.com
               icon: fa6-brands:google
-            
+
+          slogan: 🗿 Give civilization to time.
 
       - type: experience
         id: education
-        title: Experience
-        icon: briefcase
+        title: Education
+        icon: graduation-cap
         data:
           - type: work
-            place: RIKEN Center for Quantum Computing
+            place: Center for Quantum Computing
             time: Oct. 2024 - Present
             title: Postdoctoral Researcher
             content: with Dr. [Tomotaka Kuwahara](https://kuwahara-quantum.com/en/)
-            description: Analytical Quantum Complexity RIKEN Hakubi Research Team
+            description: at Analytical Quantum Complexity RIKEN Hakubi Research Team
 
           - type: work
             place: Center for Quantum Computing
