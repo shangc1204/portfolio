@@ -25,6 +25,7 @@ locales:
           name: Google Scholar
           link: https://scholar.google.com/citations?user=-k8PWr8AAAAJ
 
+        - icon: fa6-brands:linkedin-in
           name: iNSPIRE
           link: https://inspirehep.net/authors/2662928
 
