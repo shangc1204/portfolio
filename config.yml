@@ -102,18 +102,6 @@ locales:
             time: Sep. 2017 - June 2020
             title: Master of Science |Northeast Normal University, Center for Quantum Sciences
             content: with Prof. [XueXi Yi](https://cqs.nenu.edu.cn/)
-
-
-- type: list
-        id: achievements
-        title: Achievements
-        icon: trophy
-        dot: check
-        data:
-          - "**2024** Invited Talk, [21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)](https://events.physics.uoc.gr/event/1/page/5-speakers), Chania, Greece."
-          - "**2023** Best Poster Award, [5th International Symposium on Quantum Physics and Quantum Information Sciences (QPQIS-2023)](http://en.baqis.ac.cn/news/detail/?cid=1764), Beijing, China."
-          - "**2021** Japanese Government (MEXT) Doctoral Scholarship."
-          - "**2019** Chinese National Scholarship for Postgraduates."
           
 
       - type: banner
