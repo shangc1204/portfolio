@@ -73,23 +73,23 @@ locales:
         icon: briefcase
         data:
           - type: work
-            place: RIKEN Center for Quantum Computing, Japan
+            place: Wako, Saitama, Japan
             time:  Oct. 2024 - Present
             title: Postdoctoral Researcher
             content: with Dr. [Tomotaka Kuwahara](https://kuwahara-quantum.com/en/)
-            description: Analytical Quantum Complexity RIKEN Hakubi Research Team
+            description: Analytical Quantum Complexity RIKEN Hakubi Research Team, RIKEN Center for Quantum Computing
 
           - type: work
-            place: RIKEN Center for Quantum Computing, Japan
+            place: Wako, Saitama, Japan
             time: Apr. 2023 - Sep. 2024
             title: Junior Research Associate
             content: with Dr. [Tomotaka Kuwahara](https://kuwahara-quantum.com/en/)
-            description: Analytical Quantum Complexity RIKEN Hakubi Research Team
+            description: Analytical Quantum Complexity RIKEN Hakubi Research Team, RIKEN Center for Quantum Computing
 
           - type: study
-            place: The University of Tokyo, Department of Physics, Japan
+            place: Kashiwa, Chiba, Japan
             time: Oct. 2021 - Sep. 2024
-            title: Ph.D.
+            title: Ph.D. |The University of Tokyo, Department of Physics
             content: with Prof. [Naomichi Hatano](http://hatano-lab.iis.u-tokyo.ac.jp/index-e.html)
 
           - type: study
