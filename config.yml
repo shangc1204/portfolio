@@ -1,3 +1,4 @@
+
 locales:
   /:
     lang: en-US
@@ -101,6 +102,27 @@ locales:
             time: Sep. 2017 - June 2020
             title: Master of Science |Northeast Normal University, Center for Quantum Sciences
             content: with Prof. [XueXi Yi](https://cqs.nenu.edu.cn/)
+
+
+      - type: banner
+        id: cfp
+        title: Call for Papers
+        icon: bullhorn
+        data:
+          tags: Call for Papers
+          header: |-
+            Special Collection: Exception Points in non-Hermitian Systems
+          content: |-
+            **Journal**: Discover Physics (Springer Nature)
+          For inquiries, please contact: cheng.shang@riken.jp or shenhz458@nenu.edu.cn
+          footer: |-
+            Submission Deadline: 21 April, 2026
+          actions:
+            - label: Submit & Learn More
+              link: https://link.springer.com/collections/djheehghia
+              primary: true
+
+
           
       - type: list
         id: publications
@@ -145,24 +167,6 @@ locales:
           - text: Cheng Shang and H. Z. Shen, Coupling Enhancement and Symmetrization in Dissipative Optomechanical Systems, arXiv:2302.04897 (2025)
             link: https://arxiv.org/abs/2302.04897
 
-        - type: banner
-        id: cfp
-        title: Call for Papers
-        icon: bullhorn
-        data:
-          tags: Call for Papers
-          header: |-
-            Special Collection: Exception Points in non-Hermitian Systems
-          content: |-
-            **Journal**: Discover Physics (Springer Nature)
-          For inquiries, please contact: cheng.shang@riken.jp or shenhz458@nenu.edu.cn
-          footer: |-
-            Submission Deadline: 21 April, 2026
-          actions:
-            - label: Submit & Learn More
-              link: https://link.springer.com/collections/djheehghia
-              primary: true
-
             
       - type: gallery
         id: gallery
@@ -173,7 +177,7 @@ locales:
             title: PHHQP-XXI Workshop
             location: Chania, Greece
             date: 2024
-            description: This work was featured in [PRL Trending](https://x.com/PhysRevLett/status/1924474721149542443) and highlighted in RIKEN press releases ([link](https://www.riken.jp/en/news_pubs/research_news/pr/2025/20250513_2/index.html)).
+            description: Presenting my research on open quantum systems. The discussions overlooking the Mediterranean were truly inspiring.
 
           - url: https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000&auto=format&fit=crop
             title: Mountain Hiking
