@@ -190,23 +190,17 @@ locales:
 
       - type: list
         id: publications
-        title: Publications
+        title: Selected Publications
         icon: scroll
         data:
           - text: Zhi-Guang Lu, Guo-Qing Tian, Xin-You Lü, and Cheng Shang, Topological Quantum Batteries, Phys. Rev. Lett. 134, 180401 (2025)
             link: https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401
-
-          - text: Bo-Wang Zhang, Cheng Shang, J. Y. Sun, Zhuo-Cheng Gu, and X. X. Yi, Manipulating spectral transitions and photonic transmission in a non-Hermitian optical system through nanoparticle perturbations, Phys. Rev. A 111, 063702 (2025)
-            link: https://journals.aps.org/pra/abstract/10.1103/PhysRevA.111.063702
 
           - text: Cheng Shang and Hong-Chao Li, Resonance-dominant optomechanical entanglement in open quantum systems, Physical Review Applied 21 (4), 044048 (2024)
             link: https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.21.044048
 
           - text: Zhi-Guang Lu, Cheng Shang, Ying Wu, and Xin-You Lü, Analytical approach to higher-order correlation functions in U(1) symmetric systems, Physical Review A 108, 053703 (2023)
             link: https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.053703
-
-          - text: H. Y. Sun, Cheng Shang, X. X. Luo, Y. H. Zhou, and Hong-Zhi Shen, Optical-assisted Photon Blockade in a Cavity System via Parametric Interactions, International Journal of Theoretical Physics 58, 3640-3650 (2019)
-            link: https://link.springer.com/article/10.1007/s10773-019-04229-x
 
           - text: Cheng Shang, Hong-Zhi Shen, and Xue-Xi Yi, Nonreciprocity in a strongly coupled three-mode optomechanical circulatory system, Optics Express 27 (18), 25882-25901 (2019)
             link: https://opg.optica.org/oe/fulltext.cfm?uri=oe-27-18-25882&id=417227
@@ -216,7 +210,7 @@ locales:
 
       - type: list
         id: preprints
-        title: Preprints
+        title: Selected Preprints
         icon: clock-rotate-left
         data:
           - text: |-
