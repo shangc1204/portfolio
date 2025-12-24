@@ -92,15 +92,15 @@ locales:
             title: Ph.D. |The University of Tokyo, Department of Physics
             content: with Prof. [Naomichi Hatano](http://hatano-lab.iis.u-tokyo.ac.jp/index-e.html)
 
-          - type: study
-            place: Preparatory School for Chinese, China
+          - type: training
+            place: Changchun, Jilin, China
             time: Oct. 2020 - Aug. 2021
-            content: MEXT Doctoral Scholarship Candidate
+            content: MEXT Doctoral Scholarship Candidate |Preparatory School for Chinese Students to Japan
 
           - type: study
-            place: Northeast Normal University, School of Physics, China
+            place: Changchun, Jilin, China
             time: Sep. 2017 - June 2020
-            title: Master of Science
+            title: Master of Science |Northeast Normal University, Center for Quantum Sciences
             content: with Prof. [XueXi Yi](https://cqs.nenu.edu.cn/)
 
       - type: banner
