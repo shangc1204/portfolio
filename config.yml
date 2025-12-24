@@ -102,6 +102,25 @@ locales:
             title: Master of Science |Northeast Normal University, Center for Quantum Sciences
             content: with Prof. [XueXi Yi](https://cqs.nenu.edu.cn/)
 
+
+      - type: timeline
+        id: awards
+        title: Achievements
+        icon: trophy
+        data:
+          - year: 2025
+          content: Our work on "[Topological Quantum Batteries](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401)" was featured in "[PRL Trending](https://x.com/PhysRevLett/status/1924474721149542443)".
+          - year: 2025
+          content: Our work on "[Topological Quantum Batteries](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401)" was highlighted in press releases by "[RIKEN](https://www.riken.jp/en/news_pubs/research_news/pr/2025/20250513_2/index.html)".
+          - year: 2024
+          content: Invited Talk, "[21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)](https://events.physics.uoc.gr/event/1/page/5-speakers)", Chania, Greece.
+          - year: 2023
+          content: Best Poster Award, "[5th International Symposium on Quantum Physics and Quantum Information Sciences (QPQIS-2023)](http://en.baqis.ac.cn/news/detail/?cid=1764)", Beijing, China.
+          - year: 2021 
+          content: Japanese Government (MEXT) Doctoral Scholarship.
+          - year: 2019 
+          content: Chinese National Scholarship for Postgraduates.
+
       - type: banner
         id: cfp
         title: Call for Papers
@@ -119,16 +138,6 @@ locales:
             - label: Submit & Learn More
               link: https://link.springer.com/collections/djheehghia
               primary: true
-
-      - type: list
-        id: awards
-        title: Achievements
-        icon: trophy
-        data:
-          - "**2024** Invited Talk, [21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)](https://events.physics.uoc.gr/event/1/page/5-speakers), Chania, Greece."
-          - "**2023** Best Poster Award, [5th International Symposium on Quantum Physics and Quantum Information Sciences (QPQIS-2023)](http://en.baqis.ac.cn/news/detail/?cid=1764), Beijing, China."
-          - "**2021** Japanese Government (MEXT) Doctoral Scholarship."
-          - "**2019** Chinese National Scholarship for Postgraduates."
 
           
       - type: list
@@ -151,6 +160,7 @@ locales:
           - text: Hong-Zhi Shen, Cheng Shang, Y. H. Zhou, and Xue-Xi Yi, Unconventional single-photon blockade in non-Markovian systems, Physical Review A 98 (2), 023856 (2018)
             link: https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.023856
 
+
       - type: list
         id: preprints
         title: Selected Preprints
@@ -172,6 +182,7 @@ locales:
 
           - text: Cheng Shang and H. Z. Shen, Coupling Enhancement and Symmetrization in Dissipative Optomechanical Systems, arXiv:2302.04897 (2025)
             link: https://arxiv.org/abs/2302.04897
+
             
       - type: gallery
         id: gallery
