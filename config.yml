@@ -65,8 +65,7 @@ locales:
             - label: Gmail
               value: shangc1204@gmail.com
               icon: fa6-brands:google
-
-          slogan: 🗿 Give civilization to time.
+              
 
       - type: experience
         id: education
