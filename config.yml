@@ -69,8 +69,8 @@ locales:
 
       - type: experience
         id: education
-        title: Education
-        icon: graduation-cap
+        title: Experience
+        icon: briefcase
         data:
           - type: work
             place: Center for Quantum Computing
