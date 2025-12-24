@@ -13,6 +13,7 @@ locales:
       welcome: 👋 Hi there, I am
       titles:
         - ℏ Theoretical Physics Researcher
+        
       avatar: /avatar.avif
       bgImage: /bg.avif
       medias:
