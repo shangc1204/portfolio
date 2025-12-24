@@ -258,13 +258,6 @@ locales:
             date: 2024
             description: The sanctuary of knowledge where most of my doctoral dissertation took shape.
 
-      - type: markdown
-        id: closing
-        title: Looking Forward
-        icon: star
-        data:
-          content: I am always looking for collaborative opportunities at the intersection of **quantum complexity** and **open quantum systems**. Feel free to reach out for research discussions or joint explorations of the fundamental structures of our universe.
-
     footer:
       copyright: © 2025 Cheng Shang. All rights reserved.
       description: Built with Physics and Love.
