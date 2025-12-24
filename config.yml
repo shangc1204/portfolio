@@ -102,26 +102,12 @@ locales:
             title: Master of Science |Northeast Normal University, Center for Quantum Sciences
             content: with Prof. [XueXi Yi](https://cqs.nenu.edu.cn/)
 
-
-      - type: banner
-        id: cfp
-        title: Call for Papers
-        icon: bullhorn
-        data:
-          tags: Call for Papers
-          header: |-
-            Special Collection: Exception Points in non-Hermitian Systems
-          content: |-
-            **Journal**: Discover Physics (Springer Nature)
-          For inquiries, please contact: cheng.shang@riken.jp or shenhz458@nenu.edu.cn
-          footer: |-
-            Submission Deadline: 21 April, 2026
-          actions:
-            - label: Submit & Learn More
-              link: https://link.springer.com/collections/djheehghia
-              primary: true
-
-
+      - type: timeline
+        id: achievements
+        title: Achievements
+        icon: trophy
+        - year: 2024
+          content: Invited Talk, "[21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)](https://events.physics.uoc.gr/event/1/page/5-speakers)", Chania, Greece.
           
       - type: list
         id: publications
@@ -165,6 +151,24 @@ locales:
 
           - text: Cheng Shang and H. Z. Shen, Coupling Enhancement and Symmetrization in Dissipative Optomechanical Systems, arXiv:2302.04897 (2025)
             link: https://arxiv.org/abs/2302.04897
+
+        - type: banner
+        id: cfp
+        title: Call for Papers
+        icon: bullhorn
+        data:
+          tags: Call for Papers
+          header: |-
+            Special Collection: Exception Points in non-Hermitian Systems
+          content: |-
+            **Journal**: Discover Physics (Springer Nature)
+          For inquiries, please contact: cheng.shang@riken.jp or shenhz458@nenu.edu.cn
+          footer: |-
+            Submission Deadline: 21 April, 2026
+          actions:
+            - label: Submit & Learn More
+              link: https://link.springer.com/collections/djheehghia
+              primary: true
 
             
       - type: gallery
