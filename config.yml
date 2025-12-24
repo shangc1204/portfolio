@@ -73,11 +73,11 @@ locales:
         icon: briefcase
         data:
           - type: work
-            place: Center for Quantum Computing
-            time: Oct. 2024 - Present
+            place: RIKEN Center for Quantum Computing
+            time: [Hold a position] Oct. 2024 - Present
             title: Postdoctoral Researcher
             content: with Dr. [Tomotaka Kuwahara](https://kuwahara-quantum.com/en/)
-            description: at Analytical Quantum Complexity RIKEN Hakubi Research Team
+            description: Analytical Quantum Complexity RIKEN Hakubi Research Team
 
           - type: work
             place: Center for Quantum Computing
