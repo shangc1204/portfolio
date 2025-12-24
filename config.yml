@@ -37,8 +37,8 @@ locales:
       links:
         - label: Profile
           anchor: "#profile"
-        - label: Education
-          anchor: "#education"
+        - label: Experience
+          anchor: "#experience"
         - label: News
           anchor: "#news"
         - label: Publications
@@ -68,7 +68,7 @@ locales:
               
 
       - type: experience
-        id: education
+        id: experience
         title: Experience
         icon: briefcase
         data:
