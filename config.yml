@@ -55,7 +55,7 @@ locales:
           fields:
             - title: Affiliation
               icon: building-columns
-              value: Analytical Quantum Complexity RIKEN Hakubi Research Team (RIKEN Center for Quantum Computing)
+              value: Analytical Quantum Complexity RIKEN Hakubi Research Team |RIKEN Center for Quantum Computing
 
           contacts:
             - label: RIKEN Email
