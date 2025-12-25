@@ -133,20 +133,21 @@ locales:
         title: Selected Publications
         icon: scroll
         data:
-          - text: Zhi-Guang Lu, Guo-Qing Tian, Xin-You Lü, and **Cheng Shang**, Topological Quantum Batteries, Phys. Rev. Lett. 134, 180401 (2025).
-            link: https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401
+          - text: "Zhi-Guang Lu, Guo-Qing Tian, Xin-You Lü, and <span style='color:#1f4bd8; font-weight:600;'>Cheng Shang</span>, <i>Topological Quantum Batteries</i>, <b>Phys. Rev. Lett.</b> <b>134</b>, 180401 (2025)."
+          link: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401"
 
-          - text: Cheng Shang and Hong-Chao Li, Resonance-dominant optomechanical entanglement in open quantum systems, Physical Review Applied 21 (4), 044048 (2024).
-            link: https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.21.044048
+          - text: "<span style='color:#1f4bd8; font-weight:600;'>Cheng Shang</span> and Hong-Chao Li, <i>Resonance-dominant optomechanical entanglement in open quantum systems</i>, <b>Phys. Rev. Applied</b> <b>21</b>(4), 044048 (2024)."
+          link: "https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.21.044048"
 
-          - text: Cheng Shang, Hong-Zhi Shen, and Xue-Xi Yi, Nonreciprocity in a strongly coupled three-mode optomechanical circulatory system, Optics Express 27 (18), 25882-25901 (2019).
-            link: https://opg.optica.org/oe/fulltext.cfm?uri=oe-27-18-25882&id=417227
+          - text: "<span style='color:#1f4bd8; font-weight:600;'>Cheng Shang</span>, Hong-Zhi Shen, and Xue-Xi Yi, <i>Nonreciprocity in a strongly coupled three-mode optomechanical circulatory system</i>, <b>Optics Express</b> <b>27</b>(18), 25882–25901 (2019)."
+          link: "https://opg.optica.org/oe/fulltext.cfm?uri=oe-27-18-25882&id=417227"
 
-          - text: Hong-Zhi Shen, Cheng Shang, Y. H. Zhou, and Xue-Xi Yi, Unconventional single-photon blockade in non-Markovian systems, Physical Review A 98 (2), 023856 (2018).
-            link: https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.023856
+          - text: "Hong-Zhi Shen, <span style='color:#1f4bd8; font-weight:600;'>Cheng Shang</span>, Y. H. Zhou, and Xue-Xi Yi, <i>Unconventional single-photon blockade in non-Markovian systems</i>, <b>Phys. Rev. A</b> <b>98</b>(2), 023856 (2018)."
+          link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.023856"
 
-          - text: Zhi-Guang Lu, Cheng Shang, Ying Wu, and Xin-You Lü, Analytical approach to higher-order correlation functions in U(1) symmetric systems, Physical Review A 108, 053703 (2023).
-            link: https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.053703
+          - text: "Zhi-Guang Lu, <span style='color:#1f4bd8; font-weight:600;'>Cheng Shang</span>, Ying Wu, and Xin-You Lü, <i>Analytical approach to higher-order correlation functions in U(1) symmetric systems</i>, <b>Phys. Rev. A</b> <b>108</b>, 053703 (2023)."
+          link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.053703"
+
 
 
       - type: list
