@@ -86,15 +86,15 @@ locales:
           - type: work
             place: Wako, Saitama, Japan
             time: Apr. 2023 - Sep. 2024
-            title: [Junior Research Associate](https://www.riken.jp/en/careers/programs/jra/)
-            content: with Dr. [Tomotaka Kuwahara](https://kuwahara-quantum.com/en/)
+            title: Part-time Positions at RIKEN
+            content: Junior Research Associate Program with Dr. [Tomotaka Kuwahara](https://kuwahara-quantum.com/en/)
             description: Analytical Quantum Complexity RIKEN Hakubi Research Team, RIKEN Center for Quantum Computing
 
           - type: study
             place: Kashiwa, Chiba, Japan
             time: Oct. 2021 - Sep. 2024
             title: Ph.D. |The University of Tokyo, Department of Physics
-            content: with Prof. [Naomichi Hatano](http://hatano-lab.iis.u-tokyo.ac.jp/index-e.html)
+            content: Japanese Government (MEXT) Doctoral Scholarship with Prof. [Naomichi Hatano](http://hatano-lab.iis.u-tokyo.ac.jp/index-e.html)
 
           - type: study
             place: Changchun, Jilin, China
@@ -106,7 +106,7 @@ locales:
             place: Changchun, Jilin, China
             time: Sep. 2017 - June 2020
             title: Master of Science |Northeast Normal University, Center for Quantum Sciences
-            content: with Prof. [XueXi Yi](https://cqs.nenu.edu.cn/)
+            content: Chinese National Scholarship for Postgraduates with Prof. [XueXi Yi](https://cqs.nenu.edu.cn/)
           
 
       - type: banner
