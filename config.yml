@@ -173,11 +173,11 @@ locales:
         title: Gallery
         icon: images
         data:
-          - url: https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1000&auto=format&fit=crop
-            title: PHHQP-XXI Workshop
-            location: Chania, Greece
-            date: 2024
-            description: Presenting my research on open quantum systems. The discussions overlooking the Mediterranean were truly inspiring.
+          - url: https://github.com/shangc1204/portfolio/blob/main/public/souvenir%20photos%20%20(4).jpg
+            title: Kuwahara-lab
+            location: RIKEN
+            date: 2025
+            description: Cherry blossom viewing with Kuwahara-lab's member.
 
           - url: https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000&auto=format&fit=crop
             title: Mountain Hiking
