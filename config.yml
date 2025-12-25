@@ -173,7 +173,7 @@ locales:
         title: Gallery
         icon: images
         data:
-          - url: https://github.com/shangc1204/portfolio/blob/main/public/souvenir%20photos%20%20(4).jpg
+          - url: https://github.com/shangc1204/portfolio/blob/main/public/avatar.avif
             title: Kuwahara-lab
             location: RIKEN
             date: 2025
