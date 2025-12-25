@@ -133,7 +133,7 @@ locales:
         title: Selected Publications
         icon: scroll
         data:
-          - text: "Zhi-Guang Lu, Guo-Qing Tian, Xin-You Lü, and <span style="color:#6b5b95; font-weight:700;">Cheng Shang</span>, Topological Quantum Batteries, Phys. Rev. Lett. 134, 180401 (2025)."
+          - text: "Zhi-Guang Lu, Guo-Qing Tian, Xin-You Lü, and <span style=\"color:#6b5b95; font-weight:700;\">Cheng Shang</span>, Topological Quantum Batteries, Phys. Rev. Lett. 134, 180401 (2025)."
             link: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401"
 
           - text: "**Cheng Shang** and Hong-Chao Li, Resonance-dominant optomechanical entanglement in open quantum systems, Physical Review Applied 21 (4), 044048 (2024)."
