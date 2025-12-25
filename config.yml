@@ -133,20 +133,20 @@ locales:
         title: Selected Publications
         icon: scroll
         data:
-           - text: "Zhi-Guang Lu, Guo-Qing Tian, Xin-You Lü, and <span style=\"color:#6b5b95; font-weight:700; background-color:rgba(107,91,149,0.12); padding:1px 6px; border-radius:6px;\">Cheng Shang</span>, <i>Topological Quantum Batteries</i>, <b>Phys. Rev. Lett.</b> <b>134</b>, 180401 (2025)."
-           link: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401"
+          - text: "Zhi-Guang Lu, Guo-Qing Tian, Xin-You Lü, and <span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, <i>Topological Quantum Batteries</i>, <b>Phys. Rev. Lett.</b> <b>134</b>, 180401 (2025). <br><span style=\"font-size:0.95em; color:#555;\">This work was featured in <a href=\"https://x.com/PhysRevLett/status/1924474721149542443\" target=\"_blank\">PRL Trending</a>, highlighted in a press release by <a href=\"https://www.riken.jp/en/news_pubs/research_news/pr/2025/20250513_2/index.html\" target=\"_blank\">RIKEN</a>, and presented as an Invited Talk at the <a href=\"https://events.physics.uoc.gr/event/1/page/5-speakers\" target=\"_blank\">21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)</a>, Chania, Greece.</span>"
+            link: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401"
 
-           - text: "<span style=\"color:#6b5b95; font-weight:700; background-color:rgba(107,91,149,0.12); padding:1px 6px; border-radius:6px;\">Cheng Shang</span> and Hong-Chao Li, <i>Resonance-dominant optomechanical entanglement in open quantum systems</i>, <b>Phys. Rev. Applied</b> <b>21</b>(4), 044048 (2024)."
-           link: "https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.21.044048"
+          - text: "<span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span> and Hong-Chao Li, Resonance-dominant optomechanical entanglement in open quantum systems, Physical Review Applied 21 (4), 044048 (2024)."
+            link: "https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.21.044048"
 
-           - text: "<span style=\"color:#6b5b95; font-weight:700; background-color:rgba(107,91,149,0.12); padding:1px 6px; border-radius:6px;\">Cheng Shang</span>, Hong-Zhi Shen, and Xue-Xi Yi, <i>Nonreciprocity in a strongly coupled three-mode optomechanical circulatory system</i>, <b>Optics Express</b> <b>27</b>(18), 25882–25901 (2019)."
-           link: "https://opg.optica.org/oe/fulltext.cfm?uri=oe-27-18-25882&id=417227"
+          - text: "<span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, Hong-Zhi Shen, and Xue-Xi Yi, Nonreciprocity in a strongly coupled three-mode optomechanical circulatory system, Optics Express 27 (18), 25882-25901 (2019)."
+            link: "https://opg.optica.org/oe/fulltext.cfm?uri=oe-27-18-25882&id=417227"
 
-           - text: "Hong-Zhi Shen, <span style=\"color:#6b5b95; font-weight:700; background-color:rgba(107,91,149,0.12); padding:1px 6px; border-radius:6px;\">Cheng Shang</span>, Y. H. Zhou, and Xue-Xi Yi, <i>Unconventional single-photon blockade in non-Markovian systems</i>, <b>Phys. Rev. A</b> <b>98</b>(2), 023856 (2018)."
-           link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.023856"
+          - text: "Hong-Zhi Shen, <span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, Y. H. Zhou, and Xue-Xi Yi, Unconventional single-photon blockade in non-Markovian systems, Physical Review A 98 (2), 023856 (2018)."
+            link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.023856"
 
-           - text: "Zhi-Guang Lu, <span style=\"color:#6b5b95; font-weight:700; background-color:rgba(107,91,149,0.12); padding:1px 6px; border-radius:6px;\">Cheng Shang</span>, Ying Wu, and Xin-You Lü, <i>Analytical approach to higher-order correlation functions in U(1) symmetric systems</i>, <b>Phys. Rev. A</b> <b>108</b>, 053703 (2023)."
-           link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.053703"
+          - text: "Zhi-Guang Lu, <span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, Ying Wu, and Xin-You Lü, Analytical approach to higher-order correlation functions in U(1) symmetric systems, Physical Review A 108, 053703 (2023)."
+            link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.053703"
 
 
 
