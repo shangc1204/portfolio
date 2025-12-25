@@ -133,11 +133,11 @@ locales:
         title: Selected Publications
         icon: scroll
         data:
-          - text: Zhi-Guang Lu, Guo-Qing Tian, Xin-You Lü, and **Cheng Shang**, Topological Quantum Batteries, Phys. Rev. Lett. 134, 180401 (2025).
-            link: https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401
+          - text: "Zhi-Guang Lu, Guo-Qing Tian, Xin-You Lü, and **Cheng Shang**, Topological Quantum Batteries, Phys. Rev. Lett. 134, 180401 (2025)."
+            link: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401"
 
-          - text: **Cheng Shang** and Hong-Chao Li, Resonance-dominant optomechanical entanglement in open quantum systems, Physical Review Applied 21 (4), 044048 (2024).
-            link: https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.21.044048
+          - text: "**Cheng Shang** and Hong-Chao Li, Resonance-dominant optomechanical entanglement in open quantum systems, Physical Review Applied 21 (4), 044048 (2024)."
+            link: "https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.21.044048"
 
           - text: Cheng Shang, Hong-Zhi Shen, and Xue-Xi Yi, Nonreciprocity in a strongly coupled three-mode optomechanical circulatory system, Optics Express 27 (18), 25882-25901 (2019).
             link: https://opg.optica.org/oe/fulltext.cfm?uri=oe-27-18-25882&id=417227
