@@ -179,35 +179,5 @@ locales:
             date: 2025
             description: Cherry blossom viewing with Kuwahara-lab's member.
 
-          - url: https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000&auto=format&fit=crop
-            title: Mountain Hiking
-            location: Japan Alps
-            date: 2023
-            description: Recharging amidst the breathtaking landscapes of the Japan Alps. Nature provides a perfect backdrop for deep reflection.
-
-          - url: https://images.unsplash.com/photo-1544928147-79a2dbc1f389?q=80&w=1000&auto=format&fit=crop
-            title: Breaking Practice
-            location: Tokyo
-            date: 2024
-            description: Dynamics exist in movement too. Breaking (B-boying) has been my passion for years, teaching me discipline and creative expression.
-
-          - url: https://images.unsplash.com/photo-1543168256-418811576931?q=80&w=1000&auto=format&fit=crop
-            title: Gomoku Strategy
-            location: Kyoto
-            date: 2023
-            description: The elegance of logic in a board game. Gomoku is a great way to train strategic thinking outside of physics.
-
-          - url: https://images.unsplash.com/photo-1502224562085-639556652f33?q=80&w=1000&auto=format&fit=crop
-            title: Early Morning Run
-            location: Tokyo Bay
-            date: 2024
-            description: Running helps me maintain a clear mind. It is the best way to start a day of intense theoretical research.
-
-          - url: https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=1000&auto=format&fit=crop
-            title: Physics Library
-            location: UTokyo
-            date: 2024
-            description: The sanctuary of knowledge where most of my doctoral dissertation took shape.
-
     footer:
       copyright: © 2025 Cheng Shang. All rights reserved.
