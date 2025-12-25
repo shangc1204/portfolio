@@ -134,7 +134,7 @@ locales:
   title: Selected Publications
   icon: scroll
   data:
-    - type: publication
+    - type: work
       time: 2025
       title: Topological Quantum Batteries
       content: >
@@ -142,7 +142,7 @@ locales:
         *Physical Review Letters* **134**, 180401 (2025).
       link: https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401
 
-    - type: publication
+    - type: work
       time: 2024
       title: Resonance-dominant optomechanical entanglement in open quantum systems
       content: >
@@ -150,7 +150,7 @@ locales:
         *Physical Review Applied* **21**, 044048 (2024).
       link: https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.21.044048
 
-    - type: publication
+    - type: work
       time: 2023
       title: Analytical approach to higher-order correlation functions in U(1) symmetric systems
       content: >
@@ -158,7 +158,7 @@ locales:
         *Physical Review A* **108**, 053703 (2023).
       link: https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.053703
 
-    - type: publication
+    - type: work
       time: 2019
       title: Nonreciprocity in a strongly coupled three-mode optomechanical circulatory system
       content: >
@@ -166,13 +166,14 @@ locales:
         *Optics Express* **27**, 25882–25901 (2019).
       link: https://opg.optica.org/oe/fulltext.cfm?uri=oe-27-18-25882&id=417227
 
-    - type: publication
+    - type: work
       time: 2018
       title: Unconventional single-photon blockade in non-Markovian systems
       content: >
         Hong-Zhi Shen, **Cheng Shang**, Y. H. Zhou, and Xue-Xi Yi  
         *Physical Review A* **98**, 023856 (2018).
       link: https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.023856
+
 
 
 
