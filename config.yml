@@ -147,9 +147,8 @@ locales:
           - text: "Hong-Zhi Shen, <span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, Y. H. Zhou, and Xue-Xi Yi, <i>Unconventional single-photon blockade in non-Markovian systems</i>, <b>Phys. Rev. A</b> <b>98</b>(2), 023856 (2018)."
             link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.023856"
 
-          - text: "Zhi-Guang Lu, <span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, Ying Wu, and Xin-You Lü, <i>Analytical approach to higher-order correlation functions in U(1) symmetric systems</i>, <b>Phys. Rev. A</b> <b>108</b>, 053703 (2023)."
+          - text: "Zhi-Guang Lu, <span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, Ying Wu, and Xin-You Lü, <i>Analytical approach to higher-order correlation functions in U(1) symmetric systems</i>, <b>Phys. Rev. A</b> <b>108</b>, 053703 (2023). <br><span style=\"font-size:0.95em; color:#555;\">This work developed a user-friendly open-source Python library, the <a href=\"https://github.com/ZhiGuangLu/qcs\" target=\"_blank\" rel=\"noopener noreferrer\">quantum correlation solver</a>.</span>"
             link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.053703"
-
 
 
       - type: list
