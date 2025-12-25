@@ -65,6 +65,11 @@ locales:
             - label: Gmail
               value: shangc1204@gmail.com
               icon: fa6-brands:google
+
+            - label: Live proud. Never give up!
+              value: Give civilization to the years.
+              icon: fire
+
               
 
       - type: experience
