@@ -189,12 +189,13 @@ locales:
         id: future
         title: What I Want to Learn
         icon: fa6-solid:book
-        data: 
-        - "**✎ Many-body localization and thermalization** (from an information-theoretic perspective)"
-        - "**✎ Floquet theory** (Periodic driving theory and Floquet heating)"
-        - "**✎ Krylov Complexity**"
-        - "**✎ Quantum Complexity**"
-        - "**✎ Advanced Mathematics** (von Neumann algebras and Graph theory)"
+        dot: pencil
+        data:
+          - text: "**Many-body localization and thermalization** (from an information-theoretic perspective)"
+          - text: "**Floquet theory** (periodic driving theory and Floquet heating)"
+          - text: "**Quantum Complexity and Krylov complexity**"
+          - text: "**Advanced mathematics** (von Neumann algebras and graph theory)"
+
 
     footer:
           copyright: "© 2025 Cheng Shang. All rights reserved. <br>⟳ Update: December 26, 2025"
