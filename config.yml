@@ -173,17 +173,6 @@ locales:
             link: "https://arxiv.org/abs/2302.04897"
 
 
-      - type: list
-       id: interests
-       title: Research Interests
-       icon: flask
-       data:
-            - text: "Dissipative and non-Markovian quantum dynamics"
-            - text: "Quantum speed limits and Lieb–Robinson-type bounds"
-            - text: "Operator spreading and information propagation"
-            - text: "Quantum batteries and energy storage protocols"
-
-
 
     footer:
           copyright: "© 2025 Cheng Shang. All rights reserved. <br>⟳ Update: December 26, 2025"
