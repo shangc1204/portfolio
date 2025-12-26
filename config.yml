@@ -181,11 +181,9 @@ locales:
         icon: flask
         dot: check
         data:
-          - "**2024** Invited Talk, [21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)](https://events.physics.uoc.gr/event/1/page/5-speakers), Chania, Greece."
+          - "**▼ Lieb-Robinson bound and its application**: one may include Particle Transport, Information Propagation, Operator Spreading, and Correlation Generation."
           - "**2023** Best Poster Award, [5th International Symposium on Quantum Physics and Quantum Information Sciences (QPQIS-2023)](http://en.baqis.ac.cn/news/detail/?cid=1764), Beijing, China."
-          - "**2021** Japanese Government (MEXT) Doctoral Scholarship."
-          - "**2019** Chinese National Scholarship for Postgraduates."
-
+         
 
 
     footer:
