@@ -182,9 +182,10 @@ locales:
         dot: check
         data:
           - "**▼ Lieb-Robinson Bound and Its Application**: one may include Particle Transport, Information Propagation, Operator Spreading, and Correlation Generation."
-          - "**▣ Open Quantum Systems**: with particular focus on Dissipative and non-Markovian Dynamics in Quantum Optics and Quantum Information."
+          - "**▣ Open Quantum Systems**: with particular focus on dissipative and non-Markovian dynamics in quantum optics and quantum information."
+          - "**▮ Quantum Batteries**: focuses on improving the performance of Quantum Batteries by addressing theoretical obstacles, including those in Topological and Many-Body Quantum Systems."
+          - "**◎ Hybrid Cavity Optomechanics**: theoretical exploration of nonlinear radiation-pressure-induced phenomena and their integration with superconducting circuit platforms." 
          
-
 
     footer:
           copyright: "© 2025 Cheng Shang. All rights reserved. <br>⟳ Update: December 26, 2025"
