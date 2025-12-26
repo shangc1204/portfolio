@@ -157,11 +157,11 @@ locales:
         icon: clock-rotate-left
         data:
           - text: |-
-              Cheng Shang, Zhi-Guang Lu, Hayato Kinkawa, and Tomotaka Kuwahara, Operator Spreading and Information Propagation: Equivalence and Beyond, arXiv:2505.07955.
-            link: https://arxiv.org/abs/2505.07955
+            "<span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, Zhi-Guang Lu, Hayato Kinkawa, and Tomotaka Kuwahara, <i>Operator Spreading and Information Propagation: Equivalence and Beyond</i>, <b>arXiv</b>:2505.07955. <br><span style=\"font-size:0.95em; color:#555;\">This work received the Best Poster Award at the 5th International Symposium on Quantum Physics and Quantum Information Sciences (QPQIS-2023), Beijing, China. See: http://en.baqis.ac.cn/news/detail/?cid=1764</span>"
+            link: "https://arxiv.org/abs/2505.07955"
 
           - text: |-
-              Donghoon Kim, Yusuke Kimura, Hugo Mackay, Yosuke Mitsuhashi, Hideaki Nishikawa, Carla Rubiliani, Cheng Shang, Ayumi Ukai, and Tomotaka Kuwahara, Spectral Small-Incremental-Entangling: Breaking Quasi-Polynomial Complexity Barriers in Long-Range Interacting Systems, arXiv:2509.12014.
+            Donghoon Kim, Yusuke Kimura, Hugo Mackay, Yosuke Mitsuhashi, Hideaki Nishikawa, Carla Rubiliani, Cheng Shang, Ayumi Ukai, and Tomotaka Kuwahara, Spectral Small-Incremental-Entangling: Breaking Quasi-Polynomial Complexity Barriers in Long-Range Interacting Systems, arXiv:2509.12014.
             link: https://arxiv.org/abs/2509.12014
 
           - text: Hongchao Li, Cheng Shang, Tomotaka Kuwahara, and Tan Van Vu, Macroscopic Particle Transport in Dissipative Long-Range Bosonic Systems, arXiv:2503.13731.
