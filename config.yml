@@ -31,7 +31,7 @@ locales:
           link: https://inspirehep.net/authors/2662928
 
         - icon: fa6-solid:fire
-          name: "<i>Give civilization to the years. Live proud. Never give up!</i>"
+          name: "<i style=\"display:block; text-align:center; line-height:1.35; color:#555;\">Give civilization to the years.<br><span style=\"font-size:0.9em;\">Live proud. Never give up!</span></i>"
           link: https://cheng-shang.me/
 
           
@@ -45,6 +45,7 @@ locales:
           anchor: "#achievements"
         - label: Interests
           anchor: "#interests"
+
 
     sections:
       - type: profile
@@ -69,7 +70,7 @@ locales:
               value: shangc1204@gmail.com
               icon: fa6-brands:google
 
-            - label: X
+            - label: X |Social Media
               value: "@Shangc1204"
               icon: fa6-brands:x-twitter
 
