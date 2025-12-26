@@ -172,18 +172,20 @@ locales:
           - text: "<span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span> and H. Z. Shen, <i>Coupling Enhancement and Symmetrization in Dissipative Optomechanical Systems</i>, <b>arXiv</b>:2302.04897. <br><span style=\"font-size:0.95em; color:#555;\">This work is an invited contribution to <i>Annalen der Physik</i> and is currently under review.</span>"
             link: "https://arxiv.org/abs/2302.04897"
 
-      - type: markdown
+      - type: banner
         id: interests
         title: Research Interests
         icon: flask
-        content: |
-          <ul style="list-style-type:square; padding-left: 1.2em;">
-            <li>Open quantum systems: dissipative and non-Markovian dynamics.</li>
-            <li>Quantum speed limits and Lieb-Robinson-type bounds (including energy-leakage and locality techniques).</li>
-            <li>Operator spreading, correlation growth, and information propagation in many-body systems.</li>
-            <li>Quantum batteries: charging time, ergotropy, and energy storage protocols.</li>
-            <li>Structured photonic reservoirs and optomechanics: exact dynamics, bound states, and gain mechanisms.</li>
-          </ul>
+        data:
+          header: |
+            Current Research Focus
+          content: |
+            - Open quantum systems and non-Markovian dynamics  
+            - Quantum speed limits and Lieb-Robinson-type bounds  
+            - Operator spreading and information propagation  
+            - Quantum batteries and energy storage protocols  
+            - Structured photonic reservoirs and optomechanics
+
 
 
     footer:
