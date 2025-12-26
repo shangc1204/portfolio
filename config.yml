@@ -184,7 +184,17 @@ locales:
           - "**▣ Open Quantum Systems**: with particular focus on Dissipative and non-Markovian Dynamics in Quantum Optics and Quantum Information."
           - "**◎ Quantum Batteries**: focuses on improving the performance of Quantum Batteries by addressing theoretical barriers in practical applications, including those in Topological and Many-Body Quantum Systems."
           - "**|◻︎| Hybrid Cavity Optomechanics**: theoretical exploration of nonlinear radiation-pressure-induced phenomena and their integration with Superconducting Circuit platforms." 
-         
+
+      - type: list
+        id: future
+        title: What I Want to Learn
+        icon: fa6-solid:book
+        data: 
+        - "**✎ Many-body localization and thermalization** (from an information-theoretic perspective)"
+        - "**✎ Floquet theory** (Periodic driving theory and Floquet heating)"
+        - "**✎ Krylov Complexity**"
+        - "**✎ Quantum Complexity**"
+        - "**✎ Advanced Mathematics** (von Neumann algebras and Graph theory)"
 
     footer:
           copyright: "© 2025 Cheng Shang. All rights reserved. <br>⟳ Update: December 26, 2025"
