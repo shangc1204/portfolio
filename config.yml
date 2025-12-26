@@ -172,5 +172,6 @@ locales:
 
 
     footer:
-          copyright: "© 2025 Cheng Shang. All rights reserved. <br>⟳ Update: December 26, 2025"
+          copyright: "© 2025 Cheng Shang. All rights reserved.<br><span style=\"font-size:1.2em; vertical-align:middle;\">↻</span> Update: December 26, 2025"
+
 
