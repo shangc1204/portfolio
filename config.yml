@@ -156,8 +156,7 @@ locales:
         title: Selected Preprints
         icon: clock-rotate-left
         data:
-          - text: |-
-            "<span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, Zhi-Guang Lu, Hayato Kinkawa, and Tomotaka Kuwahara, <i>Operator Spreading and Information Propagation: Equivalence and Beyond</i>, <b>arXiv</b>:2505.07955. <br><span style=\"font-size:0.95em; color:#555;\">This work received the Best Poster Award at the 5th International Symposium on Quantum Physics and Quantum Information Sciences (QPQIS-2023), Beijing, China. See: http://en.baqis.ac.cn/news/detail/?cid=1764</span>"
+          - text: "<span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, Zhi-Guang Lu, Hayato Kinkawa, and Tomotaka Kuwahara, <i>Operator Spreading and Information Propagation: Equivalence and Beyond</i>, <b>arXiv</b>:2505.07955. <br><span style=\"font-size:0.95em; color:#555;\">This work received the Best Poster Award at the 5th International Symposium on Quantum Physics and Quantum Information Sciences (QPQIS-2023), Beijing, China. See: http://en.baqis.ac.cn/news/detail/?cid=1764</span>"
             link: "https://arxiv.org/abs/2505.07955"
 
           - text: |-
