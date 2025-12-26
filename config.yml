@@ -13,6 +13,7 @@ locales:
       welcome: 👋 Hi there, I am
       titles:
         - ℏ Theoretical Physics Researcher
+        - ♜ INTJ (MBTI) ➶ Sagittarius
         
       avatar: /avatar.avif
       bgImage: /bg.avif
@@ -29,9 +30,10 @@ locales:
           name: iNSPIRE
           link: https://inspirehep.net/authors/2662928
 
-        - icon: fa6-brands:x-twitter
-          name: X
-          link: https://x.com/Shangc1204
+        - label: Live proud. Never give up!
+          value: Give civilization to the years.
+          icon: fire
+          
 
     navbar:
       links:
@@ -67,9 +69,9 @@ locales:
               value: shangc1204@gmail.com
               icon: fa6-brands:google
 
-            - label: Live proud. Never give up!
-              value: Give civilization to the years.
-              icon: fire
+            - icon: fa6-brands:x-twitter
+              name: X
+              link: https://x.com/Shangc1204
 
               
 
