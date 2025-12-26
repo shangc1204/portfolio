@@ -170,22 +170,9 @@ locales:
           - text: "<span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span> and H. Z. Shen, <i>Coupling Enhancement and Symmetrization in Dissipative Optomechanical Systems</i>, <b>arXiv</b>:2302.04897. <br><span style=\"font-size:0.95em; color:#555;\">This work is an invited contribution to <i>Annalen der Physik</i> and is currently under review.</span>"
             link: "https://arxiv.org/abs/2302.04897"
 
-          - type: markdown
-            id: research_interests
-            title: Research Interests
-            icon: flask
-            content: |
-              I am interested in the complexity of open quantum dynamics, with an emphasis on:
+   
+          footer:
+                copyright: "© 2025 Cheng Shang. All rights reserved.<br>↻ Update: December 26, 2025"
 
-              - **Quantum dissipative dynamics and information-theoretic complexity**
-              - **Quantum speed limits and Lieb–Robinson-type bounds** (including energy-leakage and locality techniques)
-              - **Non-Markovian effects in photonic/optomechanical platforms**
-              - **Quantum batteries and energy storage/charging protocols**
-              - **Operator spreading, correlation growth, and communication capacity in many-body systems**
-
-
-
-    footer:
-          copyright: "© 2025 Cheng Shang. All rights reserved.<br><span style=\"font-size:1.2em; vertical-align:middle;\">↻</span> Update: December 26, 2025"
 
 
