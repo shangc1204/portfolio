@@ -30,9 +30,10 @@ locales:
           name: iNSPIRE
           link: https://inspirehep.net/authors/2662928
 
-        - icon: fire
-          name: Give civilization to the years. Live proud. Never give up!
+        - icon: fa6-solid:fire
+          name: "<i>Give civilization to the years. Live proud. Never give up!</i>"
           link: https://cheng-shang.me/
+
           
     navbar:
       links:
@@ -62,15 +63,16 @@ locales:
           contacts:
             - label: RIKEN Email
               value: cheng.shang@riken.jp
-              icon: envelope
+              icon: fa6-solid:envelope
 
             - label: Gmail
               value: shangc1204@gmail.com
               icon: fa6-brands:google
 
             - label: X
-              value: @Shangc1204
+              value: "@Shangc1204"
               icon: fa6-brands:x-twitter
+
               
 
       - type: experience
