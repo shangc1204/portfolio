@@ -191,9 +191,9 @@ locales:
         icon: fa6-solid:book
         dot: check
         data:
-          - text: "**Many-body localization and thermalization** (from an information-theoretic perspectivev"
-          - text: "**Floquet theory** (Periodic driving and Floquet heatingn"
-          - text: "**Quantum complexity and Krylov complexity**"
+          - text: "**Many-body localization and thermalization** (from an information-theoretic perspective)"
+          - text: "**Floquet theory** (Periodic driving and Floquet heating)"
+          - text: "**Hamiltonian complexity and Krylov complexity**"
           - text: "**Advanced mathematics** (e.g., von Neumann algebras and Graph theory)"
           - text: "**Cosmology** (e.g., Inflation theory and dS/CFT)"
 
