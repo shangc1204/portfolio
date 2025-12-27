@@ -192,7 +192,7 @@ locales:
         dot: check
         data:
           - text: "**Many-body localization and thermalization** (from an information-theoretic perspectivev"
-          - text: "**Floquet theory** (Periodic driving theory and Floquet heating)"
+          - text: "**Floquet theory** (Periodic driving and Floquet heatingn"
           - text: "**Quantum complexity and Krylov complexity**"
           - text: "**Advanced mathematics** (e.g., von Neumann algebras and Graph theory)"
           - text: "**Cosmology** (e.g., Inflation theory and dS/CFT)"
