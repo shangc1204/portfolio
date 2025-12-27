@@ -203,7 +203,13 @@ locales:
         icon: fa6-solid:heart
         dot: check
         data:
-          - text: "✎ Sketching; Writing fiction; ♪ Music; Comics; Hip-hop dance; Jianzi..."
+          - text: "✎ Sketching; Writing fiction; ♪ Music; Comics; Hip-hop dance; Jianzi......"
+
+        - type: markdown
+        id: closing
+        title: Welcome!
+        icon: star
+        data: If you are interested in my research, feel free to contact me. Academic discussions and potential collaborations are always welcome. : )
 
 
     footer:
