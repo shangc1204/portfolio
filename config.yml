@@ -197,6 +197,14 @@ locales:
           - text: "**Advanced mathematics** (e.g., von Neumann algebras and Graph theory)"
           - text: "**Cosmology** (e.g., Inflation theory and dS/CFT)"
 
+      - type: list
+        id: hobbies
+        title: Hobbies
+        icon: fa6-solid:heart
+        dot: check
+        data:
+          - text: "✎ Sketching; Writing fiction; ♪ Music; Comics; Hip-hop dance; Jianzi..."
+
 
     footer:
           copyright: "© 2025 Cheng Shang. All rights reserved. <br>⟳ Update: December 26, 2025"
