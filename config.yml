@@ -205,7 +205,7 @@ locales:
         data:
           - text: "✎ Sketching; Writing fiction; ♪ Music; Comics; Hip-hop dance; Jianzi......"
 
-      - type: markdown
+      - type: paragraph
         id: closing
         title: Welcome!
         icon: star
