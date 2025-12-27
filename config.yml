@@ -209,7 +209,7 @@ locales:
       - type: list
         id: closing
         title: Welcome!
-        icon: fa6-solid: star
+        icon: fa6-solid:star
         dot: check
         data: 
           - text: "If you are interested in my research, feel free to contact me. Academic discussions and potential collaborations are always welcome. : )"
