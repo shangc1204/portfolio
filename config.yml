@@ -173,6 +173,31 @@ locales:
 
           - text: "<span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span> and H. Z. Shen, <i>Coupling Enhancement and Symmetrization in Dissipative Optomechanical Systems</i>, <b>arXiv</b>:2302.04897. <br><span style=\"font-size:0.95em; color:#555;\">This work is an invited contribution to <i>Annalen der Physik</i> and is currently under review.</span>"
             link: "https://arxiv.org/abs/2302.04897"
+            
+
+        - type: list
+        id: acknowledged
+        title: Selected for acknowledgment
+        icon: clock-rotate-left
+        data:
+         - text: "<span style=\"color:#6b5b95; font-weight:800;\">Yue-Zhou Li</span>, <i>Stochastic Inflation as an Open Quantum System</i>, <b>arXiv</b>:2507.02070 (2025)."
+           link: "https://arxiv.org/abs/2507.02070"
+
+         - text: "<span style=\"color:#6b5b95; font-weight:800;\">M. E. Shirokov</span>, <i>Upper Bounds on the Holevo Quantity Arising from the Fundamental Entropic Inequality</i>, <b>arXiv</b>:2506.05335 (2025)."
+           link: "https://arxiv.org/abs/2506.05335"
+
+         - text: "<span style=\"color:#6b5b95; font-weight:800;\">Tomotaka Kuwahara</span>, <i>Clustering of Conditional Mutual Information and Quantum Markov Structure at Arbitrary Temperatures</i>, <b>arXiv</b>:2407.05835 (2024)."
+           link: "https://arxiv.org/abs/2407.05835"
+
+         - text: "<span style=\"color:#6b5b95; font-weight:800;\">Yue-Zhou Li</span>, <i>Holographic Conformal Field Theories and Their Flat-Space Structures</i>, PhD Thesis, McGill University (2023)."
+           link: "https://escholarship.mcgill.ca/concern/theses/cj82kd73h"
+
+         - text: "<span style=\"color:#6b5b95; font-weight:800;\">Yoshinaga Atsuki</span>, <i>Quantum Thermalization and Quantum Metrology in Quantum Ising Systems</i>, PhD Thesis, The University of Tokyo (2023)."
+           link: "http://hatano-lab.iis.u-tokyo.ac.jp/thesis/dron2022/thesis_yoshinaga.pdf"
+
+         - text: "<span style=\"color:#6b5b95; font-weight:800;\">Hongchao Li</span>, <i>Quantum Many-Body Theory of Dissipative Superfluidity</i>, Master Thesis, The University of Tokyo (2023)."
+           link: "https://sites.google.com/view/hongchaoliquantum/"
+
 
       - type: list
         id: interests
