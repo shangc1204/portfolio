@@ -162,7 +162,7 @@ locales:
           - text: "<span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, Zhi-Guang Lu, Hayato Kinkawa, and Tomotaka Kuwahara, <i>Operator Spreading and Information Propagation: Equivalence and Beyond</i>, <b>arXiv</b>:2505.07955. <br><span style=\"font-size:0.95em; color:#555;\">This work received the <a href=\"http://en.baqis.ac.cn/news/detail/?cid=1764\" target=\"_blank\" rel=\"noopener noreferrer\">Best Poster Award</a> at the 5th International Symposium on Quantum Physics and Quantum Information Sciences (QPQIS-2023), Beijing, China. This work is currently under review at PRA Letter.</span>"
             link: "https://arxiv.org/abs/2505.07955"
 
-          - text: "Donghoon Kim, Yusuke Kimura, Hugo Mackay, Yosuke Mitsuhashi, Hideaki Nishikawa, Carla Rubiliani, <span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang (authors are listed in alphabetical order)</span>, Ayumi Ukai, and Tomotaka Kuwahara, <i>Spectral Small-Incremental-Entangling: Breaking Quasi-Polynomial Complexity Barriers in Long-Range Interacting Systems</i>, <b>arXiv</b>:2509.12014. <br><span style=\"font-size:0.95em; color:#555;\">This work, an International Collaboration across Asia, Europe, and the U. S., introduces the concept of spectral entangling strength (SIE), which captures the structural entangling power of an operator, and establishes a spectral SIE theorem. This manuscript is currently under review at Physical Review X.</span>"
+          - text: "Donghoon Kim, Yusuke Kimura, Hugo Mackay, Yosuke Mitsuhashi, Hideaki Nishikawa, Carla Rubiliani, <span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, Ayumi Ukai, and Tomotaka Kuwahara, <i>Spectral Small-Incremental-Entangling: Breaking Quasi-Polynomial Complexity Barriers in Long-Range Interacting Systems</i>, <b>arXiv</b>:2509.12014. <br><span style=\"font-size:0.95em; color:#555;\">This work, an International Collaboration across Asia, Europe, and the U. S., introduces the concept of spectral entangling strength (SIE), which captures the structural entangling power of an operator, and establishes a spectral SIE theorem. This manuscript is currently under review at Physical Review X.</span>"
             link: "https://arxiv.org/abs/2509.12014"
 
           - text: "Hongchao Li, <span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, Tomotaka Kuwahara, and Tan Van Vu, <i>Macroscopic Particle Transport in Dissipative Long-Range Bosonic Systems</i>, <b>arXiv</b>:2503.13731. <br><span style=\"font-size:0.95em; color:#555;\">This work is currently under review at <i>Nature Communications</i>.</span>"
@@ -193,8 +193,8 @@ locales:
         icon: fa6-solid:book
         dot: check
         data:
-          - text: "**Many-body localization and thermalization** (from an information-theoretic perspective) (Currently studying...)"
-          - text: "**Floquet theory** (Periodic driving and Floquet heating) (Currently studying...)"
+          - text: "**Many-body localization and thermalization** (from an information-theoretic perspective)"
+          - text: "**Floquet theory** (Periodic driving and Floquet heating)"
           - text: "**Hamiltonian complexity and Krylov complexity**"
           - text: "**Advanced mathematics** (e.g., von Neumann algebras and Graph theory)"
           - text: "**Cosmology** (e.g., Inflation theory and dS/CFT)"
