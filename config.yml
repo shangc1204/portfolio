@@ -167,6 +167,9 @@ locales:
           - text: "Hongchao Li, <span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, Tomotaka Kuwahara, and Tan Van Vu, <i>Macroscopic Particle Transport in Dissipative Long-Range Bosonic Systems</i>, <b>arXiv</b>:2503.13731. <br><span style=\"font-size:0.95em; color:#555;\">This work has been accepted for publication in <i>Nature Communications</i>.</span>"
             link: "https://arxiv.org/abs/2503.13731"
 
+          - text: "Rohit Kumar Shukla and <span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, <i>Many-Body Structural Effects in Periodically Driven Quantum Batteries</i>, <b>arXiv</b>:2603.03883."
+            link: "https://arxiv.org/abs/2603.03883"
+
           - text: "H. Z. Shen, X. C. Zhang, L. Y. Ning, Zhi-Guang Lu, Yan-Hui Zhou, and <span style=\"color:#6b5b95; font-weight:800;\">Cheng Shang</span>, <i>Higher-order Exceptional Points Induced by Non-Markovian Environments</i>, <b>arXiv</b>:2504.00617."
             link: "https://arxiv.org/abs/2504.00617"
 
