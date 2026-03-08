@@ -69,6 +69,9 @@ locales:
 
             - label: Gmail
               value: shangc1204@gmail.com
+              icon: fa6-brands:google
+
+            - label: Gmail
               value: shangcheng.phys@gmail.com
               icon: fa6-brands:google
 
