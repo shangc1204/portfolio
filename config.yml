@@ -73,8 +73,7 @@ locales:
 
             - label: Gmail
               value: shangcheng.phys@gmail.com
-              icon: fa6-brands:google
-
+            
             - label: X |Social Media
               value: "@Shangc1204"
               icon: fa6-brands:x-twitter
