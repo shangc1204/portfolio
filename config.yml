@@ -68,11 +68,7 @@ locales:
               icon: fa6-solid:envelope
 
             - label: Gmail
-              value: shangc1204@gmail.com
-              icon: fa6-brands:google
-
-            - label: Gmail
-              value: shangcheng.phys@gmail.com
+              value: shangc1204@gmail.com; shangcheng.phys@gmail.com
               icon: fa6-brands:google
 
             - label: X |Social Media
