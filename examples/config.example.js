@@ -4,21 +4,11 @@ export default {
       lang: "zh-CN",
       langName: "EN",
       title: "Mister-Hope | Portfolio",
-      description:
-        "The personal portfolio of Mister-Hope, a front-end developer.",
-      ui: {
-        themeToggle: "Toggle Theme",
-        contact: "Contact",
-      },
+      description: "The personal portfolio of Mister-Hope, a front-end developer.",
       hero: {
         name: "Mister-Hope",
         welcome: "👋 Hi there, I am",
-        titles: [
-          "High School Physics Teacher",
-          "Front-end Developer",
-          "Open Source Contributor",
-          "A Lifelong Learner",
-        ],
+        titles: ["Open Source Contributor", "A Lifelong Learner"],
         avatar: "/avatar.avif",
         bgImage: "/bg.avif",
         medias: [
@@ -31,16 +21,6 @@ export default {
             icon: "fa7-brands:github",
             name: "GitHub",
             link: "https://github.com/Mister-Hope",
-          },
-          {
-            icon: "fa7-brands:linkedin-in",
-            name: "LinkedIn",
-            link: "https://www.linkedin.com/in/mister-hope/",
-          },
-          {
-            icon: "fa7-brands:x-twitter",
-            name: "X",
-            link: "https://x.com/Mister_Hope",
           },
         ],
       },
@@ -80,11 +60,6 @@ export default {
                 title: "Name",
                 icon: "user",
                 value: "John Hope",
-              },
-              {
-                title: "Affiliation",
-                icon: "building-columns",
-                value: "Northeast YuCai School",
               },
               {
                 title: "Interests",
@@ -134,8 +109,7 @@ export default {
               place: "Northeast Normal University, School of Physics, Chain",
               time: "Sep. 2021 - Dec. 2024",
               title: "Master of Science",
-              content:
-                "study theoretical physics with Prof. [XueXi Yi](https://cqs.nenu.edu.cn/)",
+              content: "study theoretical physics with Prof. [XueXi Yi](https://cqs.nenu.edu.cn/)",
             },
             {
               type: "project",
@@ -150,13 +124,7 @@ export default {
               place: "AnShan, China",
               time: "Jul. 2020 - Aug. 2021",
               title: "Enjoying my gap year",
-            },
-            {
-              type: "study",
-              place: "Northeast Normal University, School of Physics, China",
-              time: "Sep. 2016 - June 2020",
-              title: "Bachelor of Science, Physics",
-              content: "Awarded the Principal's Scholarship.",
+              description: "Also doing open source contributions in my spare time.",
             },
           ],
         },
@@ -166,8 +134,8 @@ export default {
           title: "Call for Papers",
           icon: "bullhorn",
           data: {
-            header:
-              "Special Collection: Exception Points in non-Hermitian Systems",
+            header: "Special Collection: Exception Points in non-Hermitian Systems",
+            tags: "Submit now",
             content:
               "**Journal**: Discover Physics (Springer Nature)\n\nFor inquiries, please contact: cheng.shang@riken.jp or shenhz458@nenu.edu.cn",
             footer: "Submission Deadline: 21 April, 2026",
@@ -194,6 +162,18 @@ export default {
               category: "Project",
               actions: [
                 {
+                  icon: "logos:typescript-icon",
+                },
+                {
+                  icon: "logos:vue",
+                },
+                {
+                  icon: "logos:webpack",
+                },
+                {
+                  icon: "logos:vitejs",
+                },
+                {
                   text: "Website",
                   link: "https://vuejs.press",
                   icon: "external-link",
@@ -209,8 +189,7 @@ export default {
               title:
                 "VuePress Ecosystem ![Stars](https://img.shields.io/github/stars/vuepress/ecosystem?style=plastic&logo=github)",
               logo: "https://vuejs.press/images/hero.png",
-              description:
-                "A collection of official VuePress plugins and themes.",
+              description: "A collection of official VuePress plugins and themes.",
               category: "Project",
               actions: [
                 {
@@ -221,64 +200,6 @@ export default {
                 {
                   text: "GitHub",
                   link: "https://github.com/vuepress/ecosystem",
-                  icon: "fa7-brands:github",
-                },
-              ],
-            },
-            {
-              title:
-                "VuePress Theme Hope ![Stars](https://img.shields.io/github/stars/vuepress-theme-hope/vuepress-theme-hope?style=plastic&logo=github)",
-              logo: "https://theme-hope-assets.vuejs.press/logo.svg",
-              description: "A VuePress theme with tons of features✨",
-              category: "Project",
-              actions: [
-                {
-                  text: "Website",
-                  link: "https://theme-hope.vuejs.press",
-                  icon: "external-link",
-                },
-                {
-                  text: "GitHub",
-                  link: "https://github.com/vuepress-theme-hope/vuepress-theme-hope",
-                  icon: "fa7-brands:github",
-                },
-              ],
-            },
-            {
-              title:
-                "Waline ![Stars](https://img.shields.io/github/stars/walinejs/waline?style=plastic&logo=github)",
-              logo: "https://waline.js.org/logo.png",
-              description: "A Simple, Safe Comment System.",
-              category: "Project",
-              actions: [
-                {
-                  text: "Website",
-                  link: "https://waline.js.org",
-                  icon: "external-link",
-                },
-                {
-                  text: "GitHub",
-                  link: "https://github.com/walinejs/waline",
-                  icon: "fa7-brands:github",
-                },
-              ],
-            },
-            {
-              title:
-                "mdit-plugins ![Stars](https://img.shields.io/github/stars/mdit-plugins/mdit-plugins?style=plastic&logo=github)",
-              logo: "https://mdit-plugins.github.io/logo.svg",
-              description:
-                "A collection of markdown-it plugins written in TypeScript.",
-              category: "Project",
-              actions: [
-                {
-                  text: "Website",
-                  link: "https://mdit-plugins.github.io/",
-                  icon: "external-link",
-                },
-                {
-                  text: "GitHub",
-                  link: "https://github.com/mdit-plugins/mdit-plugins",
                   icon: "fa7-brands:github",
                 },
               ],
@@ -295,36 +216,11 @@ export default {
               year: 2025,
               content:
                 'Our work on "[Topological Quantum Batteries](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401)" was featured in [PRL Trending](https://x.com/PhysRevLett/status/1924474721149542443).',
-            },
-            {
-              year: 2024,
-              content:
-                'Our work on "[Topological Quantum Batteries](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401)" was highlighted in press releases by [RIKEN](https://www.riken.jp/en/news_pubs/research_news/pr/2025/20250513_2/index.html) and selected for [RIKEN Research (Summer)](https://www.riken.jp/en/news_pubs/pubs/riken_research/2025/index.html). It also received coverage from [Mynavi News](https://news.mynavi.jp/techplus/article/20250514-3319145/), [NIKKEI Tech Foresight](https://www.nikkei.com/prime/tech-foresight/article/DGXZQOUC235SW0T20C25A5000000), [PHYS.ORG](https://phys.org/news/2025-06-topological-quantum-batteries-theoretical-framework.html#google_vignette), [Interesting Engineering](https://interestingengineering.com/energy/new-quantum-battery-design), [ФОКУС](https://focus.ua/digital/708987-kvantovye-batarei-smogut-zaryazhat-smartfony-za-sekundy-kak-etogo-dobyutsya-uchenye), [AGAlphaGalileo](https://www.alphagalileo.org/en-gb/Item-Display/ItemId/259206?returnurl=https://www.alphagalileo.org/en-gb/Item-Display/ItemId/259206), [MIRAGE](https://www.miragenews.com/advent-of-topological-quantum-battery-1477588/), [AZO Quantum](https://www.azoquantum.com/News.aspx?newsID=10819), [Enerzine](https://www.enerzine.com/lavenement-de-la-batterie-quantique-topologique/165028-2025-06), [Methored UK](https://www.yourweather.co.uk/news/science/japanese-scientists-propose-a-quantum-battery-design-that-resists-energy-loss.html), and [BASIC thinking](https://www.basicthinking.de/blog/2025/11/12/topologische-quantenbatterie/).',
-            },
-            {
-              year: 2023,
-              content:
-                "Joined the [Kuwahara team](https://kuwahara-quantum.com/en/people/) as a Postdoctoral Researcher (Special Research Fellow) on October 1st.",
+              link: "https://x.com/PhysRevLett/status/1924474721149542443",
             },
             {
               year: 2022,
-              content:
-                "Received Ph.D. degree from the University of Tokyo on September 20.",
-            },
-            {
-              year: 2021,
-              content:
-                "Joined the [Hatano Laboratory](http://hatano-lab.iis.u-tokyo.ac.jp/index-e.html) at the University of Tokyo as a MEXT Scholarship doctoral student.",
-            },
-            {
-              year: 2019,
-              content:
-                "Gave a talk at the Symposium on Frontiers and Progress in Quantum Physics at Inner Mongolia University.",
-            },
-            {
-              year: 2017,
-              content:
-                "Joined Prof. [Yi Xuexi's laboratory](https://cqs.nenu.edu.cn/) at the Center for Quantum Sciences for Master's research.",
+              content: "Received Ph.D. degree from the University of Tokyo on September 20.",
             },
           ],
         },
@@ -337,42 +233,6 @@ export default {
           data: [
             "**2024** Invited Talk, [21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)](https://events.physics.uoc.gr/event/1/page/5-speakers), Chania, Greece.",
             "**2023** Best Poster Award, [5th International Symposium on Quantum Physics and Quantum Information Sciences (QPQIS-2023)](http://en.baqis.ac.cn/news/detail/?cid=1764), Beijing, China.",
-            "**2021** Japanese Government (MEXT) Doctoral Scholarship.",
-            "**2019** Chinese National Scholarship for Postgraduates.",
-          ],
-        },
-        {
-          type: "cards",
-          id: "theses",
-          title: "Theses",
-          icon: "book",
-          data: [
-            {
-              title:
-                "Suppression of Decoherence in Open Quantum Systems: Resonance and Topological Effects",
-              category: "Theses",
-              description: "Doctoral Dissertation",
-              actions: [
-                {
-                  text: "View PDF",
-                  link: "http://hatano-lab.iis.u-tokyo.ac.jp/thesis/dron2024/thesis_shang.pdf",
-                  icon: "file-pdf",
-                },
-              ],
-            },
-            {
-              title:
-                "Nonreciprocal Transmission Based on Modulated Optomechanical Systems",
-              category: "Theses",
-              description: "Master’s Thesis",
-              actions: [
-                {
-                  text: "View PDF",
-                  link: "https://service.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&dbname=CMFD202101&filename=1020826922.nh&uniplatform=OVERSEA",
-                  icon: "file-pdf",
-                },
-              ],
-            },
           ],
         },
         {
@@ -388,10 +248,6 @@ export default {
             {
               text: "Bo-Wang Zhang, Cheng Shang, J. Y. Sun, Zhuo-Cheng Gu, and X. X. Yi, Manipulating spectral transitions and photonic transmission in a non-Hermitian optical system through nanoparticle perturbations, Phys. Rev. A 111, 063702 (2025)",
               link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.111.063702",
-            },
-            {
-              text: "Cheng Shang and Hong-Chao Li, Resonance-dominant optomechanical entanglement in open quantum systems, Physical Review Applied 21 (4), 044048 (2024)",
-              link: "https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.21.044048",
             },
           ],
         },
@@ -409,10 +265,6 @@ export default {
             {
               text: "Cheng Shang, Zhi-Guang Lu, Hayato Kinkawa, and Tomotaka Kuwahara, Operator Spreading and Information Propagation: Equivalence and Beyond, arXiv:2505.07955 (2025)",
               link: "https://arxiv.org/abs/2505.07955",
-            },
-            {
-              text: "Hongchao Li, Cheng Shang, Tomotaka Kuwahara, and Tan Van Vu, Macroscopic Particle Transport in Dissipative Long-Range Bosonic Systems, arXiv:2503.13731 (2025)",
-              link: "https://arxiv.org/abs/2503.13731",
             },
           ],
         },
@@ -477,7 +329,10 @@ export default {
           id: "closing",
           title: "Looking Forward",
           icon: "star",
-          data: "I am always looking for collaborative opportunities at the intersection of **quantum complexity** and **open quantum systems**. Feel free to reach out for research discussions or joint explorations of the fundamental structures of our universe.",
+          data: {
+            content:
+              "I am always looking for collaborative opportunities at the intersection of **quantum complexity** and **open quantum systems**. Feel free to reach out for research discussions or joint explorations of the fundamental structures of our universe.",
+          },
         },
       ],
       footer: {
@@ -489,15 +344,16 @@ export default {
       lang: "zh-CN",
       langName: "中文",
       title: "Mister-Hope | 作品集",
-      description: "Mister-Hope，一个前端开发者的个人作品集",
+      description: "前端开发者 Mister-Hope 的个人作品集。",
       ui: {
         themeToggle: "切换主题",
-        contact: "联系",
+        contacts: "联系",
+        details: "详情",
       },
       hero: {
         name: "Mister-Hope",
         welcome: "👋 你好，我是",
-        titles: ["高中物理教师", "前端开发者", "开源贡献者", "终身学习者"],
+        titles: ["开源贡献者", "终身学习者"],
         avatar: "/avatar.avif",
         bgImage: "/bg.avif",
         medias: [
@@ -510,16 +366,6 @@ export default {
             icon: "fa7-brands:github",
             name: "GitHub",
             link: "https://github.com/Mister-Hope",
-          },
-          {
-            icon: "fa7-brands:linkedin-in",
-            name: "领英",
-            link: "https://www.linkedin.com/in/mister-hope/",
-          },
-          {
-            icon: "fa7-brands:x-twitter",
-            name: "X",
-            link: "https://x.com/Mister_Hope",
           },
         ],
       },
@@ -559,11 +405,6 @@ export default {
                 title: "姓名",
                 icon: "user",
                 value: "约翰·霍普",
-              },
-              {
-                title: "所属机构",
-                icon: "building-columns",
-                value: "东北育才学校",
               },
               {
                 title: "兴趣",
@@ -612,8 +453,7 @@ export default {
               place: "东北师范大学，物理学院，中国",
               time: "2021年9月 - 2024年12月",
               title: "理学硕士",
-              content:
-                "在[衣学喜教授](https://cqs.nenu.edu.cn/)指导下研究理论物理。",
+              content: "在[衣学喜教授](https://cqs.nenu.edu.cn/)指导下研究理论物理。",
             },
             {
               type: "project",
@@ -701,63 +541,6 @@ export default {
                 },
               ],
             },
-            {
-              title:
-                "VuePress Theme Hope ![Stars](https://img.shields.io/github/stars/vuepress-theme-hope/vuepress-theme-hope?style=plastic&logo=github)",
-              logo: "https://theme-hope-assets.vuejs.press/logo.svg",
-              description: "一个具有强大功能的 VuePress 主题✨",
-              category: "项目",
-              actions: [
-                {
-                  text: "网站",
-                  link: "https://theme-hope.vuejs.press",
-                  icon: "external-link",
-                },
-                {
-                  text: "GitHub",
-                  link: "https://github.com/vuepress-theme-hope/vuepress-theme-hope",
-                  icon: "fa7-brands:github",
-                },
-              ],
-            },
-            {
-              title:
-                "Waline ![Stars](https://img.shields.io/github/stars/walinejs/waline?style=plastic&logo=github)",
-              logo: "https://waline.js.org/logo.png",
-              description: "一款简单、安全的评论系统。",
-              category: "项目",
-              actions: [
-                {
-                  text: "网站",
-                  link: "https://waline.js.org",
-                  icon: "external-link",
-                },
-                {
-                  text: "GitHub",
-                  link: "https://github.com/walinejs/waline",
-                  icon: "fa7-brands:github",
-                },
-              ],
-            },
-            {
-              title:
-                "mdit-plugins ![Stars](https://img.shields.io/github/stars/mdit-plugins/mdit-plugins?style=plastic&logo=github)",
-              logo: "https://mdit-plugins.github.io/logo.svg",
-              description: "一组用 TypeScript 编写的 markdown-it 插件。",
-              category: "项目",
-              actions: [
-                {
-                  text: "网站",
-                  link: "https://mdit-plugins.github.io/",
-                  icon: "external-link",
-                },
-                {
-                  text: "GitHub",
-                  link: "https://github.com/mdit-plugins/mdit-plugins",
-                  icon: "fa7-brands:github",
-                },
-              ],
-            },
           ],
         },
         {
@@ -770,34 +553,11 @@ export default {
               year: 2025,
               content:
                 "我们关于“[Topological Quantum Batteries](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401)”的工作被 [PRL Trending](https://x.com/PhysRevLett/status/1924474721149542443) 报道。",
-            },
-            {
-              year: 2024,
-              content:
-                "我们关于“[Topological Quantum Batteries](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401)”的工作被 [RIKEN](https://www.riken.jp/en/news_pubs/research_news/pr/2025/20250513_2/index.html) 新闻稿报道，并入选 [RIKEN Research (Summer)](https://www.riken.jp/en/news_pubs/pubs/riken_research/2025/index.html)。该工作还获得了 [Mynavi News](https://news.mynavi.jp/techplus/article/20250514-3319145/)、[NIKKEI Tech Foresight](https://www.nikkei.com/prime/tech-foresight/article/DGXZQOUC235SW0T20C25A5000000)、[PHYS.ORG](https://phys.org/news/2025-06-topological-quantum-batteries-theoretical-framework.html#google_vignette)、[Interesting Engineering](https://interestingengineering.com/energy/new-quantum-battery-design)、[ФОКУС](https://focus.ua/digital/708987-kvantovye-batarei-smogut-zaryazhat-smartfony-za-sekundy-kak-etogo-dobyutsya-uchenye)、[AGAlphaGalileo](https://www.alphagalileo.org/en-gb/Item-Display/ItemId/259206?returnurl=https://www.alphagalileo.org/en-gb/Item-Display/ItemId/259206)、[MIRAGE](https://www.miragenews.com/advent-of-topological-quantum-battery-1477588/)、[AZO Quantum](https://www.azoquantum.com/News.aspx?newsID=10819)、[Enerzine](https://www.enerzine.com/lavenement-de-la-batterie-quantique-topologique/165028-2025-06)、[Methored UK](https://www.yourweather.co.uk/news/science/japanese-scientists-propose-a-quantum-battery-design-that-resists-energy-loss.html) 和 [BASIC thinking](https://www.basicthinking.de/blog/2025/11/12/topologische-quantenbatterie/) 的报道。",
-            },
-            {
-              year: 2023,
-              content:
-                "10 月 1 日加入 [Kuwahara 团队](https://kuwahara-quantum.com/en/people/)担任博士后研究员（特别研究员）。",
+              link: "https://x.com/PhysRevLett/status/1924474721149542443",
             },
             {
               year: 2022,
               content: "9 月 20 日获得东京大学博士学位。",
-            },
-            {
-              year: 2021,
-              content:
-                "作为日本政府（MEXT）奖学金博士生加入东京大学 [Hatano 实验室](http://hatano-lab.iis.u-tokyo.ac.jp/index-e.html)。",
-            },
-            {
-              year: 2019,
-              content: "在内蒙古大学量子物理前沿与进展研讨会上作报告。",
-            },
-            {
-              year: 2017,
-              content:
-                "加入量子科学中心[衣学喜教授实验室](https://cqs.nenu.edu.cn/)进行硕士研究。",
             },
           ],
         },
@@ -810,42 +570,6 @@ export default {
           data: [
             "**2024** 受邀报告，[21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)](https://events.physics.uoc.gr/event/1/page/5-speakers)，希腊哈尼亚。",
             "**2023** 最佳海报奖，[5th International Symposium on Quantum Physics and Quantum Information Sciences (QPQIS-2023)](http://en.baqis.ac.cn/news/detail/?cid=1764)，中国北京。",
-            "**2021** 日本政府（MEXT）博士奖学金。",
-            "**2019** 中国国家研究生奖学金。",
-          ],
-        },
-        {
-          type: "cards",
-          id: "theses",
-          title: "学位论文",
-          icon: "book",
-          data: [
-            {
-              title:
-                "Suppression of Decoherence in Open Quantum Systems: Resonance and Topological Effects",
-              category: "学位论文",
-              description: "博士论文",
-              actions: [
-                {
-                  text: "查看 PDF",
-                  link: "http://hatano-lab.iis.u-tokyo.ac.jp/thesis/dron2024/thesis_shang.pdf",
-                  icon: "file-pdf",
-                },
-              ],
-            },
-            {
-              title:
-                "Nonreciprocal Transmission Based on Modulated Optomechanical Systems",
-              category: "学位论文",
-              description: "硕士论文",
-              actions: [
-                {
-                  text: "查看 PDF",
-                  link: "https://service.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&dbname=CMFD202101&filename=1020826922.nh&uniplatform=OVERSEA",
-                  icon: "file-pdf",
-                },
-              ],
-            },
           ],
         },
         {
@@ -861,10 +585,6 @@ export default {
             {
               text: "Bo-Wang Zhang, Cheng Shang, J. Y. Sun, Zhuo-Cheng Gu, and X. X. Yi, Manipulating spectral transitions and photonic transmission in a non-Hermitian optical system through nanoparticle perturbations, Phys. Rev. A 111, 063702 (2025)",
               link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.111.063702",
-            },
-            {
-              text: "Cheng Shang and Hong-Chao Li, Resonance-dominant optomechanical entanglement in open quantum systems, Physical Review Applied 21 (4), 044048 (2024)",
-              link: "https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.21.044048",
             },
           ],
         },
@@ -883,10 +603,6 @@ export default {
               text: "Cheng Shang, Zhi-Guang Lu, Hayato Kinkawa, and Tomotaka Kuwahara, Operator Spreading and Information Propagation: Equivalence and Beyond, arXiv:2505.07955 (2025)",
               link: "https://arxiv.org/abs/2505.07955",
             },
-            {
-              text: "Hongchao Li, Cheng Shang, Tomotaka Kuwahara, and Tan Van Vu, Macroscopic Particle Transport in Dissipative Long-Range Bosonic Systems, arXiv:2503.13731 (2025)",
-              link: "https://arxiv.org/abs/2503.13731",
-            },
           ],
         },
         {
@@ -900,8 +616,7 @@ export default {
               title: "PHHQP-XXI 研讨会",
               location: "希腊，哈尼亚",
               date: 2024,
-              description:
-                "在 PHHQP-XXI 展示我的开放量子系统研究。地中海的景色令人深受启发。",
+              description: "在 PHHQP-XXI 展示我的开放量子系统研究。地中海的景色令人深受启发。",
             },
             {
               url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000&auto=format&fit=crop",
@@ -945,7 +660,10 @@ export default {
           id: "closing",
           title: "展望未来",
           icon: "star",
-          data: "我始终期待在**量子复杂性**与**开放量子系统**交叉领域的合作。欢迎随时联系我进行研究讨论，或共同探索宇宙的基本结构。",
+          data: {
+            content:
+              "我始终期待在**量子复杂性**与**开放量子系统**交叉领域的合作。欢迎随时联系我进行研究讨论，或共同探索宇宙的基本结构。",
+          },
         },
       ],
       footer: {

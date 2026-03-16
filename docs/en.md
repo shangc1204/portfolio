@@ -77,10 +77,10 @@ The optional `config` object contains the following fields:
     - `themeToggle`:
       - Type: String (optional)
       - Details: Tooltip text for the theme toggle control.
-    - `contact`:
+    - `contacts`:
       - Type: String (optional)
       - Details: Label for the contact section.
-    - `detail`:
+    - `details`:
       - Type: String
       - Details: Label for the detail link.
 
@@ -103,12 +103,12 @@ The optional `config` object contains the following fields:
     - Details: Titles for the typewriter animation under the name.
 
   - `avatar`:
-    - Type: String
-    - Details: URL to the avatar image (relative to `public/` or absolute).
+    - Type: `string | { light: string; dark: string }`
+    - Details: URL to the avatar image (relative to `public/` or absolute) or an object with light/dark mode URLs.
 
   - `bgImage`:
-    - Type: String
-    - Details: Background image URL for the hero header.
+    - Type: `string | { light: string; dark: string }`
+    - Details: Background image URL for the hero header or an object with light/dark mode URLs.
 
   - `medias`:
     - Type: `Array<HeroMedia>` (optional)
@@ -271,11 +271,6 @@ The optional `config` object contains the following fields:
   - Type: Component
   - Details: Horizontal timeline or news list.
 
-  - `ui`:
-    - `detail`:
-      - Type: String
-      - Details: Label for the detail link.
-
   - `data`: `Array<TimelineItem>`
     - Item schema:
       - `year`:
@@ -408,9 +403,9 @@ You can modify the following variables in `src/index.css` to change the theme co
    * Define your default font family here.
    */
   --font:
-    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
   /* 
     Define your brand colors here. 
     The system will automatically generate the palette based on these colors.

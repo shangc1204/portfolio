@@ -77,10 +77,10 @@
     - `themeToggle`:
       - 类型: 字符串 (String) (可选)
       - 详情: 主题切换控件的提示文本。
-    - `contact`:
+    - `contacts`:
       - 类型: 字符串 (String) (可选)
       - 详情: 联系方式章节的标签。
-    - `detail`:
+    - `details`:
       - 类型: 字符串 (String)
       - 详情: 详情链接的标签。
 
@@ -103,12 +103,12 @@
     - 详情: 姓名下方打字机动画的头衔。
 
   - `avatar`:
-    - 类型: 字符串 (String)
-    - 详情: 头像图片的 URL (相对于 `public/` 或绝对路径)。
+    - 类型: `string | { light: string; dark: string }`
+    - 详情: 头像图片的 URL (相对于 `public/` 或绝对路径) 或包含浅色/深色模式 URL 的对象。
 
   - `bgImage`:
-    - 类型: 字符串 (String)
-    - 详情: 首屏页眉的背景图片 URL。
+    - 类型: `string | { light: string; dark: string }`
+    - 详情: 首屏页眉的背景图片 URL 或包含浅色/深色模式 URL 的对象。
 
   - `medias`:
     - 类型: `Array<HeroMedia>` (可选)
@@ -270,11 +270,6 @@
 - `timeline` (类型: `timeline`):
   - 类型: 组件 (Component)
   - 详情: 水平时间轴或新闻列表。
-
-  - `ui`:
-    - `detail`:
-      - 类型: 字符串 (String)
-      - 详情: 详情链接的标签。
 
   - `data`: `Array<TimelineItem>`
     - 项目架构:

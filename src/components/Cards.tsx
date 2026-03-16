@@ -1,5 +1,7 @@
 import type { FC } from "react";
+import type { AdaptiveImageSource } from "../types/index.js";
 import { isCJKLocale } from "../utils/index.js";
+import { AdaptiveImage } from "./AdaptiveImage.js";
 import { Icon } from "./Icon.js";
 import { RichContent } from "./RichContent.js";
 
@@ -8,7 +10,7 @@ export interface CardAction {
    * Action button label (e.g., "View PDF")
    * 操作按钮标签 (例如 "查看 PDF")
    */
-  text: string;
+  text?: string;
   /**
    * Link URL
    * 链接地址
@@ -36,7 +38,7 @@ export interface CardItem {
    * Optional logo URL or object with light/dark mode URLs
    * 可选的标志 URL 或包含亮色/暗色模式 URL 的对象
    */
-  logo?: string | { light: string; dark: string };
+  logo?: AdaptiveImageSource;
 
   /**
    * Category label (e.g., "Thesis")
@@ -79,69 +81,59 @@ export const Cards: FC<CardsProps> = ({ items, locale }) => {
 
   return (
     <div className="card-grid">
-      {items.map((card, idx) => (
-        <div key={idx} className="card-base card-item">
+      {items.map(({ actions, category, description, logo, title }) => (
+        <div key={title + (description ?? "")} className="card-item flex flex-col card-base">
           <div className="card-decoration" />
-          <div className="relative z-10">
-            {card.category && (
-              <h4 className={`label-sm mb-3 ${isCJK ? "" : "tracking-widest"}`}>
-                {card.category}
-              </h4>
+          <div className="relative z-10 block">
+            {category && (
+              <h4 className={`mb-3 label-sm ${isCJK ? "" : "tracking-widest"}`}>{category}</h4>
             )}
-            {card.logo &&
-              (typeof card.logo === "string" ? (
-                <img
-                  src={card.logo}
-                  alt={card.title}
-                  className="card-logo float-right ml-4 mb-2"
-                  loading="lazy"
-                />
-              ) : (
-                <picture className="card-logo float-right ml-4 mb-2">
-                  <source
-                    media="(prefers-color-scheme: dark)"
-                    srcSet={card.logo.dark}
-                  />
-                  <img src={card.logo.light} alt={card.title} loading="lazy" />
-                </picture>
-              ))}
-            <h3 className="card-title">
-              <RichContent content={card.title} />
-            </h3>
-            {card.description && (
-              <RichContent
-                className="card-description"
-                content={card.description}
-                block
+            {logo && (
+              <AdaptiveImage
+                src={logo}
+                alt={title}
+                className="card-logo float-right mb-2 ml-4"
+                loading="lazy"
               />
             )}
-            {card.actions?.map((action, actionIndex) => {
-              const content = (
-                <>
-                  <span>{action.text}</span>
-                  {action.icon && (
-                    <Icon icon={action.icon} className="text-lg inline-block" />
-                  )}
-                </>
-              );
-
-              return action.link ? (
-                <a
-                  key={actionIndex}
-                  href={action.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="card-action mr-4"
-                >
-                  {content}
-                </a>
-              ) : (
-                <span key={actionIndex} className="card-action mr-4">
-                  {content}
-                </span>
-              );
-            })}
+            <h3 className="card-title">
+              <RichContent content={title} />
+            </h3>
+            {description && (
+              <RichContent className="card-description" content={description} block />
+            )}
           </div>
+          {actions && (
+            <div className="relative z-10 mt-auto flex flex-wrap items-center">
+              {actions.map(({ text, icon, link }) => {
+                if (!text && !icon) return null;
+
+                const className = `card-action ${text ? "mx-1" : "mx-0.5"}`;
+                const content = (
+                  <>
+                    {text && <span>{text}</span>}
+                    {icon && <Icon icon={icon} className="inline-block text-lg" />}
+                  </>
+                );
+
+                return link ? (
+                  <a
+                    key={text + (icon ?? "")}
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${className} card-action-link`}
+                  >
+                    {content}
+                  </a>
+                ) : (
+                  <span key={text + (icon ?? "")} className={className}>
+                    {content}
+                  </span>
+                );
+              })}
+            </div>
+          )}
         </div>
       ))}
     </div>

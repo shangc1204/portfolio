@@ -67,12 +67,12 @@ export interface LocaleConfig {
      * Label for contact
      * 联系方式标签
      */
-    contact?: string;
+    contacts?: string;
     /**
      * Label for detail link
      * 详情链接标签
      */
-    detail?: string;
+    details?: string;
   };
 }
 

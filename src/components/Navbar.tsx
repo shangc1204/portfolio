@@ -32,7 +32,7 @@ interface NavbarProps {
    * Callback to toggle theme
    * 切换主题的回调函数
    */
-  onThemeChange: () => void;
+  onThemeChange: (event: React.MouseEvent) => void;
   /**
    * Tooltip text for theme toggler
    * 主题切换器的提示文本
@@ -72,7 +72,9 @@ export const Navbar: FC<NavbarProps> = ({
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = (): void => setScrolled(window.scrollY > 50);
+    const handleScroll = (): void => {
+      setScrolled(window.scrollY > 50);
+    };
 
     window.addEventListener("scroll", handleScroll);
 
@@ -82,11 +84,7 @@ export const Navbar: FC<NavbarProps> = ({
   }, []);
 
   return (
-    <nav
-      className={`navbar-base ${
-        scrolled ? "navbar-scrolled" : "navbar-transparent"
-      }`}
-    >
+    <nav className={`navbar-base ${scrolled ? "navbar-scrolled" : "navbar-transparent"}`}>
       <div className="navbar-container">
         <a
           href="#"
@@ -99,15 +97,15 @@ export const Navbar: FC<NavbarProps> = ({
 
         <div className="flex items-center gap-4 md:gap-8">
           <div className="navbar-links">
-            {links.map((link, idx) => (
+            {links.map(({ label, anchor }) => (
               <a
-                key={idx}
-                href={link.anchor}
+                key={label}
+                href={anchor}
                 className={`navbar-link ${
                   scrolled ? "navbar-link-scrolled" : "navbar-link-transparent"
                 }`}
               >
-                {link.label}
+                {label}
               </a>
             ))}
           </div>
@@ -115,27 +113,26 @@ export const Navbar: FC<NavbarProps> = ({
           <div className="navbar-actions">
             {showLocaleSwitch && (
               <button
+                type="button"
                 onClick={onLocaleChange}
                 className={`nav-btn-base navbar-locale-btn ${
                   scrolled ? "nav-btn-scrolled" : "nav-btn-transparent"
                 }`}
               >
-                <Icon icon="language" className="text-sm md:text-base" />
+                <Icon icon="language" className="text-main" />
                 {nextLocaleName}
               </button>
             )}
 
             <button
+              type="button"
               onClick={onThemeChange}
               className={`nav-btn-base navbar-theme-btn ${
                 scrolled ? "nav-btn-scrolled" : "nav-btn-transparent"
               }`}
               title={themeLabel}
             >
-              <Icon
-                icon={theme === "light" ? "moon" : "sun"}
-                className="text-sm md:text-base"
-              />
+              <Icon icon={theme === "light" ? "moon" : "sun"} className="text-main" />
             </button>
           </div>
         </div>

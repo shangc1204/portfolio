@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import type { FC } from "react";
 
 /**
@@ -27,18 +28,12 @@ interface RichContentProps {
  *
  * 渲染 HTML 字符串的 RichContent 组件
  */
-export const RichContent: FC<RichContentProps> = ({
-  content,
-  block = false,
-  className = "",
-}) => {
+export const RichContent: FC<RichContentProps> = ({ content, block = false, className = "" }) => {
   const Tag = block ? "div" : "span";
+  const html = useMemo(() => ({ __html: content }), [content]);
 
   return (
-    <Tag
-      className={`rich-content ${className}`}
-      // eslint-disable-next-line @typescript-eslint/naming-convention
-      dangerouslySetInnerHTML={{ __html: content }}
-    />
+    // oxlint-disable-next-line react/no-danger
+    <Tag className={`rich-content ${className}`} dangerouslySetInnerHTML={html} />
   );
 };
