@@ -24,6 +24,8 @@
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
+    "@mdit/plugin-attrs": "^0.25.1",
+    "@mdit/plugin-mark": "^0.23.1",
     "@mr-hope/tsconfig": "0.0.3",
     "@tailwindcss/vite": "^4.2.2",
     "@types/js-yaml": "^4.0.9",
