@@ -50,7 +50,7 @@ For inquiries, please contact: <a href="mailto:cheng.shang@riken.jp">cheng.shang
 `,icon:`ph:arrows-clockwise-bold`},{text:`<p><strong>Mutual information and Conditional mutual information</strong></p>
 `,icon:`ph:share-network-bold`},{text:`<p><strong>Hamiltonian complexity and Krylov complexity</strong></p>
 `,icon:`ph:chart-line-up-bold`},{text:`<p><strong>Advanced mathematics</strong> (e.g., von Neumann algebras and Graph theory)</p>
-`,icon:`ph:share-network-bold`},{text:`<p><strong>Cosmology</strong> (e.g., Inflation theory and dS/CFT)</p>
+`,icon:`ph:calculator-bold`},{text:`<p><strong>Cosmology</strong> (e.g., Inflation theory and dS/CFT)</p>
 `,icon:`ph:star-four-bold`}]},{type:`list`,id:`hobbies`,title:`Hobbies`,icon:`fa6-solid:heart`,data:[{text:`<p>Sketching</p>
 `,icon:`ph:pencil-line-bold`},{text:`<p>Writing fiction</p>
 `,icon:`ph:book-open-text-bold`},{text:`<p>Music</p>
