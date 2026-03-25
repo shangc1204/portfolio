@@ -1,4 +1,7 @@
+mark {
+  @apply text-indigo-600 dark:text-indigo-400 bg-size-[0];
+}
+
 .desc {
-  color: var(--color-slate-500);
-  font-size: 0.875em;
+  @apply text-slate-500 dark:text-slate-400 text-sm;
 }
