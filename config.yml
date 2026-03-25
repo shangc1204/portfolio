@@ -227,7 +227,7 @@ locales:
             icon: ph:fingerprint-bold
           - text: "**Floquet theory** (Periodic driving and Floquet heating) _Currently studying_"
             icon: ph:arrows-clockwise-bold
-          - text: "**Mutual information and Conditional mutual information**"
+          - text: "**Mutual information and Conditional mutual information_Currently studying_**"
             icon: ph:share-network-bold
           - text: "**Hamiltonian complexity and Krylov complexity**"
             icon: ph:chart-line-up-bold
