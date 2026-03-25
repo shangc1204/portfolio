@@ -36,7 +36,7 @@ locales:
           name: iNSPIRE
           link: https://inspirehep.net/authors/2662928
 
-        - icon: fa6-solid:fire
+        - icon: fire
           name: "Make time for civilization. Live proud. Never give up!"
           link: https://cheng-shang.me/
 
@@ -225,7 +225,8 @@ locales:
       - type: list
         id: future
         title: What I Want to Learn
-        icon: fa6-solid:book
+        icon: book
+        dot: check
         data:
           - text: "**Many-body localization and thermalization** (from an information-theoretic perspective) _Currently studying_"
             icon: ph:fingerprint-bold
@@ -244,6 +245,7 @@ locales:
         id: hobbies
         title: Hobbies
         icon: fa6-solid:heart
+        dot: check
         data:
           - text: Sketching
             icon: ph:pencil-line-bold
@@ -259,7 +261,7 @@ locales:
       - type: markdown
         id: closing
         title: Welcome
-        icon: fa6-solid:star
+        icon: star
         data:
           content: |-
             If you are interested in my research, feel free to contact me.
