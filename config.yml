@@ -236,7 +236,7 @@ locales:
           - text: "**Hamiltonian complexity and Krylov complexity**"
             icon: ph:chart-line-up-bold
           - text: "**Advanced mathematics** (e.g., von Neumann algebras and Graph theory)"
-            icon: ph:share-network-bold
+            icon: ph:calculator-bold
           - text: "**Cosmology** (e.g., Inflation theory and dS/CFT)"
             icon: ph:star-four-bold
 
