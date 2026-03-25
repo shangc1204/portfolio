@@ -45,7 +45,7 @@ For inquiries, please contact: <a href="mailto:cheng.shang@riken.jp">cheng.shang
 `,icon:`ph:battery-charging-vertical-bold`},{text:`<p><strong>Hybrid Cavity Optomechanics</strong>: theoretical exploration of nonlinear radiation-pressure-induced phenomena and their integration with Superconducting Circuit platforms.</p>
 `,icon:`ph:circuitry-bold`}]},{type:`list`,id:`future`,title:`What I Want to Learn`,icon:`book`,dot:`check`,data:[{text:`<p><strong>Many-body localization and thermalization</strong> (from an information-theoretic perspective) <em>Currently studying</em></p>
 `,icon:`ph:fingerprint-bold`},{text:`<p><strong>Floquet theory</strong> (Periodic driving and Floquet heating) <em>Currently studying</em></p>
-`,icon:`ph:arrows-clockwise-bold`},{text:`<p><strong>Mutual information and Conditional mutual information_Currently studying_</strong></p>
+`,icon:`ph:arrows-clockwise-bold`},{text:`<p><strong>Mutual information and Conditional mutual information</strong><em>Currently studying</em></p>
 `,icon:`ph:share-network-bold`},{text:`<p><strong>Hamiltonian complexity and Krylov complexity</strong></p>
 `,icon:`ph:chart-line-up-bold`},{text:`<p><strong>Advanced mathematics</strong> (e.g., von Neumann algebras and Graph theory)</p>
 `,icon:`ph:calculator-bold`},{text:`<p><strong>Cosmology</strong> (e.g., Inflation theory and dS/CFT)</p>
