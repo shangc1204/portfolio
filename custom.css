@@ -1,7 +1,7 @@
 mark {
-  @apply text-indigo-600 dark:text-indigo-400 bg-size-[0];
+  @apply bg-size-[0] text-indigo-600 dark:text-indigo-400;
 }
 
 .desc {
-  @apply text-slate-500 dark:text-slate-400 text-sm;
+  @apply text-sm text-slate-500 dark:text-slate-400;
 }
