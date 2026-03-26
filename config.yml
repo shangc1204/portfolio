@@ -38,7 +38,6 @@ locales:
 
         - icon: fire
           name: "Make time for civilization. Live proud. Never give up!"
-          link: https://cheng-shang.me/
 
     navbar:
       links:
@@ -77,7 +76,7 @@ locales:
             - label: Gmail
               value: shangcheng.phys@gmail.com
 
-            - label: X |Social Media
+            - label: X | Social Media
               value: "@Shangc1204"
               link: https://x.com/Shangc1204
               icon: fa6-brands:x-twitter
@@ -265,6 +264,6 @@ locales:
 
     footer:
       copyright: |-
-        © 2026 Cheng Shang. All rights reserved.
+        Copyright © 2025-$year Cheng Shang. All rights reserved.
 
-        ⟳ Update: February, 2026
+        ⟳ Last Updated: February, 2026
