@@ -69,12 +69,9 @@ locales:
               value: cheng.shang@riken.jp
               icon: fa6-solid:envelope
 
-            - label: Gmail
+            - label: Personal Email
               value: shangc1204@gmail.com
               icon: fa6-brands:google
-
-            - label: Gmail
-              value: shangcheng.phys@gmail.com
 
             - label: X | Social Media
               value: "@Shangc1204"
@@ -95,14 +92,14 @@ locales:
 
           - type: work
             place: Wako, Saitama, Japan
-            time: Apr. 2023 - Sep. 2024
+            time: Apr. 2023 - Sept. 2024
             title: Part-time Positions at RIKEN
             content: Junior Research Associate Program with Dr. [Tomotaka Kuwahara](https://kuwahara-quantum.com/en/)
             description: Analytical Quantum Complexity RIKEN Hakubi Research Team, RIKEN Center for Quantum Computing
 
           - type: study
             place: Kashiwa, Chiba, Japan
-            time: Oct. 2021 - Sep. 2024
+            time: Oct. 2021 - Sept. 2024
             title: Ph.D. |The University of Tokyo, Department of Physics
             content: Japanese Government (MEXT) Doctoral Scholarship with Prof. [Naomichi Hatano](http://hatano-lab.iis.u-tokyo.ac.jp/index-e.html)
 
@@ -114,7 +111,7 @@ locales:
 
           - type: study
             place: Changchun, Jilin, China
-            time: Sep. 2017 - June 2020
+            time: Sept. 2017 - June 2020
             title: Master of Science |Northeast Normal University, Center for Quantum Sciences
             content: Chinese National Scholarship for Postgraduates with Prof. [XueXi Yi](https://cqs.nenu.edu.cn/)
 
@@ -258,11 +255,11 @@ locales:
         icon: star
         data:
           content: |-
-            If you are interested in my research, feel free to contact me.
+            If you are interested in my research, feel free to contact me mailto:cheng.shang@riken.jp
 
             Academic discussions and potential collaborations are always welcome!
 
     footer:
-      copyright: Copyright © 2025-$year Cheng Shang. All rights reserved.
+      copyright: Copyright © 2025-2026$year Cheng Shang. All rights reserved.
       description: |-
         ⟳ Last Updated: February, 2026
