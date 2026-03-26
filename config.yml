@@ -263,7 +263,6 @@ locales:
             Academic discussions and potential collaborations are always welcome!
 
     footer:
-      copyright: |-
-        Copyright © 2025-$year Cheng Shang. All rights reserved.
-
+      copyright: Copyright © 2025-$year Cheng Shang. All rights reserved.
+      description: |-
         ⟳ Last Updated: February, 2026
