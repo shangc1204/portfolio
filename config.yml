@@ -219,11 +219,11 @@ locales:
         icon: book
         dot: check
         data:
-          - text: "**Many-body localization and thermalization** (from an information-theoretic perspective) _Currently studying_"
+          - text: "**Many-body localization and thermalization** (from an information-theoretic perspective) |_Currently studying_"
             icon: ph:fingerprint-bold
-          - text: "**Floquet theory** (Periodic driving and Floquet heating) _Currently studying_"
+          - text: "**Floquet theory** (Periodic driving and Floquet heating) |_Currently studying_"
             icon: ph:arrows-clockwise-bold
-          - text: "**Mutual information and Conditional mutual information** _Currently studying_"
+          - text: "**Mutual information and Conditional mutual information** |_Currently studying_"
             icon: ph:share-network-bold
           - text: "**Hamiltonian complexity and Krylov complexity**"
             icon: ph:chart-line-up-bold
@@ -260,6 +260,6 @@ locales:
             Academic discussions and potential collaborations are always welcome!
 
     footer:
-      copyright: Copyright © 2025-$year Cheng Shang. All rights reserved.
+      copyright: Copyright © 2025-$year |Cheng Shang. All rights reserved.
       description: |-
         ⟳ Last Updated: February, 2026
