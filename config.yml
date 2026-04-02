@@ -118,7 +118,7 @@ locales:
       - type: banner
         id: cfp
         title: Professional Service
-        icon: handshake
+        icon: briefcase
         data:
           tags: Reviewer and Editor
           header: |-
