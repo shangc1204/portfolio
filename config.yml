@@ -118,9 +118,9 @@ locales:
       - type: banner
         id: cfp
         title: Professional Service
-        icon: briefcase
+        icon: handshake
         data:
-          tags: Reviewer and Editor
+          tags: Guest Editor (Discover Physics)
           header: |-
             Reviewer: 
           content: |-
