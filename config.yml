@@ -117,20 +117,21 @@ locales:
 
       - type: banner
         id: cfp
-        title: Call for Papers
+        title: Professional Service
         icon: bullhorn
         data:
-          tags: Call for Papers
+          tags: Reviewer and Editor
           header: |-
-            Special Collection: Exception Points in non-Hermitian Systems
+            Reviewer: 
           content: |-
-            **Journal**: Discover Physics (Springer Nature)
-            For inquiries, please contact: cheng.shang@riken.jp or shenhz458@nenu.edu.cn
-          footer: |-
-            Submission Deadline: 21 April, 2026
+            **Academic Journal**: Physical Review Letters; Advanced Quantum Technologies; Advances in Mathematical Physics; International Journal of Theoretical Physics; Physica A: Statistical Mechanics and its Applications
+          header: |-
+            Editor: 
+          content: |-
+            **Academic Journal**: Discover Physics (Guest Editor)
           actions:
-            - label: Submit & Learn More
-              link: https://link.springer.com/collections/djheehghia
+            - label: See my ORCiD profile for more details 
+              link: https://orcid.org/0000-0001-8393-2329
               primary: true
 
       - type: list
