@@ -124,7 +124,7 @@ locales:
           header: |-
             Reviewer: 
           content: |-
-            **Academic Journal**: Physical Review Letters; Advanced Quantum Technologies; Advances in Mathematical Physics; International Journal of Theoretical Physics; Physica A: Statistical Mechanics and its Applications.
+            **Academic Journal**: Physical Review Letters; Scientific Reports; Advanced Quantum Technologies; Advances in Mathematical Physics; International Journal of Theoretical Physics; Physica A: Statistical Mechanics and its Applications.
           actions:
             - label: See my ORCiD profile for more details 
               link: https://orcid.org/0000-0001-8393-2329
