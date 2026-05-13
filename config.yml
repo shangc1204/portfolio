@@ -124,7 +124,7 @@ locales:
           header: |-
             Reviewer: 
           content: |-
-            **Academic Journal**: Physical Review Letters; Scientific Reports; Advanced Quantum Technologies; Advances in Mathematical Physics; International Journal of Theoretical Physics; Physica A: Statistical Mechanics and its Applications; Optical and Quantum Electronics.
+            **Academic Journal**: Physical Review Letters; Physical Review A; Scientific Reports; Advanced Quantum Technologies; Advances in Mathematical Physics; International Journal of Theoretical Physics; Physica A: Statistical Mechanics and its Applications; Optical and Quantum Electronics.
           actions:
             - label: See my ORCiD profile for more details 
               link: https://orcid.org/0000-0001-8393-2329
@@ -158,7 +158,7 @@ locales:
           - |-
             [Hong-Zhi Shen, ==Cheng Shang==, Y. H. Zhou, and Xue-Xi Yi, _Unconventional single-photon blockade in non-Markovian systems_, **Phys. Rev. A** **98**(2), 023856 (2018).](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.023856){.plain}
 
-            As of April 2026, this work has received 104 citations on Google Scholar. {.desc}
+            As of April 2026, this work has received 105 citations on Google Scholar. {.desc}
 
           - |-
             [Zhi-Guang Lu, ==Cheng Shang==, Ying Wu, and Xin-You Lü, _Analytical approach to higher-order correlation functions in U(1) symmetric systems_, **Phys. Rev. A** **108**, 053703 (2023).](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.053703){.plain}
