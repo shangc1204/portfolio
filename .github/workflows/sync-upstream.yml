@@ -47,7 +47,7 @@ jobs:
             [ -f "$f" ] && cp "$f" /tmp/user-files/ || true
           done
 
-          # Save package.json name, description, version, author, repository, and extra deps
+          # Save package.json name, description, and version
           node -e "
             const fs = require('fs');
             const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -55,10 +55,6 @@ jobs:
             if (pkg.name !== undefined) meta.name = pkg.name;
             if (pkg.description !== undefined) meta.description = pkg.description;
             if (pkg.version !== undefined) meta.version = pkg.version;
-            if (pkg.author !== undefined) meta.author = pkg.author;
-            if (pkg.repository !== undefined) meta.repository = pkg.repository;
-            if (pkg.dependencies !== undefined) meta.dependencies = pkg.dependencies;
-            if (pkg.devDependencies !== undefined) meta.devDependencies = pkg.devDependencies;
             fs.writeFileSync('/tmp/user-files/pkg-meta.json', JSON.stringify(meta, null, 2));
           "
 
@@ -77,6 +73,11 @@ jobs:
           # makes the resulting commit a valid PR target against main.
           git checkout -B sync-upstream origin/main
           git read-tree -u --reset upstream/main
+
+          # Restore the user's .github/workflows/ so the push does not require
+          # the `workflows` permission (GitHub Apps cannot update workflow files
+          # without it). Users must sync workflow files manually.
+          git checkout origin/main -- .github/workflows/ 2>/dev/null || true
 
       - name: Remove examples if user had deleted it
         run: |
@@ -100,7 +101,8 @@ jobs:
             cp -r "/tmp/user-files/public" .
           fi
 
-          # Restore README files
+          # Restore README files (first remove all upstream README files, then restore only user's)
+          rm -f README.md README-*.md
           [ -f "/tmp/user-files/README.md" ] && cp "/tmp/user-files/README.md" . || true
           shopt -s nullglob
           for f in /tmp/user-files/README-*.md; do
@@ -108,7 +110,7 @@ jobs:
           done
           shopt -u nullglob
 
-          # Merge package.json name, description, version, author, repository, and extra deps back
+          # Merge package.json name, description, version back
           node -e "
             const fs = require('fs');
             const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -116,25 +118,6 @@ jobs:
             if (meta.name !== undefined) pkg.name = meta.name;
             if (meta.description !== undefined) pkg.description = meta.description;
             if (meta.version !== undefined) pkg.version = meta.version;
-            if (meta.author !== undefined) pkg.author = meta.author;
-            if (meta.repository !== undefined) pkg.repository = meta.repository;
-            // Preserve user's extra dependencies that don't exist in upstream
-            if (meta.dependencies) {
-              pkg.dependencies = pkg.dependencies || {};
-              for (const [key, value] of Object.entries(meta.dependencies)) {
-                if (!(key in pkg.dependencies)) {
-                  pkg.dependencies[key] = value;
-                }
-              }
-            }
-            if (meta.devDependencies) {
-              pkg.devDependencies = pkg.devDependencies || {};
-              for (const [key, value] of Object.entries(meta.devDependencies)) {
-                if (!(key in pkg.devDependencies)) {
-                  pkg.devDependencies[key] = value;
-                }
-              }
-            }
             fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
           "
 
@@ -183,7 +166,14 @@ jobs:
                     '- `custom.css` (if present)',
                     '- `public/` folder',
                     '- `README.md` and `README-*.md`',
-                    '- `package.json` `name`, `description`, `version`, `author`, `repository`, and extra dependencies',
+                    '- `package.json` `name`, `description`, `version`',
+                    '- `.github/workflows/` (see note below)',
+                    '',
+                    '> [!NOTE]',
+                    '> **Workflow files are not updated automatically.**',
+                    '> GitHub Apps cannot push changes to `.github/workflows/` without the `workflows` permission.',
+                    '> Please manually review and apply any upstream workflow changes by comparing:',
+                    '> <https://github.com/Mister-Hope/portfolio-template/tree/main/.github/workflows>',
                   ].join('\n'),
                 });
               } catch (err) {
