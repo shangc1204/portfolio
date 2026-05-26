@@ -231,7 +231,7 @@ locales:
           - text: "**Topologically ordered phases** (e.g., Fractional quantum Hall states)"
             icon: ph:wave-sine-bold
           - text: "**Clifford and random circuits**"
-            icon: ph:circuitry-bold
+            icon: ph:cpu-bold
 
       - type: list
         id: hobbies
