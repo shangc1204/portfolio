@@ -228,7 +228,7 @@ locales:
             icon: ph:calculator-bold
           - text: "**Cosmology** (e.g., Inflation theory and dS/CFT)"
             icon: ph:star-four-bold
-          - text: "**Topologically ordered phases** (e.g., fractional quantum Hall states)
+          - text: "**Topologically ordered phases** (e.g., fractional quantum Hall states)"
             icon: ph:atom-bold
 
       - type: list
