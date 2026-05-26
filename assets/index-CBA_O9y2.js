@@ -48,8 +48,9 @@ Error generating stack: `+e.message+`
 `,icon:`ph:share-network-bold`},{text:`<p><strong>Hamiltonian complexity and Krylov complexity</strong></p>
 `,icon:`ph:chart-line-up-bold`},{text:`<p><strong>Advanced mathematics</strong> (e.g., von Neumann algebras and Graph theory)</p>
 `,icon:`ph:calculator-bold`},{text:`<p><strong>Cosmology</strong> (e.g., Inflation theory and dS/CFT)</p>
-`,icon:`ph:star-four-bold`},{text:`<p><strong>Topologically ordered phases</strong> (e.g., fractional quantum Hall states)</p>
-`,icon:`ph:atom-bold`}]},{type:`list`,id:`hobbies`,title:`Hobbies`,icon:`fa6-solid:heart`,dot:`check`,data:[{text:`<p>Sketching</p>
+`,icon:`ph:star-four-bold`},{text:`<p><strong>Topologically ordered phases</strong> (e.g., Fractional quantum Hall states)</p>
+`,icon:`ph:wave-sine-bold`},{text:`<p><strong>Clifford and random circuits</strong></p>
+`,icon:`ph:circuitry-bold`}]},{type:`list`,id:`hobbies`,title:`Hobbies`,icon:`fa6-solid:heart`,dot:`check`,data:[{text:`<p>Sketching</p>
 `,icon:`ph:pencil-line-bold`},{text:`<p>Writing fiction</p>
 `,icon:`ph:book-open-text-bold`},{text:`<p>Music</p>
 `,icon:`ph:music-notes-simple-bold`},{text:`<p>Comics</p>
