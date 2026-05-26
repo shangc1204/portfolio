@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-template",
+  "name": "cheng-shang-portfolio",
   "version": "0.0.0",
   "private": true,
   "author": {
@@ -51,8 +51,16 @@
     "**/*": "oxfmt --no-error-on-unmatched-pattern",
     "*.{js,ts}": "oxlint --fix --deny-warnings --report-unused-disable-directives"
   },
-  "engines": {
-    "node": "^20.19.0 || >=22.12.0"
-  },
-  "packageManager": "pnpm@10.33.0"
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.3.0",
+      "onFail": "download"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "^22.18.0 || ^24.0.0 || ^26.0.0",
+      "onFail": "error"
+    }
+  }
 }
