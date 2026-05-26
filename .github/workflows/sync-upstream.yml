@@ -144,6 +144,9 @@ jobs:
             fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
           "
 
+      - name: Format
+        run: pnpm exec oxfmt
+
       - name: Commit changes
         id: commit
         run: |
