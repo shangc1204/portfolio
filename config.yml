@@ -228,8 +228,10 @@ locales:
             icon: ph:calculator-bold
           - text: "**Cosmology** (e.g., Inflation theory and dS/CFT)"
             icon: ph:star-four-bold
-          - text: "**Topologically ordered phases** (e.g., fractional quantum Hall states)"
-            icon: ph:atom-bold
+          - text: "**Topologically ordered phases** (e.g., Fractional quantum Hall states)"
+            icon: ph:wave-sine-bold
+          - text: "**Clifford and random circuits**"
+            icon: ph:circuitry-bold
 
       - type: list
         id: hobbies
