@@ -52,11 +52,19 @@ jobs:
           # Save public folder
           [ -d "public" ] && cp -r "public" /tmp/user-files/ || true
 
-          # Save README.md and README-*.md
+          # Save README.md and README-*.md / README.*.md
+          # Also record the exact list of localized readme files, so we don't
+          # resurrect upstream readme files the user intentionally deleted.
           [ -f "README.md" ] && cp "README.md" /tmp/user-files/ || true
-          for f in README-*.md; do
-            [ -f "$f" ] && cp "$f" /tmp/user-files/ || true
-          done
+          {
+            ls README-*.md 2>/dev/null || true
+            ls README.*.md 2>/dev/null || true
+          } > /tmp/user-files/readme-list.txt
+          if [ -s "/tmp/user-files/readme-list.txt" ]; then
+            while IFS= read -r f; do
+              [ -n "$f" ] && cp "$f" /tmp/user-files/
+            done < /tmp/user-files/readme-list.txt
+          fi
 
           # Save package.json name, description, version, author, repository, and extra deps
           node -e "
@@ -117,13 +125,15 @@ jobs:
           fi
 
           # Restore README files
-          rm -f README.md README-*.md
+          # Only restore localized readme files the user had; don't bring back
+          # upstream readme files the user intentionally deleted.
+          rm -f README.md README-*.md README.*.md
           [ -f "/tmp/user-files/README.md" ] && cp "/tmp/user-files/README.md" . || true
-          shopt -s nullglob
-          for f in /tmp/user-files/README-*.md; do
-            cp "$f" .
-          done
-          shopt -u nullglob
+          if [ -s "/tmp/user-files/readme-list.txt" ]; then
+            while IFS= read -r f; do
+              [ -n "$f" ] && cp "/tmp/user-files/$f" . || true
+            done < /tmp/user-files/readme-list.txt
+          fi
 
           # Merge package.json name, description, version, author, repository, and extra deps back
           node -e "
@@ -154,6 +164,9 @@ jobs:
             }
             fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
           "
+
+      - name: Update lockfile
+        run: pnpm install --lockfile-only
 
       - name: Format
         run: pnpm dlx oxfmt
@@ -202,7 +215,7 @@ jobs:
                     '- Config files (`config.ts` / `config.js` / `config.json` / `config.yml` / `config.yaml`)',
                     '- `custom.css` (if present)',
                     '- `public/` folder',
-                    '- `README.md` and `README-*.md`',
+                    '- `README.md` and localized `README-*.md` / `README.*.md`',
                     '- `package.json` `name`, `description`, `version`, `author`, `repository`, and extra dependencies',
                     '- `.github/workflows/` (see note below)',
                     '',
