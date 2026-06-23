@@ -150,8 +150,6 @@ locales:
 
             Significant progress has been made in establishing limits on quantum transport in closed systems, but extensions to open many-body systems remain scarce. We develop the general optimal transport theory and find the maximal speed of macroscopic particle transport in dissipative long-range bosonic systems. This work was featured on [ClearSkyScience](https://www.clearskyscience.com/en/10.1038/s41467-026-70881-7/).{.desc}
 
-  
-
       - type: list
         id: preprints
         title: Selected Preprints
@@ -172,8 +170,6 @@ locales:
 
             This work study how many-body structure affects charging optimization under a periodic driving protocol, showing that integrability breaking and long-range interactions serve as key points for improving the QBs charging performance. This manuscript is currently under review at _Physical Review Letter_. {.desc}
 
-
-
       - type: list
         id: interests
         title: Research Interests
@@ -188,7 +184,6 @@ locales:
             icon: ph:battery-charging-vertical-bold
           - text: "**Hybrid Cavity Optomechanics**: theoretical exploration of nonlinear radiation-pressure-induced phenomena and their integration with Superconducting Circuit platforms."
             icon: ph:circuitry-bold
-
 
       - type: list
         id: future
@@ -212,7 +207,6 @@ locales:
             icon: ph:wave-sine-bold
           - text: "**Clifford and random circuits**"
             icon: ph:cpu-bold
-
 
       - type: markdown
         id: closing
