@@ -39,7 +39,8 @@ Error generating stack: `+e.message+`
 `,icon:`ph:chart-line-up-bold`},{text:`<p><strong>Advanced mathematics</strong> (e.g., von Neumann algebras and Graph theory)</p>
 `,icon:`ph:calculator-bold`},{text:`<p><strong>Cosmology</strong> (e.g., Inflation theory and dS/CFT)</p>
 `,icon:`ph:star-four-bold`},{text:`<p><strong>Topologically ordered phases</strong> (e.g., Fractional quantum Hall states)</p>
-`,icon:`ph:wave-sine-bold`},{text:`<p><strong>Clifford and random circuits</strong></p>
+`,icon:`ph:wave-sine-bold`},{text:`<p><strong>Dissipative quantum algorithms and Lindbladian learning</strong></p>
+`,icon:`ph:atom-bold`},{text:`<p><strong>Clifford and random circuits</strong></p>
 `,icon:`ph:cpu-bold`}]},{type:`markdown`,id:`closing`,title:`Welcome`,icon:`star`,data:{content:`<p>If you are interested in my research, please feel free to email me at <a href="mailto:cheng.shang@riken.jp">cheng.shang@riken.jp</a>.</p>
 <p>Academic discussions and potential collaborations are always welcome!</p>
 `}}],footer:{copyright:`<p>Copyright © 2025-$year | Cheng Shang. All rights reserved.</p>
