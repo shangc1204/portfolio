@@ -205,7 +205,7 @@ locales:
             icon: ph:star-four-bold
           - text: "**Topologically ordered phases** (e.g., Fractional quantum Hall states)"
             icon: ph:wave-sine-bold
-          - text: "**Dissipative quantum algorithms and Lindbladian learning**" 
+          - text: "**Dissipative quantum algorithms and Lindbladian learning**"
             icon: ph:atom-bold
           - text: "**Clifford and random circuits**"
             icon: ph:cpu-bold
