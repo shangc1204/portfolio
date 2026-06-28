@@ -197,6 +197,8 @@ locales:
             icon: ph:arrows-clockwise-bold
           - text: "**Mutual information and Conditional mutual information** | _Currently studying_"
             icon: ph:share-network-bold
+          - text: "**Resource theory**"
+            icon: ph:brain-bold
           - text: "**Hamiltonian complexity and Krylov complexity**"
             icon: ph:chart-line-up-bold
           - text: "**Advanced mathematics** (e.g., von Neumann algebras and Graph theory)"
