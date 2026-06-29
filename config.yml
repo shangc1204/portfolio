@@ -210,7 +210,7 @@ locales:
             icon: ph:arrows-clockwise-bold
           - text: "**Mutual information and Conditional mutual information** | _Currently studying_"
             icon: ph:share-network-bold
-          - text: "**Resource theory**_Currently studying_"
+          - text: "**Resource theory** |_Currently studying_"
             icon: ph:brain-bold
           - text: "**Hamiltonian complexity and Krylov complexity**"
             icon: ph:chart-line-up-bold
