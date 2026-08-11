@@ -120,7 +120,7 @@ locales:
         title: Professional Service
         icon: handshake
         data:
-          tags: Guest Editor: Discover Physics; Mathematics.
+          tags: Guest Editor (Discover Physics); (Mathematics).
           header: |-
             Reviewer:
           content: |-
