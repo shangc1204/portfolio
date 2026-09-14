@@ -9,6 +9,13 @@ const processSection = (section: Section, renderMarkdown: RenderMarkdown): Secti
   switch (result.type) {
     case "banner": {
       const processedData = { ...result.data };
+      if (typeof processedData.tags === "string") {
+  processedData.tags = renderMarkdown(processedData.tags, true);
+} else if (Array.isArray(processedData.tags)) {
+  processedData.tags = processedData.tags.map((tag) =>
+    renderMarkdown(tag, true),
+  );
+}
 
       if (processedData.header) processedData.header = renderMarkdown(processedData.header, true);
 
