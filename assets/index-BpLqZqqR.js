@@ -32,7 +32,33 @@ Error generating stack: `+e.message+`
 <p class="desc">This work, an international collaboration across Asia, Europe, and the U.S., introduces the concept of spectral entangling strength, which captures the structural entangling power of an operator, and establishes a spectral small-incremental entangling (SIE) theorem. The manuscript has been accepted for publication in <a href="https://journals.aps.org/prx/accepted/10.1103/8fcr-5tf4" target="_blank" rel="noopener noreferrer"><em>Physical Review X</em></a>. The work was also selected for a contributed talk at <a href="https://tqc-conference.org/2026/accepted-papers/" target="_blank" rel="noopener noreferrer">Theory of Quantum Computation, Communication and Cryptography (TQC 2026)</a>.</p>
 `,`<p><a href="https://arxiv.org/abs/2603.03883" class="plain" target="_blank" rel="noopener noreferrer">Rohit Kumar Shukla and <mark>Cheng Shang</mark>, <em>Many-Body Structural Effects in Periodically Driven Quantum Batteries</em>, <strong>arXiv</strong>:2603.03883.</a></p>
 <p class="desc">This work study how many-body structure affects charging optimization under a periodic driving protocol, showing that integrability breaking and long-range interactions serve as key points for improving the QBs charging performance. This manuscript is currently under review at <em>Physical Review Letter</em>.</p>
-`]},{type:`list`,id:`interests`,title:`Research Interests`,icon:`flask`,dot:`check`,data:[{text:`<p><strong>Lieb-Robinson Bound and Its Application</strong>: one may include Particle Transport, Information Propagation, Operator Spreading, and Correlation Generation.</p>
+`]},{type:`markdown`,id:`academic-activities`,title:`Selected Academic Activities`,icon:`calendar-days`,data:{content:`<ol style="list-style: decimal; padding-left: 1.5em; margin: 0; line-height: 1.6;">
+  <li style="margin-bottom: 1.6em;">
+    <strong>Poster Presenter</strong>,
+    <a href="https://www.pks.mpg.de/qmbsoe26" target="_blank" rel="noopener noreferrer">International Workshop on Quantum Many-Body Systems Out of Equilibrium: Relaxation, Thermalization, and Ergodicity Breaking</a>,
+    Max Planck Institute for the Physics of Complex Systems (MPIPKS), Dresden, Germany (2026).
+  </li>
+  <li style="margin-bottom: 1.6em;">
+    <strong>Poster Presenter</strong>,
+    RQC Winter Session,
+    RIKEN Center for Quantum Computing, Saitama, Japan (2025).
+  </li>
+  <li style="margin-bottom: 1.6em;">
+    <strong>Invited Speaker</strong>,
+    <a href="https://events.physics.uoc.gr/event/1/" target="_blank" rel="noopener noreferrer">21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)</a>,
+    University of Crete, Chania, Greece (2024).
+  </li>
+  <li style="margin-bottom: 1.6em;">
+    <strong>Poster Presenter</strong>,
+    <a href="http://en.baqis.ac.cn/news/detail/?cid=1764" target="_blank" rel="noopener noreferrer">5th International Symposium on Quantum Physics and Quantum Information Sciences (QPQIS-2023)</a>,
+    Beijing Academy of Quantum Information Sciences (BAQIS), Beijing, China (2023).
+  </li>
+  <li>
+    <strong>Workshop Co-organizer</strong>,
+    <a href="http://hatano-lab.iis.u-tokyo.ac.jp/manami/SQP2022/index_jp.html" target="_blank" rel="noopener noreferrer">Stat&amp;QuantPhys Autumn School (SQP2022)</a>,
+    The University of Tokyo, Kashiwa, Japan (2022).
+  </li>
+</ol>`}},{type:`list`,id:`interests`,title:`Research Interests`,icon:`flask`,dot:`check`,data:[{text:`<p><strong>Lieb-Robinson Bound and Its Application</strong>: one may include Particle Transport, Information Propagation, Operator Spreading, and Correlation Generation.</p>
 `,icon:`ph:arrows-out-bold`},{text:`<p><strong>Open Quantum Systems</strong>: with particular focus on Dissipative and non-Markovian Dynamics in Quantum Optics and Quantum Information.</p>
 `,icon:`ph:atom-bold`},{text:`<p><strong>Quantum Batteries</strong>: focuses on improving the performance of Quantum Batteries by addressing theoretical barriers in practical applications, including those in Topological few-body and Many-Body Quantum Systems.</p>
 `,icon:`ph:battery-charging-vertical-bold`},{text:`<p><strong>Hybrid Cavity Optomechanics</strong>: theoretical exploration of nonlinear radiation-pressure-induced phenomena and their integration with Superconducting Circuit platforms.</p>
