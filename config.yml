@@ -120,7 +120,9 @@ locales:
         title: Professional Service
         icon: handshake
         data:
-          tags: "Guest Editor ([Discover Physics](https://link.springer.com/collections/djheehghia) | Collection: Exceptional Points in Non-Hermitian Systems); ([Mathematics](https://www.mdpi.com/journal/mathematics/special_issues/WLZ9QX8AA5) | Special Issues: Quantum Optics and Quantum Information: Theory and Applications)."
+          tags: "Guest Editor ([Discover Physics](https://link.springer.com/collections/djheehghia) | Collection: Exceptional Points in Non-Hermitian Systems); 
+          <br><br>
+          ([Mathematics](https://www.mdpi.com/journal/mathematics/special_issues/WLZ9QX8AA5) | Special Issues: Quantum Optics and Quantum Information: Theory and Applications)."
           header: |-
             Reviewer:
           content: |-
@@ -153,7 +155,7 @@ locales:
           - |-
             [H. Z. Shen, ==Cheng Shang==, Y. H. Zhou, and X. X. Yi, _Unconventional single-photon blockade in non-Markovian systems_, **Phys. Rev. A** **98**(2), 023856 (2018).](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.023856){.plain}
 
-            As of August 2026, this work has received 133 citations on Google Scholar. {.desc}
+            As of September 2026, this work has received 133 citations on Google Scholar. {.desc}
 
           - |-
             [H. Z. Shen, X. C. Zhang, L. Y. Ning, Zhi-Guang Lu, Yan-Hui Zhou, and ==Cheng Shang==, _Higher-order Exceptional Points Induced by Non-Markovian Environments_, **Laser & Photonics Reviews** 20, e71535 (2026).](https://doi.org/10.1002/lpor.71535){.plain}
