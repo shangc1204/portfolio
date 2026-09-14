@@ -55,7 +55,7 @@ Error generating stack: `+e.message+`
   </li>
   <li>
     <strong>Workshop Co-organizer</strong>,
-    <a href="http://hatano-lab.iis.u-tokyo.ac.jp/manami/SQP2022/index_jp.html" target="_blank" rel="noopener noreferrer">Stat&amp;QuantPhys Autumn School (SQP2022)</a>,
+    <a href="http://hatano-lab.iis.u-tokyo.ac.jp/manami/SQP2022/index_jp.html" target="_blank" rel="noopener noreferrer">Stat&amp;QuantPhys Autumn School (SQP)</a>,
     The University of Tokyo, Kashiwa, Japan (2022).
   </li>
 </ol>`}},{type:`list`,id:`interests`,title:`Research Interests`,icon:`flask`,dot:`check`,data:[{text:`<p><strong>Lieb-Robinson Bound and Its Application</strong>: one may include Particle Transport, Information Propagation, Operator Spreading, and Correlation Generation.</p>
