@@ -33,22 +33,22 @@ Error generating stack: `+e.message+`
 `,`<p><a href="https://arxiv.org/abs/2603.03883" class="plain" target="_blank" rel="noopener noreferrer">Rohit Kumar Shukla and <mark>Cheng Shang</mark>, <em>Many-Body Structural Effects in Periodically Driven Quantum Batteries</em>, <strong>arXiv</strong>:2603.03883.</a></p>
 <p class="desc">This work study how many-body structure affects charging optimization under a periodic driving protocol, showing that integrability breaking and long-range interactions serve as key points for improving the QBs charging performance. This manuscript is currently under review at <em>Physical Review Letter</em>.</p>
 `]},{type:`markdown`,id:`academic-activities`,title:`Selected Academic Activities`,icon:`calendar-days`,data:{content:`<ol style="list-style: decimal; padding-left: 1.5em; margin: 0; line-height: 1.6;">
-  <li style="margin-bottom: 1.6em;">
+  <li style="margin-bottom: 1.0em;">
     <strong>Poster Presenter</strong>,
     <a href="https://www.pks.mpg.de/qmbsoe26" target="_blank" rel="noopener noreferrer">International Workshop on Quantum Many-Body Systems Out of Equilibrium: Relaxation, Thermalization, and Ergodicity Breaking</a>,
     Max Planck Institute for the Physics of Complex Systems (MPIPKS), Dresden, Germany (2026).
   </li>
-  <li style="margin-bottom: 1.6em;">
+  <li style="margin-bottom: 1.0em;">
     <strong>Poster Presenter</strong>,
     RQC Winter Session,
     RIKEN Center for Quantum Computing, Saitama, Japan (2025).
   </li>
-  <li style="margin-bottom: 1.6em;">
+  <li style="margin-bottom: 1.0em;">
     <strong>Invited Speaker</strong>,
     <a href="https://events.physics.uoc.gr/event/1/" target="_blank" rel="noopener noreferrer">21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)</a>,
     University of Crete, Chania, Greece (2024).
   </li>
-  <li style="margin-bottom: 1.6em;">
+  <li style="margin-bottom: 1.0em;">
     <strong>Poster Presenter</strong>,
     <a href="http://en.baqis.ac.cn/news/detail/?cid=1764" target="_blank" rel="noopener noreferrer">5th International Symposium on Quantum Physics and Quantum Information Sciences (QPQIS-2023)</a>,
     Beijing Academy of Quantum Information Sciences (BAQIS), Beijing, China (2023).
