@@ -187,25 +187,25 @@ locales:
         data:
           content: |-
             <ol style="list-style: decimal; padding-left: 1.5em; margin: 0; line-height: 1.6;">
-              <li style="margin-bottom: 1.6em;">
+              <li style="margin-bottom: 1.0em;">
                 <strong>Poster Presenter</strong>,
                 <a href="https://www.pks.mpg.de/qmbsoe26" target="_blank" rel="noopener noreferrer">International Workshop on Quantum Many-Body Systems Out of Equilibrium: Relaxation, Thermalization, and Ergodicity Breaking</a>,
                 Max Planck Institute for the Physics of Complex Systems (MPIPKS), Dresden, Germany (2026).
               </li>
 
-              <li style="margin-bottom: 1.6em;">
+              <li style="margin-bottom: 1.0em;">
                 <strong>Poster Presenter</strong>,
                 RQC Winter Session,
                 RIKEN Center for Quantum Computing, Saitama, Japan (2025).
               </li>
 
-              <li style="margin-bottom: 1.6em;">
+              <li style="margin-bottom: 1.0em;">
                 <strong>Invited Speaker</strong>,
                 <a href="https://events.physics.uoc.gr/event/1/" target="_blank" rel="noopener noreferrer">21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)</a>,
                 University of Crete, Chania, Greece (2024).
               </li>
 
-              <li style="margin-bottom: 1.6em;">
+              <li style="margin-bottom: 1.0em;">
                 <strong>Poster Presenter</strong>,
                 <a href="http://en.baqis.ac.cn/news/detail/?cid=1764" target="_blank" rel="noopener noreferrer">5th International Symposium on Quantum Physics and Quantum Information Sciences (QPQIS-2023)</a>,
                 Beijing Academy of Quantum Information Sciences (BAQIS), Beijing, China (2023).
