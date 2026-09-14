@@ -115,18 +115,43 @@ locales:
             title: Master of Science |Northeast Normal University, Center for Quantum Sciences
             content: Chinese National Scholarship for Postgraduates with Prof. [XueXi Yi](https://cqs.nenu.edu.cn/)
 
-      - type: banner
+            - type: banner
         id: cfp
         title: Professional Service
         icon: handshake
         data:
-          tags: "Guest Editor ([Discover Physics](https://link.springer.com/collections/djheehghia) | Collection: Exceptional Points in Non-Hermitian Systems); ([Mathematics](https://www.mdpi.com/journal/mathematics/special_issues/WLZ9QX8AA5) | Special Issues: Quantum Optics and Quantum Information: Theory and Applications)."
-          header: |-
-            Reviewer:
+          tags: |-
+            <span class="service-heading">Guest Editor</span>
+            <span class="service-editors">
+              <span class="service-editor">
+                [Discover Physics](https://link.springer.com/collections/djheehghia)
+                <span class="service-kind">Collection</span>
+                <span class="service-topic">Exceptional Points in Non-Hermitian Systems</span>
+              </span>
+              <span class="service-editor">
+                [Mathematics](https://www.mdpi.com/journal/mathematics/special_issues/WLZ9QX8AA5)
+                <span class="service-kind">Special Issue</span>
+                <span class="service-topic">Quantum Optics and Quantum Information: Theory and Applications</span>
+              </span>
+            </span>
+          header: Reviewer
           content: |-
-            **Academic Journal**: Physical Review Letters; PRX Energy; Physical Review A; Physical Review E; APS Open Science; Scientific Reports; Advanced Quantum Technologies; Advances in Mathematical Physics; International Journal of Theoretical Physics; Physica A: Statistical Mechanics and its Applications; Optical and Quantum Electronics; Journal of the Optical Society of America B.
+            **Academic Journals**
+
+            - Physical Review Letters
+            - PRX Energy
+            - Physical Review A
+            - Physical Review E
+            - APS Open Science
+            - Scientific Reports
+            - Advanced Quantum Technologies
+            - Advances in Mathematical Physics
+            - International Journal of Theoretical Physics
+            - Physica A: Statistical Mechanics and its Applications
+            - Optical and Quantum Electronics
+            - Journal of the Optical Society of America B
           actions:
-            - label: See my ORCiD profile for more details
+            - label: View ORCID profile →
               link: https://orcid.org/0000-0001-8393-2329
               primary: true
 
