@@ -5,7 +5,6 @@ mark {
 .desc {
   @apply text-sm text-slate-500 dark:text-slate-400;
 }
-
 /* Professional Service */
 #cfp .banner-container {
   padding: clamp(24px, 4vw, 44px);
@@ -23,6 +22,7 @@ mark {
   min-width: 0;
 }
 
+/* 移除原来的长胶囊和全大写 */
 #cfp .banner-tag {
   display: block;
   padding: 0;
@@ -36,6 +36,7 @@ mark {
   text-transform: none;
 }
 
+/* 两个小标题保持一致 */
 #cfp .service-heading,
 #cfp .banner-title {
   display: block;
@@ -47,6 +48,7 @@ mark {
   letter-spacing: -0.02em;
 }
 
+/* 编辑信息卡片 */
 #cfp .service-editors {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -90,6 +92,7 @@ mark {
   line-height: 1.6;
 }
 
+/* 审稿期刊列表 */
 #cfp .banner-content {
   max-width: none;
   color: #d5def0;
@@ -122,6 +125,7 @@ mark {
   color: #8ca9df;
 }
 
+/* 底部按钮 */
 #cfp .banner-container > .relative > :last-child {
   width: 100%;
   padding-top: 20px;
@@ -138,6 +142,7 @@ mark {
   box-shadow: none;
 }
 
+/* 手机显示为单列 */
 @media (max-width: 680px) {
   #cfp .service-editors,
   #cfp .banner-content ul {
