@@ -88,17 +88,15 @@ export const Banner: FC<BannerProps> = ({ header, content, footer, tags, actions
 
     <div className="relative z-10 flex flex-col items-center gap-8 lg:flex-row">
       <div className="flex-1 space-y-6">
-                {tags &&
+        {tags &&
           (Array.isArray(tags) ? (
             tags.map((tag) => (
               <div key={tag} className="banner-tag">
-                <RichContent content={tag} />
+                {tag}
               </div>
             ))
           ) : (
-            <div className="banner-tag">
-              <RichContent content={tags} />
-            </div>
+            <div className="banner-tag">{tags}</div>
           ))}
         <div className="space-y-2">
           {header && (
