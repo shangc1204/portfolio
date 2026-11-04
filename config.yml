@@ -117,14 +117,12 @@ locales:
 
       - type: banner
         id: cfp
-        title: Professional Service
+        title: Academic service
         icon: handshake
         data:
-          tags: "Guest Editor ([Discover Physics](https://link.springer.com/collections/djheehghia) | Collection: Exceptional Points in Non-Hermitian Systems); ([Mathematics](https://www.mdpi.com/journal/mathematics/special_issues/WLZ9QX8AA5) | Special Issues: Quantum Optics and Quantum Information: Theory and Applications)."
-          header: |-
             Reviewer:
           content: |-
-            **Academic Journal**: Physical Review Letters; PRX Energy; Physical Review A; Physical Review B; Physical Review E; APS Open Science; Scientific Reports; Advanced Quantum Technologies; Nanophotonics; Advances in Mathematical Physics; International Journal of Theoretical Physics; Physica A: Statistical Mechanics and its Applications; Optical and Quantum Electronics; Journal of the Optical Society of America B; The European Physical Journal Plus; Optical Review.
+            **Academic Journal**: Physical Review Letters; PRX Energy; Physical Review A; Physical Review B; Physical Review E; APS Open Science; Scientific Reports; Advanced Quantum Technologies; Nanophotonics; Advances in Mathematical Physics; International Journal of Theoretical Physics; Physica A: Statistical Mechanics and its Applications; Optical and Quantum Electronics; Journal of the Optical Society of America B; The European Physical Journal Plus; Optical Review; Discover Physics; Mathematics; Discover Optics and Photonics; New Journal of Physics.
           actions:
             - label: See my ORCiD profile for more details
               link: https://orcid.org/0000-0001-8393-2329
