@@ -120,6 +120,7 @@ locales:
         title: Academic service
         icon: handshake
         data:
+          header: |-
             Reviewer:
           content: |-
             **Academic Journal**: Physical Review Letters; PRX Energy; Physical Review A; Physical Review B; Physical Review E; APS Open Science; Scientific Reports; Advanced Quantum Technologies; Nanophotonics; Advances in Mathematical Physics; International Journal of Theoretical Physics; Physica A: Statistical Mechanics and its Applications; Optical and Quantum Electronics; Journal of the Optical Society of America B; The European Physical Journal Plus; Optical Review; Discover Physics; Mathematics; Discover Optics and Photonics; New Journal of Physics.
