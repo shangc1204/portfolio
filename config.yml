@@ -137,7 +137,12 @@ locales:
           - |-
             [Zhi-Guang Lu, Guo-Qing Tian, Xin-You Lü, and ==Cheng Shang==, _Topological Quantum Batteries_, **Phys. Rev. Lett.** **134**, 180401 (2025).](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.180401){.plain}
 
-            This paper was recognized as a [Web of Science Highly Cited Paper](https://webofscience.clarivate.cn/wos/woscc/full-record/WOS:001492852700004), ranking among the top 1% in Physics in 2025, and was also cited in Nature Reviews Physics 8, 115 (2026). Moreover, this work was featured in [PRL Trending](https://x.com/PhysRevLett/status/1924474721149542443), highlighted in a Press Release by [RIKEN](https://www.riken.jp/en/news_pubs/research_news/pr/2025/20250513_2/index.html), and presented as an Invited Talk at the [21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)](https://events.physics.uoc.gr/event/1/page/5-speakers), Chania, Greece. As of October 2026, this study has 171 citations on Google Scholar. {.desc}
+            This paper was recognized as a [Web of Science Highly Cited Paper](https://webofscience.clarivate.cn/wos/woscc/full-record/WOS:001492852700004), ranking among the top 1% in Physics in 2025, and was also cited in Nature Reviews Physics 8, 115 (2026). Moreover, this work was featured in [PRL Trending](https://x.com/PhysRevLett/status/1924474721149542443), highlighted in a Press Release by [RIKEN](https://www.riken.jp/en/news_pubs/research_news/pr/2025/20250513_2/index.html), and presented as an Invited Talk at the [21st International Workshop on Pseudo-Hermitian Hamiltonians in Quantum Physics (PHHQP-XXI)](https://events.physics.uoc.gr/event/1/page/5-speakers), Chania, Greece. As of October 2026, this study has 175 citations on Google Scholar. {.desc}
+          
+          - |-
+            [Donghoon Kim, Yusuke Kimura, Hugo Mackay, Yosuke Mitsuhashi, Hideaki Nishikawa, Carla Rubiliani, ==Cheng Shang==, Ayumi Ukai, and Tomotaka Kuwahara, _Spectral Small-Incremental-Entangling: Breaking Quasi-Polynomial Complexity Barriers in Long-Range Interacting Systems_, **Phys. Rev. X** **16**, 041035 (2026).](https://doi.org/10.1103/8fcr-5tf4){.plain}
+
+            This work, an international collaboration across Asia, Europe, and the U.S., introduces the concept of spectral entangling strength, which captures the structural entangling power of an operator, and establishes a spectral small-incremental entangling (SIE) theorem. The work was selected for a contributed talk at [Theory of Quantum Computation, Communication and Cryptography (TQC 2026)](https://tqc-conference.org/2026/accepted-papers/). {.desc}
 
           - |-
             [==Cheng Shang== and Hong-Chao Li, _Resonance-dominant optomechanical entanglement in open quantum systems_, **Physical Review Applied** **21**(4), 044048 (2024).](https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.21.044048){.plain}
@@ -168,11 +173,6 @@ locales:
             [==Cheng Shang==, Zhi-Guang Lu, Hayato Kinkawa, and Tomotaka Kuwahara, _Operator Spreading and Information Propagation: Equivalence and Beyond_, **arXiv**:2505.07955.](https://arxiv.org/abs/2505.07955){.plain}
 
             This work received the [Best Poster Award](http://en.baqis.ac.cn/news/detail/?cid=1764) at the 5th International Symposium on Quantum Physics and Quantum Information Sciences (QPQIS-2023), Beijing, China. This work is currently under review at _PRA Letter_. {.desc}
-
-          - |-
-            [Donghoon Kim, Yusuke Kimura, Hugo Mackay, Yosuke Mitsuhashi, Hideaki Nishikawa, Carla Rubiliani, ==Cheng Shang==, Ayumi Ukai, and Tomotaka Kuwahara, _Spectral Small-Incremental-Entangling: Breaking Quasi-Polynomial Complexity Barriers in Long-Range Interacting Systems_, **arXiv**:2509.12014.](https://arxiv.org/abs/2509.12014){.plain}
-
-            This work, an international collaboration across Asia, Europe, and the U.S., introduces the concept of spectral entangling strength, which captures the structural entangling power of an operator, and establishes a spectral small-incremental entangling (SIE) theorem. The manuscript has been accepted for publication in [*Physical Review X*](https://journals.aps.org/prx/accepted/10.1103/8fcr-5tf4). The work was also selected for a contributed talk at [Theory of Quantum Computation, Communication and Cryptography (TQC 2026)](https://tqc-conference.org/2026/accepted-papers/). {.desc}
 
           - |-
             [Rohit Kumar Shukla and ==Cheng Shang==, _Many-Body Structural Effects in Periodically Driven Quantum Batteries_, **arXiv**:2603.03883.](https://arxiv.org/abs/2603.03883){.plain}
